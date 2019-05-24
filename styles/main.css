@@ -140,6 +140,10 @@ span {
     display: none;
 }
 
+.active {
+    display: block;
+}
+
 .nav-links,
 .logo,
 .nav-links-search {

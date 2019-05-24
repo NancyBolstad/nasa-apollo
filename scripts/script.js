@@ -1,15 +1,15 @@
-let navBarToggle = document.getElementById('js-navmenu-toggle');
+const navBarToggle = document.getElementById('js-navmenu-toggle');
+const mainNav = document.getElementById('js-menu');
+let isMobileMenuHidden = true;
 
 navBarToggle.addEventListener('click', function() {
-  const isHidden = document.getElementById('js-menu').style.display;
-
-  if (isHidden === 'none') {
-    document.getElementById('js-navmenu-toggle').classList.remove('fa-bars');
-    document.getElementById('js-navmenu-toggle').classList.add('fa-times');
-    document.getElementById('js-menu').style.display = 'block';
+  isMobileMenuHidden = !isMobileMenuHidden;
+  if (!isMobileMenuHidden) {
+    navBarToggle.classList.remove('fa-bars');
+    navBarToggle.classList.add('fa-times');
   } else {
-    document.getElementById('js-navmenu-toggle').classList.remove('fa-times');
-    document.getElementById('js-navmenu-toggle').classList.add('fa-bars');
-    document.getElementById('js-menu').style.display = 'none';
+    navBarToggle.classList.remove('fa-times');
+    navBarToggle.classList.add('fa-bars');
   }
+  mainNav.classList.toggle('active');
 });
