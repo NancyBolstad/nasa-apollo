@@ -22,24 +22,8 @@ p {
 }
 
 a {
-    color: #0071bc;
     text-decoration: underline;
     border-bottom: none;
-    font-weight: 700;
-}
-
-a:hover,
-a:active {
-    color: #205493;
-}
-
-a:focus {
-    outline: 2px dotted #aeb0b5;
-    outline-offset: 3px;
-}
-
-a:visited {
-    color: #4c2c92;
 }
 
 /*------------------------------------*\
@@ -112,14 +96,14 @@ span {
 }
 
 @media screen and (min-width: 481px) {
-    .usa-display {
+    .hero-text {
         font-size: 4rem;
         font-weight: 700;
     }
 }
 
 @media screen and (min-width: 600px) {
-    .usa-display {
+    .hero-text {
         font-size: 5.2rem;
         font-weight: 700;
     }
@@ -136,22 +120,6 @@ span {
 /*------------------------------------*\
   #Wrappers
 \*------------------------------------*/
-.section-background-dark {
-    background-color: #323a45;
-}
-
-.usa-background-dark p,
-.usa-background-dark span {
-    color: #ffffff;
-}
-
-.usa-background-dark a {
-    color: #d6d7d9;
-}
-
-.usa-background-dark a:hover {
-    color: #ffffff;
-}
 
 /*------------------------------------*\
   #Components
@@ -162,9 +130,9 @@ span {
     top: 0;
     width: 100%;
     font-size: 2vw;
-    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #111111;
     padding-bottom: 10px;
+    z-index: 1;
 }
 
 .main-nav {
@@ -173,9 +141,10 @@ span {
 }
 
 .nav-links,
-.logo {
+.logo,
+.nav-links-search {
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.7);
+    color: #999999;
 }
 
 .main-nav li {
@@ -185,7 +154,7 @@ span {
 
 .logo {
     display: inline-block;
-    font-size: 2.2vw;
+    font-size: 1.5vw;
     margin-top: 10px;
     margin-left: 20px;
 }
@@ -204,7 +173,12 @@ span {
 }
 
 .nav-links-search {
-    visibility: hidden;
+    display: none;
+}
+
+.logo:hover,
+.nav-links:hover {
+    color: rgba(255, 255, 255, 1);
 }
 
 @media screen and (min-width: 768px) {
@@ -212,8 +186,9 @@ span {
         display: flex;
         justify-content: space-between;
         padding-bottom: 0;
-        height: 70px;
+        height: 50px;
         align-items: center;
+        font-size: 1.5vw;
     }
 
     .main-nav {
@@ -236,16 +211,11 @@ span {
     }
 
     .navbar-toggle {
-        display: none;
-    }
-
-    .logo:hover,
-    .nav-links:hover {
-        color: rgba(255, 255, 255, 1);
+        visibility: hidden;
     }
 
     .nav-links-search {
-        visibility: visible;
+        display: inline;
         margin-left: 20px;
     }
 }
