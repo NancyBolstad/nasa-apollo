@@ -6,24 +6,24 @@
 \*------------------------------------*/
 
 html {
-    font-family: Merriweather;
-    font-size: 10px;
+  font-family: Merriweather;
+  font-size: 10px;
 }
 
 body {
-    font-size: 1.7rem;
+  font-size: 1.7rem;
 }
 
 p {
-    line-height: 1.5;
-    margin-bottom: 1em;
-    margin-top: 1em;
-    max-width: 60ch;
+  line-height: 1.5;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  max-width: 60ch;
 }
 
 a {
-    text-decoration: underline;
-    border-bottom: none;
+  text-decoration: underline;
+  border-bottom: none;
 }
 
 /*------------------------------------*\
@@ -35,86 +35,87 @@ h3,
 h4,
 h5,
 h6 {
-    clear: both;
-    font-family: "Merriweather", "Georgia", "Cambria", "Times New Roman", "Times", serif;
-    line-height: 1.3;
-    margin-bottom: 0.5em;
-    margin-top: 1.5em;
+  clear: both;
+  font-family: 'Merriweather', 'Georgia', 'Cambria', 'Times New Roman', 'Times',
+    serif;
+  line-height: 1.3;
+  margin-bottom: 0.5em;
+  margin-top: 1.5em;
 }
 
 h1 {
-    font-size: 4rem;
-    font-weight: 700;
+  font-size: 4rem;
+  font-weight: 700;
 }
 
 h2 {
-    font-size: 3rem;
-    font-weight: 700;
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 h3 {
-    font-size: 2rem;
-    font-weight: 700;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 h4 {
-    font-size: 1.7rem;
-    font-weight: 700;
+  font-size: 1.7rem;
+  font-weight: 700;
 }
 
 h5 {
-    font-size: 1.5rem;
-    font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 h6 {
-    font-size: 1.3rem;
-    font-weight: 400;
-    line-height: 1.5;
-    text-transform: uppercase;
-    font-family: "Source Sans Pro";
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro';
 }
 
 cite,
 var,
 address,
 dfn {
-    font-style: normal;
+  font-style: normal;
 }
 
 p,
 a,
 li,
 span {
-    font-family: "Source Sans Pro";
+  font-family: 'Source Sans Pro';
 }
 
 .hero-text {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 481px) {
-    .hero-text {
-        font-size: 4rem;
-        font-weight: 700;
-    }
+  .hero-text {
+    font-size: 4rem;
+    font-weight: 700;
+  }
 }
 
 @media screen and (min-width: 600px) {
-    .hero-text {
-        font-size: 5.2rem;
-        font-weight: 700;
-    }
+  .hero-text {
+    font-size: 5.2rem;
+    font-weight: 700;
+  }
 }
 
 .section-lead {
-    font-family: "Merriweather";
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: 1.7;
-    max-width: 77rem;
+  font-family: 'Merriweather';
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.7;
+  max-width: 77rem;
 }
 
 /*------------------------------------*\
@@ -122,104 +123,181 @@ span {
 \*------------------------------------*/
 
 /*------------------------------------*\
-  #Components
+  #navbar
 \*------------------------------------*/
 
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    font-size: 2vw;
-    background-color: #111111;
-    padding-bottom: 10px;
-    z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-size: 2vw;
+  background-color: #111111;
+  padding-bottom: 10px;
+  z-index: 1;
 }
 
 .main-nav {
-    list-style-type: none;
-    display: none;
+  list-style-type: none;
+  display: none;
 }
 
 .active {
-    display: block;
+  display: block;
 }
 
 .nav-links,
 .logo,
 .nav-links-search {
-    text-decoration: none;
-    color: #999999;
+  text-decoration: none;
+  color: #999999;
 }
 
 .main-nav li {
-    text-align: center;
-    margin: 15px auto;
+  text-align: center;
+  margin: 15px auto;
 }
 
 .logo {
-    display: inline-block;
-    font-size: 1.5vw;
-    margin-top: 10px;
-    margin-left: 20px;
+  display: inline-block;
+  font-size: 1.5vw;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
 .navbar-toggle {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    cursor: pointer;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 2.2vw;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 2.2vw;
 }
 
 .navbar-fas:first-child {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .nav-links-search {
-    display: none;
+  display: none;
 }
 
 .logo:hover,
 .nav-links:hover {
-    color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 1);
 }
 
 @media screen and (min-width: 768px) {
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 0;
-        height: 50px;
-        align-items: center;
-        font-size: 1.5vw;
-    }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 50px;
+    align-items: center;
+    font-size: 1.5vw;
+  }
 
-    .main-nav {
-        display: flex;
-        margin-right: 30px;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
 
-    .main-nav li {
-        margin: 0;
-    }
+  .main-nav li {
+    margin: 0;
+  }
 
-    .nav-links {
-        margin-left: 40px;
-    }
+  .nav-links {
+    margin-left: 40px;
+  }
 
-    .logo {
-        margin-top: 0;
-    }
+  .logo {
+    margin-top: 0;
+  }
 
-    .navbar-toggle {
-        visibility: hidden;
-    }
+  .navbar-toggle {
+    visibility: hidden;
+  }
 
-    .nav-links-search {
-        display: inline;
-        margin-left: 20px;
-    }
+  .nav-links-search {
+    display: inline;
+    margin-left: 20px;
+  }
+}
+
+/*------------------------------------*\
+  #navbar-search
+\*------------------------------------*/
+
+.search-overlay {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.search-form-wrapper {
+  position: relative;
+  top: 30%;
+  width: 90%;
+  text-align: center;
+  margin-top: 30px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  color: aliceblue;
+}
+
+.search-form-wrapper h2 {
+  padding-bottom: 8vw;
+}
+
+.btn-close-search {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+  color: white;
+}
+
+.search-form-wrapper input[type='text'] {
+  background-color: #eeeeee;
+  padding: 18px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: 18px;
+  color: #555555;
+  flex-basis: 100%;
+  border: none;
+  width: 70vw;
+}
+
+.search-form-wrapper input[type='text']:hover {
+  background: #f1f1f1;
+}
+
+.search-form-wrapper button {
+  color: #ffffff;
+  text-transform: capitalize;
+  background-color: #2196f3;
+  text-decoration: none;
+  border: none;
+  padding: 18px 42px;
+  margin-top: 40px;
+  font-size: 18px;
+}
+
+.search-form-wrapper button fa-search {
+  margin-right: 20px;
+}
+
+.overlay button:hover {
+  background: #bbb;
 }
