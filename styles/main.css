@@ -156,7 +156,7 @@ span {
 }
 .navbar {
   width: 100vw;
-  font-size: 0.8rem;
+  font-size: 1.1rem;
   background-color: #111111;
   color: #eeeeee;
   padding-bottom: 0.3rem;
@@ -179,6 +179,15 @@ span {
 .nav-links-search {
   text-decoration: none;
   color: inherit;
+}
+
+.logo {
+  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/514050/logo-short.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 6rem;
+  height: 1.2rem;
 }
 
 .main-nav li {
@@ -213,7 +222,8 @@ span {
 
 .logo:hover,
 .nav-links:hover,
-.fa-bars:hover .fa-times:hover,
+.fa-bars:hover,
+.fa-times:hover,
 .fa-search:hover {
   color: paleturquoise;
 }
@@ -225,6 +235,7 @@ span {
     padding: 0.3rem;
     height: 2rem;
     align-items: center;
+    font-size: 0.8rem;
   }
 
   .main-nav {
