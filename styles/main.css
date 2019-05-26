@@ -366,6 +366,111 @@ span {
 }
 
 /*------------------------------------*\
+  #page-hero
+\*------------------------------------*/
+
+#index-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../assets/1437409095-neil-armstrong.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  width: 100vw;
+  height: 95vh;
+}
+.page-banner {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4);
+}
+
+.banner-box {
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  width: 85vw;
+}
+
+.banner-title {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  padding: 20px;
+  color: inherit;
+  font-weight: 700;
+}
+
+.banner-underline {
+  width: 20rem;
+  margin: 10px auto;
+  border: 4px solid #ffffff;
+  font-weight: 900;
+  display: none;
+}
+
+.banner-subtitle {
+  margin: 20px 0 40px 0;
+  text-transform: capitalize;
+  font-size: 0.8rem;
+  display: none;
+  color: #ffffff;
+  display: block;
+}
+
+.cta {
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 32px;
+  font-size: 1em;
+  text-decoration: none;
+  color: #ffffff;
+  transition: background 0.2s ease;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.cta-primary {
+  background: #2b98f0;
+}
+
+.cta-primary:hover {
+  background: #005694;
+}
+
+.cta-flex {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .cta-flex {
+    flex-direction: row;
+  }
+
+  .banner-underline {
+    width: 70vw;
+    margin: 0px auto;
+    border: 4px solid #2b98f0;
+    display: block;
+  }
+
+  .banner-subtitle {
+    margin: 20px 0 40px 0;
+    text-transform: capitalize;
+    display: block;
+  }
+}
+
+/*------------------------------------*\
   #timeline
 \*------------------------------------*/
 
