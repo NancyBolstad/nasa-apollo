@@ -142,15 +142,17 @@ span {
   #navbar
 \*------------------------------------*/
 
-.navbar {
+.page-header {
   position: fixed;
   top: 0;
+  z-index: 1;
+}
+.navbar {
   width: 100vw;
   font-size: 0.8rem;
   background-color: #111111;
   color: #eeeeee;
   padding-bottom: 0.3rem;
-  z-index: 1;
   display: inline-block;
   text-align: center;
 }
@@ -346,7 +348,7 @@ main {
 }
 #timeline {
   position: relative;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -487,4 +489,17 @@ h2 {
     margin-left: 0;
     margin-right: 32.5px;
   }
+}
+
+.header-progress {
+  width: 100%;
+  background-color: #000000;
+  top: 0.2rem;
+}
+
+.progress-bar {
+  height: 0.2rem;
+  background: #4caf50;
+  width: 0%;
+  top: 0.2rem;
 }

@@ -2,6 +2,14 @@ const navBarToggle = document.getElementById('js-navmenu-toggle');
 const mainNav = document.getElementById('js-menu');
 let isMobileMenuHidden = true;
 
+window.onscroll = () => {
+  const docHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  let scrolled = (window.pageYOffset / docHeight) * 100;
+  document.getElementById('js-scroll-bar').style.width = `${scrolled}%`;
+};
+
 navBarToggle.addEventListener('click', function() {
   isMobileMenuHidden = !isMobileMenuHidden;
   if (!isMobileMenuHidden) {
