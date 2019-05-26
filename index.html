@@ -23,9 +23,11 @@
     <header>
       <nav class="navbar">
         <a href="#" class="logo">Apollo 11</a>
-        <span class="navbar-toggle">
-          <i class="fas fa-search navbar-fas js-navsearch-toggle"></i>
+        <span class="navbar-toggle-wrapper mobile-menu-left">
           <i class="fas fa-bars navbar-fas" id="js-navmenu-toggle"></i>
+        </span>
+        <span class="navbar-toggle-wrapper mobile-search-right">
+          <i class="fas fa-search navbar-fas js-navsearch-toggle"></i>
         </span>
         <ul class="main-nav" id="js-menu">
           <li>
@@ -35,10 +37,7 @@
             <a href="#" class="nav-links">Overview</a>
           </li>
           <li>
-            <a href="#" class="nav-links">Milestones</a>
-          </li>
-          <li>
-            <a href="#" class="nav-links">Legacy</a>
+            <a href="#" class="nav-links">Timeline</a>
           </li>
           <li>
             <a href="#" class="nav-links">Contact</a>
@@ -50,7 +49,7 @@
           </li>
         </ul>
       </nav>
-      <div id="js-search-overlay" class="search-overlay">
+      <div class="search-overlay" id="js-search-overlay">
         <span class="btn-close-search" title="Close Overlay">×</span>
         <div class="search-form-wrapper">
           <h2>What are your looking for?</h2>
@@ -61,5 +60,22 @@
         </div>
       </div>
     </header>
+    <main>
+      <header>
+        <video
+          class="Video_video__3pOq0"
+          muted=""
+          controls=""
+          loop=""
+          preload="auto"
+        >
+          <source
+            src="assets/apollo-nasa.mp4"
+            type="video/mp4"
+            media="all and (min-width:769px)"
+          />
+        </video>
+      </header>
+    </main>
   </body>
 </html>
