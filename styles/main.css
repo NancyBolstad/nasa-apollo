@@ -355,7 +355,7 @@ span {
   margin: 0 auto;
 }
 
-.date {
+.event-date {
   position: relative;
   float: left;
   text-align: right;
@@ -384,13 +384,13 @@ span {
   border: 5px solid tomato;
 }
 
-.job {
+.event {
   padding-top: 50px;
   width: 100%;
   display: block;
 }
 
-.job_description {
+.event_description {
   position: relative;
   float: left;
   display: block;
@@ -401,7 +401,7 @@ span {
   margin-top: 0.678rem;
 }
 
-.red .job_description {
+.red .event_description {
   border-left: 5px solid #ff9d87;
 }
 
@@ -409,7 +409,7 @@ span {
   border: 5px solid #ff9d87;
 }
 
-.blue .job_description {
+.blue .event_description {
   border-left: 5px solid #71c5df;
 }
 
@@ -417,7 +417,7 @@ span {
   border: 5px solid #71c5df;
 }
 
-.green .job_description {
+.green .event_description {
   border-left: 5px solid #84c6a2;
 }
 
@@ -425,7 +425,7 @@ span {
   border: 5px solid #84c6a2;
 }
 
-.end .job_description {
+.end .event_description {
   border-left: 5px solid transparent;
 }
 
@@ -445,7 +445,7 @@ h2 {
   color: gray;
 }
 
-.content {
+.event-content {
   margin-top: 20px;
   color: gray;
   font-weight: inherit;
@@ -456,7 +456,7 @@ h2 {
     width: 90%;
   }
 
-  .job_description {
+  .event_description {
     margin-top: 0px;
     padding-top: 30px;
     padding-bottom: 40px;
@@ -472,11 +472,11 @@ h2 {
     font-size: 18px;
   }
 
-  .content {
+  .timeline-event-content {
     font-size: 14px;
   }
 
-  .date {
+  .event-date {
     position: relative;
     float: left;
     top: 0px;
