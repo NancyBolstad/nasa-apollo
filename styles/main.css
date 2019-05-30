@@ -1,14 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Heebo&display=swap');
 
 /*------------------------------------*\
   #Global Settings
 \*------------------------------------*/
-
-html {
-  font-family: Merriweather;
-  font-size: 1.7rem;
-}
 
 body {
   display: flex;
@@ -16,6 +12,7 @@ body {
   justify-content: space-between;
   overflow-x: hidden;
   width: 100vw;
+  height: 100vh;
   padding: 0;
   margin: 0;
 }
@@ -52,8 +49,7 @@ h4,
 h5,
 h6 {
   clear: both;
-  font-family: 'Merriweather', 'Georgia', 'Cambria', 'Times New Roman', 'Times',
-    serif;
+  font-family: 'Heebo', sans-serif;
   line-height: 1.3;
   margin-bottom: 0.5em;
   margin-top: 1.5em;
@@ -110,28 +106,23 @@ span {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0;
+  color: inherit;
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
   .hero-text {
-    font-size: 4rem;
-    font-weight: 700;
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .hero-text {
-    font-size: 5.2rem;
+    font-size: 2.8rem;
     font-weight: 700;
   }
 }
 
 .section-lead {
-  font-family: 'Merriweather';
   font-size: 2rem;
   font-weight: 400;
   line-height: 1.7;
   max-width: 77rem;
+  text-align: center;
+  color: inherit;
 }
 
 /*------------------------------------*\
@@ -150,12 +141,14 @@ span {
 
 .progress-bar {
   height: 0.25rem;
-  background: #4caf50;
+  background: #0000FF;
   width: 0%;
-  top: 0.25rem;
+  top: 1.2rem;
 }
+
 .navbar {
   width: 100vw;
+  height: 3rem;
   font-size: 1.1rem;
   background-color: #111111;
   color: #eeeeee;
@@ -182,12 +175,13 @@ span {
 }
 
 .logo {
-  background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/514050/logo-short.svg');
+  background-image: url('../assets/nasa-logo.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  height: 2.8rem;
   width: 6rem;
-  height: 1.2rem;
+  margin-top: 0.2rem;
 }
 
 .main-nav li {
@@ -197,7 +191,6 @@ span {
 
 .logo {
   display: inline-block;
-  margin-top: 10px;
   margin-left: 20px;
 }
 
@@ -210,10 +203,12 @@ span {
 
 .mobile-menu-left {
   left: 1rem;
+  top: 1.2rem;
 }
 
 .mobile-search-right {
   right: 1rem;
+  top: 1.2rem;
 }
 
 .nav-links-search {
@@ -233,9 +228,9 @@ span {
     display: flex;
     justify-content: space-between;
     padding: 0.3rem;
-    height: 2rem;
+    height: 3rem;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
 
   .main-nav {
@@ -255,6 +250,8 @@ span {
 
   .logo {
     margin-top: 0;
+    height: 2.8rem;
+    width: 8rem;
   }
 
   .navbar-toggle-wrapper {
@@ -369,66 +366,85 @@ span {
   #page-hero
 \*------------------------------------*/
 
-#index-banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(../assets/1437409095-neil-armstrong.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
+.hero-container {
+  overflow: hidden;
   width: 100vw;
   height: 95vh;
-}
-.page-banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/footprint.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   display: flex;
-  flex-direction: column;
-  align-content: center;
+  flex-flow: column;
   align-items: center;
   justify-content: center;
-  text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 0.4);
 }
 
-.banner-box {
-  color: #ffffff;
-  text-align: center;
+.cover-holder {
+  margin: 0 auto;
+  width: 90vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-content: center;
   align-items: center;
-  width: 85vw;
+  justify-content: center;
 }
 
-.banner-title {
-  text-transform: capitalize;
-  font-size: 1.6rem;
-  padding: 20px;
-  color: inherit;
-  font-weight: 700;
+.cover-holder h1 {
+  font-size: 1.2rem;
+  color: #fffff0;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 100;
+  margin-bottom: 2rem;
 }
 
-.banner-underline {
-  width: 20rem;
-  margin: 10px auto;
-  border: 4px solid #ffffff;
-  font-weight: 900;
-  display: none;
-}
-
-.banner-subtitle {
-  margin: 20px 0 40px 0;
-  text-transform: capitalize;
-  font-size: 0.8rem;
-  display: none;
-  color: #ffffff;
+.cover-holder h1 span {
   display: block;
+  font-weight: 700;
+  font-size: 2.3rem;
+  margin-top: 0.78rem;
+  border-top: solid 2px #eeeeee;
+  border-bottom: solid 2px #eeeeee;
+}
+
+.cover-holder h2 {
+  font-size: 1.2rem;
+  color: #fffff0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.cover-holder a {
+  display: block;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+
+  .cover-holder {
+    width: 60vw;
+  }
+
+  .cover-holder h1 {
+    font-size: 2rem;
+  }
+
+  .cover-holder h1 span {
+    font-size: 4rem;
+    padding: 2rem;
+  }
+
+  .cover-holder h2 {
+    font-size: 2rem;
+  }
 }
 
 .cta {
-  display: inline-block;
-  margin: 15px;
   padding: 15px 32px;
-  font-size: 1em;
+  font-size: 1.2rem;
   text-decoration: none;
   color: #ffffff;
   transition: background 0.2s ease;
@@ -444,39 +460,14 @@ span {
   background: #005694;
 }
 
-.cta-flex {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
-}
-
-@media (min-width: 768px) {
-  .cta-flex {
-    flex-direction: row;
-  }
-
-  .banner-underline {
-    width: 70vw;
-    margin: 0px auto;
-    border: 4px solid #2b98f0;
-    display: block;
-  }
-
-  .banner-subtitle {
-    margin: 20px 0 40px 0;
-    text-transform: capitalize;
-    display: block;
-  }
-}
-
 /*------------------------------------*\
   #timeline
 \*------------------------------------*/
 
+
 .timeline {
   position: relative;
-  width: 80%;
+  width: 90vw;
   margin: 0 auto;
 }
 
@@ -523,7 +514,7 @@ span {
   padding-left: 40px;
   padding-bottom: 15%;
   border-left: 5px solid tomato;
-  margin-top: 0.678rem;
+  margin-top: 1rem;
 }
 
 .red .event_description {
@@ -554,32 +545,45 @@ span {
   border-left: 5px solid transparent;
 }
 
-h1 {
+.timeline h1 {
   position: relative;
-  top: -11px;
+  top: -2rem;
   vertical-align: middle;
-  font-size: 1.8em;
+  font-size: 1.8rem;
   font-weight: 500;
   color: black;
 }
 
-h2 {
+.timeline h2 {
   position: relative;
-  font-size: 1.4em;
+  font-size: 1.4rem;
   font-weight: 400;
   color: gray;
 }
 
 .event-content {
   margin-top: 20px;
+  margin-right: 20px;
   color: gray;
   font-weight: inherit;
+  font-size: 1.2rem;
+}
+
+.news-read-more {
+  color: #000000;
+  display: block;
+  margin-top: 16px;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  margin-right: auto;
+  position: relative;
+  cursor: pointer;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: capitalize;
 }
 
 @media screen and (max-width: 800px) {
-  .timeline {
-    width: 90%;
-  }
 
   .event_description {
     margin-top: 0px;
@@ -589,16 +593,16 @@ h2 {
     width: 90%;
   }
 
-  h1 {
+  .timeline h1 {
     font-size: 25px;
   }
 
-  h2 {
-    font-size: 18px;
+  .timeline h2 {
+    font-size: 20px;
   }
 
-  .timeline-event-content {
-    font-size: 14px;
+  .event-content {
+    font-size: 18px;
   }
 
   .event-date {
@@ -617,4 +621,37 @@ h2 {
     margin-left: 0;
     margin-right: 32.5px;
   }
+}
+
+/*------------------------------------*\
+  #Wrappers
+\*------------------------------------*/
+.intro-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 50px 0;
+  color: #000100;
+  flex-wrap: wrap;
+}
+
+
+.intro-wrapper .img-profile {
+  position: relative;
+  top: -7rem;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.intro-wrapper p {
+  top: -3rem;
+  position: relative;
+  width: 80vw;
+  font-size: 1.6rem;
+  margin-bottom: 5rem;
 }
