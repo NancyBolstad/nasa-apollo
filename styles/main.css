@@ -467,7 +467,7 @@ span {
 
 .timeline {
   position: relative;
-  width: 80%;
+  width: 90vw;
   margin: 0 auto;
 }
 
@@ -547,30 +547,43 @@ span {
 
 .timeline h1 {
   position: relative;
-  top: -11px;
+  top: -2rem;
   vertical-align: middle;
-  font-size: 1.8em;
+  font-size: 1.8rem;
   font-weight: 500;
   color: black;
 }
 
 .timeline h2 {
   position: relative;
-  font-size: 1.4em;
+  font-size: 1.4rem;
   font-weight: 400;
   color: gray;
 }
 
 .event-content {
   margin-top: 20px;
+  margin-right: 20px;
   color: gray;
   font-weight: inherit;
+  font-size: 1.2rem;
+}
+
+.news-read-more {
+  color: #000000;
+  display: block;
+  margin-top: 16px;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  margin-right: auto;
+  position: relative;
+  cursor: pointer;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: capitalize;
 }
 
 @media screen and (max-width: 800px) {
-  .timeline {
-    width: 90%;
-  }
 
   .event_description {
     margin-top: 0px;
@@ -585,11 +598,11 @@ span {
   }
 
   .timeline h2 {
-    font-size: 18px;
+    font-size: 20px;
   }
 
-  .timeline-event-content {
-    font-size: 14px;
+  .event-content {
+    font-size: 18px;
   }
 
   .event-date {
