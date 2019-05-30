@@ -472,7 +472,7 @@ span {
 
 @media screen and (min-width: 800px) {
   .timeline {
-    width: 65vw;
+    width: 50vw;
   }
 }
 
@@ -506,12 +506,14 @@ span {
   border-radius: 100%;
   background: white;
   display: block;
-  border: 5px solid tomato;
+  border: 5px solid #0054b0;
+  margin-right: 7px;
 }
 
 @media screen and (min-width: 800px) {
   .timeline-point {
     float: right;
+    margin-right: 0px;
   }
 }
 
@@ -529,7 +531,7 @@ span {
   padding-top: 30px;
   padding-left: 40px;
   padding-bottom: 40px;
-  border-left: 5px solid tomato;
+  border-left: 5px solid #0054b0;
 }
 
 .end .event_description {
@@ -594,17 +596,12 @@ span {
   #Wrappers
 \*------------------------------------*/
 .intro-wrapper {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  justify-content: space-between;
   text-align: center;
-  padding: 50px 0;
   color: #000100;
-  flex-wrap: wrap;
+  display: block;
 }
 
 .intro-wrapper .img-profile {
@@ -615,9 +612,77 @@ span {
 }
 
 .intro-wrapper p {
-  top: -3rem;
-  position: relative;
   width: 80vw;
+  margin-top: -3rem;
   font-size: 1.6rem;
   margin-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+main {
+  width: 100vw;
+}
+
+section {
+  width: 100vw;
+}
+
+.text-container {
+  text-align: center;
+  background-color: #0054b0;
+  width: 100vw;
+  height: auto;
+}
+
+.text-container h3 {
+  color: #eeeeee;
+  padding: 5rem;
+}
+
+.text-container p {
+  letter-spacing: 1px;
+  color: #eeeeee;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.blue-button {
+  color: #fff;
+  background-color: #3168a6;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  margin-top: 1em;
+  border: 3px solid #3168a6;
+  transition: all 0.2s ease;
+  margin-bottom: 10rem;
+}
+
+.blue-button:hover {
+  background: #1a3757;
+  border-color: #1a3757;
+}
+
+.outline-button {
+  color: #000;
+  background-color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  margin-top: 1em;
+  border: 3px solid #fff;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  border-color: #0a304e;
+  margin-bottom: 10rem;
+}
+.outline-button:hover {
+  background: #cccccc;
+  border-color: #cccccc;
 }
