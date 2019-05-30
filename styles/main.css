@@ -141,7 +141,7 @@ span {
 
 .progress-bar {
   height: 0.25rem;
-  background: #0000FF;
+  background: #0000ff;
   width: 0%;
   top: 1.2rem;
 }
@@ -370,7 +370,8 @@ span {
   overflow: hidden;
   width: 100vw;
   height: 95vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/footprint.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../assets/footprint.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -423,7 +424,6 @@ span {
 }
 
 @media only screen and (min-width: 768px) {
-
   .cover-holder {
     width: 60vw;
   }
@@ -464,40 +464,55 @@ span {
   #timeline
 \*------------------------------------*/
 
-
 .timeline {
   position: relative;
   width: 90vw;
   margin: 0 auto;
 }
 
+@media screen and (min-width: 800px) {
+  .timeline {
+    width: 65vw;
+  }
+}
+
 .event-date {
   position: relative;
   float: left;
-  text-align: right;
-  width: 200px;
-  display: block;
-  font-size: 14px;
+  text-align: left;
+  width: 100%;
   color: #333333;
   vertical-align: middle;
   line-height: 20px;
   font-weight: 700;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  left: 12.5px;
+  left: -7.5px;
+  top: 0px;
+}
+
+@media screen and (min-width: 800px) {
+  .event-date {
+    left: 12.5px;
+    width: 200px;
+  }
 }
 
 .timeline-point {
   position: relative;
-  float: right;
+  float: left;
   height: 10px;
   width: 10px;
-  margin-right: 0;
-  margin-left: 32.5px;
   border-radius: 100%;
   background: white;
   display: block;
   border: 5px solid tomato;
+}
+
+@media screen and (min-width: 800px) {
+  .timeline-point {
+    float: right;
+  }
 }
 
 .event {
@@ -510,39 +525,24 @@ span {
   position: relative;
   float: left;
   display: block;
-  width: calc(100% - 250px);
+  width: 80vw;
+  padding-top: 30px;
   padding-left: 40px;
-  padding-bottom: 15%;
+  padding-bottom: 40px;
   border-left: 5px solid tomato;
-  margin-top: 1rem;
-}
-
-.red .event_description {
-  border-left: 5px solid #ff9d87;
-}
-
-.red .timeline-point {
-  border: 5px solid #ff9d87;
-}
-
-.blue .event_description {
-  border-left: 5px solid #71c5df;
-}
-
-.blue .timeline-point {
-  border: 5px solid #71c5df;
-}
-
-.green .event_description {
-  border-left: 5px solid #84c6a2;
-}
-
-.green .timeline-point {
-  border: 5px solid #84c6a2;
 }
 
 .end .event_description {
   border-left: 5px solid transparent;
+}
+
+@media screen and (min-width: 800px) {
+  .event_description {
+    margin-top: 1rem;
+    padding-top: 0px;
+    padding-bottom: 15%;
+    width: calc(100% - 250px);
+  }
 }
 
 .timeline h1 {
@@ -567,6 +567,13 @@ span {
   color: gray;
   font-weight: inherit;
   font-size: 1.2rem;
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .event-content {
+    display: block;
+  }
 }
 
 .news-read-more {
@@ -581,46 +588,6 @@ span {
   font-weight: 400;
   font-style: italic;
   text-transform: capitalize;
-}
-
-@media screen and (max-width: 800px) {
-
-  .event_description {
-    margin-top: 0px;
-    padding-top: 30px;
-    padding-bottom: 40px;
-    padding-left: 40px;
-    width: 90%;
-  }
-
-  .timeline h1 {
-    font-size: 25px;
-  }
-
-  .timeline h2 {
-    font-size: 20px;
-  }
-
-  .event-content {
-    font-size: 18px;
-  }
-
-  .event-date {
-    position: relative;
-    float: left;
-    top: 0px;
-    left: -7.5px;
-    text-align: left;
-    width: 100%;
-    display: block;
-    font-size: 14px;
-  }
-
-  .timeline-point {
-    float: left;
-    margin-left: 0;
-    margin-right: 32.5px;
-  }
 }
 
 /*------------------------------------*\
@@ -639,7 +606,6 @@ span {
   color: #000100;
   flex-wrap: wrap;
 }
-
 
 .intro-wrapper .img-profile {
   position: relative;
