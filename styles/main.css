@@ -141,14 +141,13 @@ span {
 
 .progress-bar {
   height: 0.25rem;
-  background: #0000FF;
+  background: #0000ff;
   width: 0%;
   top: 1.2rem;
 }
 
 .navbar {
   width: 100vw;
-  height: 3rem;
   font-size: 1.1rem;
   background-color: #111111;
   color: #eeeeee;
@@ -165,14 +164,20 @@ span {
 .active {
   display: flex;
   flex-direction: column;
+  background-color: #111111;
+  color: #eeeeee;
 }
 
 .nav-links,
-.logo,
 .nav-links-search {
   text-decoration: none;
   color: inherit;
+  display: inline-block;
+  position: relative;
+  padding: 2rem;
+  margin: -2rem;
 }
+
 
 .logo {
   background-image: url('../assets/nasa-logo.svg');
@@ -223,6 +228,10 @@ span {
   color: paleturquoise;
 }
 
+.nav-links:hover {
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 768px) {
   .navbar {
     display: flex;
@@ -230,7 +239,7 @@ span {
     padding: 0.3rem;
     height: 3rem;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .main-nav {
@@ -275,7 +284,8 @@ span {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(0, 0, 0);
+  background-color: #000000;
+  text-align: center;
 }
 
 .search-form-wrapper {
@@ -291,7 +301,7 @@ span {
 }
 
 .search-form-wrapper h2 {
-  font-size: 1rem;
+  font-size: 2.1rem;
   margin-top: 2rem;
   margin-bottom: 1.6875rem;
   text-align: center;
@@ -301,11 +311,14 @@ span {
 
 .btn-close-search {
   position: absolute;
-  top: 20px;
-  right: 45px;
+  right: 1.3rem;
+  top: 0.3rem;
   font-size: 2.25rem;
   cursor: pointer;
   color: white;
+  display: inline-block;
+  padding: 2rem;
+  margin: -2rem;
 }
 
 .search-form-wrapper input[type='text'] {
@@ -340,13 +353,7 @@ span {
   font-size: 18px;
 }
 
-.search-form-wrapper button fa-search {
-  margin-right: 20px;
-}
 
-.overlay button:hover {
-  background: #bbb;
-}
 
 @media screen and (min-width: 768px) {
   .search-form-wrapper {
@@ -360,6 +367,18 @@ span {
   .search-form-wrapper input[type='text'] {
     width: 40vw;
   }
+
+  .btn-close-search {
+    right: 2rem;
+    top: 0.6rem;
+    font-size: 3.3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .search-options-wrapper {
+    display: block;
+  }
 }
 
 /*------------------------------------*\
@@ -370,7 +389,8 @@ span {
   overflow: hidden;
   width: 100vw;
   height: 95vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/footprint.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../assets/footprint.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -423,7 +443,6 @@ span {
 }
 
 @media only screen and (min-width: 768px) {
-
   .cover-holder {
     width: 60vw;
   }
@@ -464,40 +483,57 @@ span {
   #timeline
 \*------------------------------------*/
 
-
 .timeline {
   position: relative;
   width: 90vw;
   margin: 0 auto;
 }
 
+@media screen and (min-width: 800px) {
+  .timeline {
+    width: 50vw;
+  }
+}
+
 .event-date {
   position: relative;
   float: left;
-  text-align: right;
-  width: 200px;
-  display: block;
-  font-size: 14px;
+  text-align: left;
+  width: 100%;
   color: #333333;
   vertical-align: middle;
   line-height: 20px;
   font-weight: 700;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
-  left: 12.5px;
+  left: -7.5px;
+  top: 0px;
+}
+
+@media screen and (min-width: 800px) {
+  .event-date {
+    left: 12.5px;
+    width: 200px;
+  }
 }
 
 .timeline-point {
   position: relative;
-  float: right;
+  float: left;
   height: 10px;
   width: 10px;
-  margin-right: 0;
-  margin-left: 32.5px;
   border-radius: 100%;
   background: white;
   display: block;
-  border: 5px solid tomato;
+  border: 5px solid #0054b0;
+  margin-right: 7px;
+}
+
+@media screen and (min-width: 800px) {
+  .timeline-point {
+    float: right;
+    margin-right: 0px;
+  }
 }
 
 .event {
@@ -510,39 +546,24 @@ span {
   position: relative;
   float: left;
   display: block;
-  width: calc(100% - 250px);
+  width: 80vw;
+  padding-top: 30px;
   padding-left: 40px;
-  padding-bottom: 15%;
-  border-left: 5px solid tomato;
-  margin-top: 1rem;
-}
-
-.red .event_description {
-  border-left: 5px solid #ff9d87;
-}
-
-.red .timeline-point {
-  border: 5px solid #ff9d87;
-}
-
-.blue .event_description {
-  border-left: 5px solid #71c5df;
-}
-
-.blue .timeline-point {
-  border: 5px solid #71c5df;
-}
-
-.green .event_description {
-  border-left: 5px solid #84c6a2;
-}
-
-.green .timeline-point {
-  border: 5px solid #84c6a2;
+  padding-bottom: 40px;
+  border-left: 5px solid #0054b0;
 }
 
 .end .event_description {
   border-left: 5px solid transparent;
+}
+
+@media screen and (min-width: 800px) {
+  .event_description {
+    margin-top: 1rem;
+    padding-top: 0px;
+    padding-bottom: 15%;
+    width: calc(100% - 250px);
+  }
 }
 
 .timeline h1 {
@@ -567,6 +588,13 @@ span {
   color: gray;
   font-weight: inherit;
   font-size: 1.2rem;
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .event-content {
+    display: block;
+  }
 }
 
 .news-read-more {
@@ -583,63 +611,17 @@ span {
   text-transform: capitalize;
 }
 
-@media screen and (max-width: 800px) {
-
-  .event_description {
-    margin-top: 0px;
-    padding-top: 30px;
-    padding-bottom: 40px;
-    padding-left: 40px;
-    width: 90%;
-  }
-
-  .timeline h1 {
-    font-size: 25px;
-  }
-
-  .timeline h2 {
-    font-size: 20px;
-  }
-
-  .event-content {
-    font-size: 18px;
-  }
-
-  .event-date {
-    position: relative;
-    float: left;
-    top: 0px;
-    left: -7.5px;
-    text-align: left;
-    width: 100%;
-    display: block;
-    font-size: 14px;
-  }
-
-  .timeline-point {
-    float: left;
-    margin-left: 0;
-    margin-right: 32.5px;
-  }
-}
-
 /*------------------------------------*\
   #Wrappers
 \*------------------------------------*/
 .intro-wrapper {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  justify-content: space-between;
   text-align: center;
-  padding: 50px 0;
   color: #000100;
-  flex-wrap: wrap;
+  display: block;
 }
-
 
 .intro-wrapper .img-profile {
   position: relative;
@@ -649,9 +631,45 @@ span {
 }
 
 .intro-wrapper p {
-  top: -3rem;
-  position: relative;
   width: 80vw;
+  margin-top: -3rem;
   font-size: 1.6rem;
   margin-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
+
+main {
+  width: 100vw;
+}
+
+section {
+  width: 100vw;
+}
+
+
+.text-container {
+  text-align: center;
+  background-color: #0054b0;
+  width: 100vw;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  height: auto;
+  color: #eeeeee;
+}
+
+.text-container h3 {
+  padding: 5rem;
+}
+
+.text-container p {
+  letter-spacing: 1px;
+  color: #eeeeee;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*------------------------------------*\
+  #Wrappers
+\*------------------------------------*/
