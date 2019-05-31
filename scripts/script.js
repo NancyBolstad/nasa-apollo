@@ -43,3 +43,6 @@ function openSearch() {
 function closeSearch() {
   document.getElementById('js-search-overlay').style.display = 'none';
 }
+
+
+

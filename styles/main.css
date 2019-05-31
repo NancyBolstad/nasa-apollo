@@ -148,7 +148,6 @@ span {
 
 .navbar {
   width: 100vw;
-  height: 3rem;
   font-size: 1.1rem;
   background-color: #111111;
   color: #eeeeee;
@@ -165,14 +164,20 @@ span {
 .active {
   display: flex;
   flex-direction: column;
+  background-color: #111111;
+  color: #eeeeee;
 }
 
 .nav-links,
-.logo,
 .nav-links-search {
   text-decoration: none;
   color: inherit;
+  display: inline-block;
+  position: relative;
+  padding: 2rem;
+  margin: -2rem;
 }
+
 
 .logo {
   background-image: url('../assets/nasa-logo.svg');
@@ -223,6 +228,10 @@ span {
   color: paleturquoise;
 }
 
+.nav-links:hover {
+  text-decoration: underline;
+}
+
 @media screen and (min-width: 768px) {
   .navbar {
     display: flex;
@@ -230,7 +239,7 @@ span {
     padding: 0.3rem;
     height: 3rem;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .main-nav {
@@ -275,7 +284,8 @@ span {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(0, 0, 0);
+  background-color: #000000;
+  text-align: center;
 }
 
 .search-form-wrapper {
@@ -291,7 +301,7 @@ span {
 }
 
 .search-form-wrapper h2 {
-  font-size: 1rem;
+  font-size: 2.1rem;
   margin-top: 2rem;
   margin-bottom: 1.6875rem;
   text-align: center;
@@ -301,11 +311,14 @@ span {
 
 .btn-close-search {
   position: absolute;
-  top: 20px;
-  right: 45px;
+  right: 1.3rem;
+  top: 0.3rem;
   font-size: 2.25rem;
   cursor: pointer;
   color: white;
+  display: inline-block;
+  padding: 2rem;
+  margin: -2rem;
 }
 
 .search-form-wrapper input[type='text'] {
@@ -340,13 +353,7 @@ span {
   font-size: 18px;
 }
 
-.search-form-wrapper button fa-search {
-  margin-right: 20px;
-}
 
-.overlay button:hover {
-  background: #bbb;
-}
 
 @media screen and (min-width: 768px) {
   .search-form-wrapper {
@@ -359,6 +366,18 @@ span {
 
   .search-form-wrapper input[type='text'] {
     width: 40vw;
+  }
+
+  .btn-close-search {
+    right: 2rem;
+    top: 0.6rem;
+    font-size: 3.3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .search-options-wrapper {
+    display: block;
   }
 }
 
@@ -629,15 +648,18 @@ section {
   width: 100vw;
 }
 
+
 .text-container {
   text-align: center;
   background-color: #0054b0;
   width: 100vw;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   height: auto;
+  color: #eeeeee;
 }
 
 .text-container h3 {
-  color: #eeeeee;
   padding: 5rem;
 }
 
@@ -648,41 +670,6 @@ section {
   text-align: center;
 }
 
-.blue-button {
-  color: #fff;
-  background-color: #3168a6;
-  font-weight: 700;
-  font-size: 20px;
-  text-decoration: none;
-  padding: 0.5em 1.5em;
-  display: inline-block;
-  margin-top: 1em;
-  border: 3px solid #3168a6;
-  transition: all 0.2s ease;
-  margin-bottom: 10rem;
-}
-
-.blue-button:hover {
-  background: #1a3757;
-  border-color: #1a3757;
-}
-
-.outline-button {
-  color: #000;
-  background-color: #fff;
-  font-weight: 700;
-  font-size: 20px;
-  text-decoration: none;
-  padding: 0.5em 1.5em;
-  display: inline-block;
-  margin-top: 1em;
-  border: 3px solid #fff;
-  transition: all 0.2s ease;
-  box-sizing: border-box;
-  border-color: #0a304e;
-  margin-bottom: 10rem;
-}
-.outline-button:hover {
-  background: #cccccc;
-  border-color: #cccccc;
-}
+/*------------------------------------*\
+  #Wrappers
+\*------------------------------------*/
