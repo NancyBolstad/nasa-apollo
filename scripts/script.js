@@ -45,4 +45,34 @@ function closeSearch() {
 }
 
 
+//create Lorem Ipsum titles to shuffle through
+var fakeTitle = ["Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.", "Ligula porta felis euismod semper.", "Maecenas faucibus mollis interdum.", "Sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.", "Morbi leo risus, porta ac consectetur ac, vestibulum at eros."];
+
+//loop through fakeTitle and randomize
+//Not sure if this is the best way to do this, but it gets the job done for the demo
+ function randomTitle(min, max) {
+  return Math.floor(Math.random() * ((fakeTitle.length) - 0)) + 0;
+}
+
+function addElement () { 
+//create random number for image generation
+var unsplashNum = Math.floor(Math.random() * 1084) + 1;
+
+var newsContainer = document.getElementById("news-grid");
+// create a new article element 
+var newDiv = document.createElement("article");
+newDiv.className = "block";
+// and give it some content
+newDiv.innerHTML ='<div class="block-hero"><img src="https://unsplash.it/600/400?image='+ unsplashNum +'"></div><div class="block-body"><h1>' + fakeTitle[randomTitle()] + '</h1></div>';  
+// add the newly created element and its content into the DOM  
+//document.getElementById("news-grid").appendChild(newDiv);
+newsContainer.insertBefore(newDiv, newsContainer.childNodes[0]);
+
+}
+
+function removeElement(){
+var parent = document.getElementById("news-grid");
+var child = document.getElementsByTagName("article")[0];
+parent.removeChild(child);
+}
 

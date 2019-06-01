@@ -1,354 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Apollo 11</title>
-    <link rel="stylesheet" type="text/css" href="styles/main.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
-      crossorigin="anonymous"
-    />
-    <script defer src="scripts/script.js"></script>
-  </head>
 
-  <body>
-    <header class="page-header">
-      <nav class="navbar">
-        <a href="#" class="logo"></a>
-        <span class="navbar-toggle-wrapper mobile-menu-left">
-          <i class="fas fa-bars navbar-fas" id="js-navmenu-toggle"></i>
-        </span>
-        <span class="navbar-toggle-wrapper mobile-search-right">
-          <i class="fas fa-search navbar-fas js-navsearch-toggle"></i>
-        </span>
-        <ul class="main-nav" id="js-menu">
-          <li>
-            <a href="#" class="nav-links">Home</a>
-          </li>
-          <li>
-            <a href="#" class="nav-links">Milestones</a>
-          </li>
-          <li>
-            <a href="#" class="nav-links">Contact</a>
-          </li>
-          <li>
-            <a href="#" class="nav-links-search">
-              <i class="fas fa-search navbar-fas js-navsearch-toggle"></i
-            ></a>
-          </li>
-        </ul>
-      </nav>
-      <div class="search-overlay" id="js-search-overlay">
-        <span class="btn-close-search" title="Close Overlay">×</span>
-        <div class="search-form-wrapper">
-          <h2>What are your looking for?</h2>
-          <form action="">
-            <input type="text" placeholder="e.g. moon walking" name="search" />
-            <button type="submit">Search</button>
-          </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Apollo 11</title>
+  <link rel="stylesheet" type="text/css" href="styles/main.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+  <script defer src="scripts/script.js"></script>
+</head>
+
+<body>
+  <header class="page-header">
+    <nav class="navbar">
+      <a href="#" class="logo"></a>
+      <span class="navbar-toggle-wrapper mobile-menu-left">
+        <i class="fas fa-bars navbar-fas" id="js-navmenu-toggle"></i>
+      </span>
+      <span class="navbar-toggle-wrapper mobile-search-right">
+        <i class="fas fa-search navbar-fas js-navsearch-toggle"></i>
+      </span>
+      <ul class="main-nav" id="js-menu">
+        <li>
+          <a href="#" class="nav-links">Home</a>
+        </li>
+        <li>
+          <a href="#" class="nav-links">Milestones</a>
+        </li>
+        <li>
+          <a href="#" class="nav-links">Contact</a>
+        </li>
+        <li>
+          <a href="#" class="nav-links-search">
+            <i class="fas fa-search navbar-fas js-navsearch-toggle"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="search-overlay" id="js-search-overlay">
+      <span class="btn-close-search" title="Close Overlay">×</span>
+      <div class="search-form-wrapper">
+        <h2>What are your looking for?</h2>
+        <form action="">
+          <input type="text" placeholder="e.g. moon walking" name="search" />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+    <div class="progress-bar" id="js-scroll-bar"></div>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="hero-container">
+        <div class="cover-holder">
+          <h1>50 Years Anniversary <span>Apollo 11</span></h1>
+          <h2>
+            Revisit Milestones That Makes The First Moon Landing.
+          </h2>
+          <a href="#timeline" class="cta cta-primary">Join Our Celebration</a>
         </div>
       </div>
-      <div class="progress-bar" id="js-scroll-bar"></div>
-    </header>
-    <main>
-      <section class="page-hero">
-        <div class="hero-container">
-          <div class="cover-holder">
-            <h1>50 Years Anniversary <span>Apollo 11</span></h1>
+    </section>
+    <section class="intro-wrapper">
+      <img class="img-profile" src="./assets/spaceman.png" />
+      <p>
+        Apollo 11 var en amerikansk romekspedisjon, en del av
+        Apollo-programmet, som sendte de første menneskene til månen.
+        Oppskytingen fant sted ved John F. Kennedy Space Center den 16. juli
+        1969, og landingsfartøyet landet på månen 20. juli 21:17:40 norsk tid.
+        Seks og en halv time senere, 21. juli 03:56 norsk tid, tok Neil
+        Armstrong det første steg på månen. Ferden endte med landing i
+        Stillehavet 24. juli 17.50 norsk tid.
+      </p>
+    </section>
+    <section class="section-timeline">
+      <h3 class="text-container">Milestones Timeline</h3>
+      <div class="timeline">
+        <div class="event red">
+          <div class="event-date">
+            <span class="timeline-point"></span>02/12 – 07/13
+          </div>
+          <div class="event_description">
+            <h1>Freelance Art Director Online</h1>
             <h2>
-              Revisit Milestones That Makes The First Moon Landing.
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+              diam nonumy eirmod tempo
             </h2>
-            <a href="#timeline" class="cta cta-primary">Join Our Celebration</a>
+            <p class="event-content">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+              diam nonumy eirmod tempo invidunt ut labore et dolore magna
+              aliquyam erat, sed diam voluptua. At vero eos et accusam et
+              justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+              takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+              dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+              sed diam voluptua. At vero eos et accusam et justo duo dolores
+              et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+              est Lorem ipsum dolor sit amet.
+            </p>
           </div>
         </div>
-      </section>
-      <section class="intro-wrapper">
-        <img class="img-profile" src="./assets/spaceman.png" />
-        <p>
-          Apollo 11 var en amerikansk romekspedisjon, en del av
-          Apollo-programmet, som sendte de første menneskene til månen.
-          Oppskytingen fant sted ved John F. Kennedy Space Center den 16. juli
-          1969, og landingsfartøyet landet på månen 20. juli 21:17:40 norsk tid.
-          Seks og en halv time senere, 21. juli 03:56 norsk tid, tok Neil
-          Armstrong det første steg på månen. Ferden endte med landing i
-          Stillehavet 24. juli 17.50 norsk tid.
-        </p>
-      </section>
-      <section class="section-timeline">
-        <h3 class="text-container">Milestones Timeline</h3>
-        <div class="timeline">
-          <div class="event red">
-            <div class="event-date">
-              <span class="timeline-point"></span>02/12 – 07/13
-            </div>
-            <div class="event_description">
-              <h1>Freelance Art Director Online</h1>
-              <h2>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempo
-              </h2>
-              <p class="event-content">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempo invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                sed diam voluptua. At vero eos et accusam et justo duo dolores
-                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                est Lorem ipsum dolor sit amet.
-              </p>
-            </div>
+        <div class="event blue">
+          <div class="event-date">
+            <span class="timeline-point"></span>02/12 – 07/13
           </div>
-          <div class="event blue">
-            <div class="event-date">
-              <span class="timeline-point"></span>02/12 – 07/13
-            </div>
-            <div class="event_description">
-              <h1>Art Director Online</h1>
-              <h2>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempo
-              </h2>
-              <p class="event-content">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempo invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                sed diam voluptua. At vero eos et accusam et justo duo dolores
-                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                est Lorem ipsum dolor sit amet.
-              </p>
-            </div>
-          </div>
-
-          <div class="event green">
-            <div class="event-date">
-              <span class="timeline-point"></span>02/12 – 07/13
-            </div>
-            <div class="event_description">
-              <h1>Junior Art Director</h1>
-              <h2>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempo
-              </h2>
-              <p class="event-content">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempo invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                sed diam voluptua. At vero eos et accusam et justo duo dolores
-                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                est Lorem ipsum dolor sit amet.
-              </p>
-            </div>
-          </div>
-
-          <div class="event green">
-            <div class="event-date">
-              <span class="timeline-point"></span>02/12 – 07/13
-            </div>
-            <div class="event_description">
-              <h1>Trainee Design</h1>
-              <h2>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempo.
-              </h2>
-              <video
-                class="timeline-video"
-                muted=""
-                controls=""
-                loop=""
-                preload="auto"
-              >
-                <source
-                  src="assets/apollo-nasa.mp4"
-                  type="video/mp4"
-                  media="all and (min-width:769px)"
-                />
-              </video>
-              <p class="event-content">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempo invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                sed diam voluptua. At vero eos et accusam et justo duo dolores
-                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                est Lorem ipsum dolor sit amet.
-              </p>
-              <a href="#" class="news-read-more">View Details »</a>
-            </div>
-          </div>
-
-          <div class="event green end">
-            <div class="event-date">
-              <span class="timeline-point"></span>02/12 – 07/13
-            </div>
-            <div class="event_description">
-              <h1>Junior Art Director</h1>
-            </div>
+          <div class="event_description">
+            <h1>Art Director Online</h1>
+            <h2>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+              diam nonumy eirmod tempo
+            </h2>
+            <p class="event-content">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+              diam nonumy eirmod tempo invidunt ut labore et dolore magna
+              aliquyam erat, sed diam voluptua. At vero eos et accusam et
+              justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+              takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+              dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+              sed diam voluptua. At vero eos et accusam et justo duo dolores
+              et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+              est Lorem ipsum dolor sit amet.
+            </p>
           </div>
         </div>
-      </section>
-      <section class="section-timeline">
-        <h3 class="text-container">Milestones Timeline</h3>
-        <div class="timeline">
-          <div class="event red">
-            <div class="event-date">
-              <span class="timeline-point"></span>02/12 – 07/13
-            </div>
-            <div class="event_description">
-              <h1>Freelance Art Director Online</h1>
-              <h2>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempo
-              </h2>
-              <p class="event-content">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempo invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                sed diam voluptua. At vero eos et accusam et justo duo dolores
-                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                est Lorem ipsum dolor sit amet.
-              </p>
-            </div>
-          </div>
-          <div class="event blue">
-            <div class="event-date">
-              <span class="timeline-point"></span>02/12 – 07/13
-            </div>
-            <div class="event_description">
-              <h1>Art Director Online</h1>
-              <h2>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempo
-              </h2>
-              <p class="event-content">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempo invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                sed diam voluptua. At vero eos et accusam et justo duo dolores
-                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                est Lorem ipsum dolor sit amet.
-              </p>
-            </div>
-          </div>
 
-          <div class="event green">
-            <div class="event-date">
-              <span class="timeline-point"></span>02/12 – 07/13
-            </div>
-            <div class="event_description">
-              <h1>Junior Art Director</h1>
-              <h2>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempo
-              </h2>
-              <p class="event-content">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempo invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                sed diam voluptua. At vero eos et accusam et justo duo dolores
-                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                est Lorem ipsum dolor sit amet.
-              </p>
-            </div>
+        <div class="event green">
+          <div class="event-date">
+            <span class="timeline-point"></span>02/12 – 07/13
           </div>
-
-          <div class="event green">
-            <div class="event-date">
-              <span class="timeline-point"></span>02/12 – 07/13
-            </div>
-            <div class="event_description">
-              <h1>Trainee Design</h1>
-              <h2>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempo.
-              </h2>
-              <video
-                class="timeline-video"
-                muted=""
-                controls=""
-                loop=""
-                preload="auto"
-              >
-                <source
-                  src="assets/apollo-nasa.mp4"
-                  type="video/mp4"
-                  media="all and (min-width:769px)"
-                />
-              </video>
-              <p class="event-content">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempo invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                sed diam voluptua. At vero eos et accusam et justo duo dolores
-                et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
-                est Lorem ipsum dolor sit amet.
-              </p>
-              <a href="#" class="news-read-more">View Details »</a>
-            </div>
-          </div>
-
-          <div class="event green end">
-            <div class="event-date">
-              <span class="timeline-point"></span>02/12 – 07/13
-            </div>
-            <div class="event_description">
-              <h1>Junior Art Director</h1>
-            </div>
+          <div class="event_description">
+            <h1>Junior Art Director</h1>
+            <h2>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+              diam nonumy eirmod tempo
+            </h2>
+            <p class="event-content">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+              diam nonumy eirmod tempo invidunt ut labore et dolore magna
+              aliquyam erat, sed diam voluptua. At vero eos et accusam et
+              justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+              takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+              dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+              sed diam voluptua. At vero eos et accusam et justo duo dolores
+              et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+              est Lorem ipsum dolor sit amet.
+            </p>
           </div>
         </div>
-      </section>
-      <section></section>
-      <video
-        class="video-whole-screen"
-        muted=""
-        controls=""
-        loop=""
-        preload="auto"
-      >
-        <source
-          src="assets/apollo-nasa.mp4"
-          type="video/mp4"
-          media="all and (min-width:769px)"
-        />
-      </video>
-    </main>
-  </body>
+
+        <div class="event green">
+          <div class="event-date">
+            <span class="timeline-point"></span>02/12 – 07/13
+          </div>
+          <div class="event_description">
+            <h1>Trainee Design</h1>
+            <h2>
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+              diam nonumy eirmod tempo.
+            </h2>
+            <video class="timeline-video" muted="" controls="" loop="" preload="auto">
+              <source src="assets/apollo-nasa.mp4" type="video/mp4" media="all and (min-width:769px)" />
+            </video>
+            <p class="event-content">
+              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+              diam nonumy eirmod tempo invidunt ut labore et dolore magna
+              aliquyam erat, sed diam voluptua. At vero eos et accusam et
+              justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+              takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+              dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+              eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+              sed diam voluptua. At vero eos et accusam et justo duo dolores
+              et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus
+              est Lorem ipsum dolor sit amet.
+            </p>
+            <a href="#" class="news-read-more">View Details »</a>
+          </div>
+        </div>
+
+        <div class="event green end">
+          <div class="event-date">
+            <span class="timeline-point"></span>02/12 – 07/13
+          </div>
+          <div class="event_description">
+            <h1>Junior Art Director</h1>
+          </div>
+        </div>
+        <div class="button-field">
+          <button onclick="addElement()">Load More</button>
+        </div>
+      </div>
+    </section>
+    <section class="section-news">
+      <div class="news" id="news">
+        <h3 class="">Explore More Stories And Events In Our Digital Libarary</h3>
+        <div class="news-grid" id="news-grid">
+          <article class="block">
+            <div class="block-hero test-one">
+              <img src="https://unsplash.it/600/400?image=821
+            ">
+            </div>
+            <div class="block-body">
+              <h1>Etiam porta sem malesuada magna mollis euismod.</h1>
+            </div>
+          </article>
+          <article class="block">
+            <div class="block-hero test-one">
+              <img src="https://unsplash.it/600/400?image=836
+            ">
+            </div>
+            <div class="block-body">
+              <h1>Maecenas sed diam eget risus varius blandit sit amet non magna.</h1>
+            </div>
+          </article>
+          <article class="block">
+            <div class="block-hero test-one">
+              <img src="https://unsplash.it/600/400?image=838
+            ">
+            </div>
+            <div class="block-body">
+              <h1>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</h1>
+            </div>
+          </article>
+          <article class="block">
+            <div class="block-hero test-one">
+              <img src="https://unsplash.it/600/400?image=996
+            ">
+            </div>
+            <div class="block-body">
+              <h1>Vestibulum id ligula porta felis euismod semper.</h1>
+            </div>
+          </article>
+          <article class="block">
+            <div class="block-hero test-one">
+              <img src="https://unsplash.it/600/400?image=1027
+            ">
+            </div>
+            <div class="block-body">
+              <h1>Nullam id dolor id nibh ultricies vehicula ut id elit.</h1>
+            </div>
+          </article>
+          <article class="block">
+            <div class="block-hero test-one">
+              <img src="https://unsplash.it/600/400?image=1060
+            ">
+            </div>
+            <div class="block-body">
+              <h1>Donec id elit non mi porta gravida at eget metus.</h1>
+            </div>
+          </article>
+          <article class="block">
+            <div class="block-hero test-one">
+              <img src="https://unsplash.it/600/400?image=1066
+            ">
+            </div>
+            <div class="block-body">
+              <h1>Etiam porta sem malesuada magna mollis euismod.</h1>
+            </div>
+          </article>
+          <article class="block">
+            <div class="block-hero test-one">
+              <img src="https://unsplash.it/600/400?image=1066
+             ">
+            </div>
+            <div class="block-body">
+              <h1>Etiam porta sem malesuada magna mollis euismod.</h1>
+            </div>
+          </article>
+        </div>
+        <div class="button-field">
+          <button onclick="addElement()">Add Item</button>
+          <button onclick="removeElement()">Remove Item</button>
+        </div>
+    </section>
+    <section>
+      
+    </section>
+    <video class="video-whole-screen" muted="" controls="" loop="" preload="auto">
+      <source src="assets/apollo-nasa.mp4" type="video/mp4" media="all and (min-width:769px)" />
+    </video>
+  </main>
+</body>
+
 </html>
