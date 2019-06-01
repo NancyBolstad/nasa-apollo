@@ -15,6 +15,7 @@ body {
   height: 100vh;
   padding: 0;
   margin: 0;
+  background: #000000;
 }
 
 p {
@@ -141,7 +142,11 @@ span {
 
 .progress-bar {
   height: 0.25rem;
-  background: #0000ff;
+  background-image: radial-gradient(
+    circle farthest-corner at 12.3% 19.3%,
+    rgba(85, 88, 218, 1) 0%,
+    rgba(95, 209, 249, 1) 100.2%
+  );
   width: 0%;
   top: 1.2rem;
 }
@@ -177,7 +182,6 @@ span {
   padding: 2rem;
   margin: -2rem;
 }
-
 
 .logo {
   background-image: url('../assets/nasa-logo.svg');
@@ -352,8 +356,6 @@ span {
   margin-top: 40px;
   font-size: 18px;
 }
-
-
 
 @media screen and (min-width: 768px) {
   .search-form-wrapper {
@@ -620,7 +622,7 @@ span {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  color: #000100;
+  color: #ffffff;
   display: block;
 }
 
@@ -648,7 +650,6 @@ main {
 section {
   width: 100vw;
 }
-
 
 .text-container {
   text-align: center;
@@ -680,7 +681,9 @@ section {
   padding-top: 3rem;
 }
 
-.section-news h3 {
+.section-news h3,
+.section-news,
+h4 {
   text-align: center;
   margin: 3rem auto;
 }
@@ -688,20 +691,19 @@ section {
 .button-field {
   padding: 2rem 1rem;
   text-align: center;
-}
-
-.button-field button {
-  background: #e5127d;
-  border: 0;
-  color: white;
-  padding: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .news-grid {
   list-style: none;
   margin: 0;
   padding: 0;
-  background: linear-gradient(90deg, #f7c626 15%, #f68c2f 40%, #e5127d 85%);
+  background-image: radial-gradient(
+    circle farthest-corner at 12.3% 19.3%,
+    rgba(85, 88, 218, 1) 0%,
+    rgba(95, 209, 249, 1) 100.2%
+  );
 }
 
 @media (min-width: 600px) {
@@ -764,7 +766,6 @@ section {
 }
 
 @media (min-width: 600px) {
-
   .block:first-child,
   .block:nth-child(4) {
     overflow: hidden;
@@ -774,7 +775,6 @@ section {
 }
 
 @media (min-width: 1000px) {
-
   .block:first-child,
   .block:nth-child(4) {
     flex-basis: calc(70% - 1px * 2);
@@ -787,7 +787,6 @@ section {
 }
 
 @media (min-width: 600px) {
-
   .block:first-child .block-hero img,
   .block:nth-child(4) .block-hero img {
     position: absolute;
@@ -800,7 +799,6 @@ section {
 }
 
 @media (min-width: 600px) {
-
   .block:nth-child(2),
   .block:nth-child(3) {
     flex-basis: calc(30% - 1px * 2);
@@ -826,7 +824,7 @@ section {
 }
 
 @media (min-width: 600px) {
-  .block:nth-child(n+5) {
+  .block:nth-child(n + 5) {
     flex-basis: calc(30% - 1px * 2);
     flex-direction: column;
   }
@@ -864,4 +862,26 @@ section {
   .block .block-body {
     width: 100%;
   }
+}
+
+.btn-redirect {
+  position: relative;
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: flex;
+  text-transform: none;
+  color: rgb(241, 134, 38);
+  line-height: 38px;
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  border-width: 4px;
+  border-style: solid;
+  border-color: rgb(241, 134, 38);
+  border-image: initial;
+  border-radius: 4px;
+  padding: 1.25rem 1.1875rem;
+  text-decoration: underline transparent;
+  margin-left: auto;
+  margin-right: auto;
 }
