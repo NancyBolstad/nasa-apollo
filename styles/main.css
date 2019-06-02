@@ -15,15 +15,15 @@ body {
   background: #f9f9f9;
   color: #000000;
   display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	-ms-flex-line-pack: center;
-	align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
 }
 
 p {
@@ -694,7 +694,7 @@ span {
 
 main {
   width: 100vw;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
 }
 
