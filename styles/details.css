@@ -1,0 +1,233 @@
+/*------------------------------------*\
+  #breadcurmb
+\*------------------------------------*/
+
+.breadcrumb {
+  left: 20px;
+  margin-top: 3rem;
+  height: 40px;
+}
+.breadcrumb .left {
+  float: left;
+}
+.breadcrumb .left .crumb {
+  margin-top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+  color: gray;
+}
+.breadcrumb .left .crumb strong {
+  color: #1b051b;
+}
+
+.breadcrumb h1 {
+  margin: 5rem 3.5rem;
+}
+
+/*------------------------------------*\
+  #details
+\*------------------------------------*/
+
+.section-details {
+  width: 80vw;
+  margin: 15rem auto 10rem auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 768px) {
+  .section-details {
+    flex-direction: row;
+    align-items: stretch;
+    align-content: center;
+  }
+  .details-left {
+    flex: 30vh 1 0;
+  }
+
+  .details-right {
+    flex: 30vh 1 0;
+  }
+  .details-media img,
+  .details-media video {
+    max-width: 35vw !important;
+  }
+
+  .details-media video {
+    display: none;
+  }
+}
+
+.details-title {
+  width: 80vw;
+}
+
+.details-title h1 {
+  margin: 1.2rem auto;
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.section-details h6 {
+  font-size: 1.2rem;
+  color: inherit;
+  margin-top: 0.5em;
+}
+
+.details-media img,
+.details-media video {
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.details-description p {
+  font-size: 1.2rem;
+  padding: 0;
+}
+
+.section-details a {
+  color: #262626;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+  padding-right: 0.3rem;
+}
+.section-details a:hover {
+  color: #8c8c8c;
+}
+
+/*------------------------------------*\
+  #related-articles
+\*------------------------------------*/
+
+.events-container {
+  background: #0054b0;
+}
+
+.events-container .section-intro {
+  width: 80vw;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.5rem;
+  color: aliceblue;
+}
+
+.events h3 {
+  line-height: 1.2;
+  font-size: 2em;
+  font-weight: 700;
+  text-align: left;
+}
+
+.events {
+  width: 100vw;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.events-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 calc(100%);
+  flex: 1 1 calc(100%);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 40px 10px;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 1);
+}
+
+@media (min-width: 768px) {
+  .events {
+    width: 80vw;
+  }
+
+  .events-item {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 calc(31.333% - 1em);
+    flex: 1 1 calc(31.333% - 1em);
+    margin: 40px 20px;
+  }
+}
+
+.events-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.events-image img {
+  display: block;
+  width: 100%;
+  height: 380px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.events-image img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.events-title {
+  margin-top: 15px;
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.events-description {
+  color: #555555;
+  font-size: 1.5em;
+  line-height: 2;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  text-align: left;
+}
+
+.events-item .read-more {
+  width: 100%;
+}
+
+.read-more {
+  font-size: 1.2em;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #fff;
+  background: #2b98f0;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.read-more:hover {
+  background: #005694;
+  cursor: pointer;
+}

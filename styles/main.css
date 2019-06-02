@@ -7,17 +7,23 @@
 \*------------------------------------*/
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   overflow-x: hidden;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   padding: 0;
   margin: 0;
   background: #f9f9f9;
   color: #000000;
-  position: absolute;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
 }
 
 p {
@@ -688,7 +694,7 @@ span {
 
 main {
   width: 100vw;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
 }
 
@@ -1210,4 +1216,26 @@ section {
   .articles article:nth-child(even) a .caption-wrapper:before {
     top: 150px;
   }
+}
+
+ul.breadcrumb {
+  outline-style: none;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+  display: block;
+  padding: 0.75rem;
+  background: #fff;
+}
+ul.breadcrumb li {
+  display: inline-block;
+}
+ul.breadcrumb li.is-active {
+  color: #848484;
+}
+ul.breadcrumb > li + li:before {
+  padding: 0 5px;
+  color: #848484;
+  content: '/\00a0';
+}
+ul.breadcrumb li a:hover {
+  text-decoration: underline;
 }
