@@ -106,9 +106,9 @@
 }
 
 .events-container .section-intro {
-  width: 80vw;
+  width: 100vw;
   margin: 0 auto;
-  text-align: left;
+  text-align: center;
   font-size: 1.5rem;
   color: aliceblue;
 }
@@ -158,6 +158,10 @@
 }
 
 @media (min-width: 768px) {
+  .events-container .section-intro {
+    width: 80vw;
+    text-align: left;
+  }
   .events {
     width: 80vw;
   }
