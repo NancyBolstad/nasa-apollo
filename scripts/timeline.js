@@ -1,19 +1,16 @@
-const endpoint='https://images-api.nasa.gov/search?media_type=image&';
-const prelaunchQuery=`q=${encodeURIComponent('moon landing')}&year_start=1958&year_end=1968`;
-const launchQuery=`q=${encodeURIComponent('apollo 11 launch')}&year_start=1968&year_end=1969`;
-const landingQuery=`q=${encodeURIComponent('apollo 11 landing')}&year_start=1968&year_end=1969`;
+const endpoint = 'https://images-api.nasa.gov/search?media_type=image&';
+const query = `q=${encodeURIComponent(
+  'apollo 11'
+)}&year_start=1969&year_end=1969`;
+
 const prelaunchContainer = document.getElementById('js-prelaunch-container');
-const aunchContainer = document.getElementById('js-launch-container');
+const launchContainer = document.getElementById('js-launch-container');
 const landingContainer = document.getElementById('js-landing-container');
 
 (async () => {
   try {
-    const prelaunchData = await (await fetch(endpoint+prelaunchQuery)).json();
-    const launchData = await (await fetch(endpoint+launchQuery)).json();
-    const landingData = await (await fetch(endpoint+landingQuery)).json();
-    formateData(prelaunchData.collection);
-    formateData(launchData.collection);
-    formateData(landingData.collection);
+    const data = await (await fetch(endpoint + query)).json();
+    formateData(data.collection);
   } catch (error) {
     alert(error);
   }
@@ -23,7 +20,6 @@ function formateData(data) {
   let { items } = data;
 
   items.sort((a, b) => {
-    console.log(a.data[0].date_created);
     return a.data[0].date_created > b.data[0].date_created ? 1 : -1;
   });
 
@@ -31,19 +27,18 @@ function formateData(data) {
 }
 
 function populateTimeline(items) {
-  let max = 5;
-  const itemsToShow = items.slice(0, max);
-    renderTimelineItems(itemsToShow);
-
+  const preLaunchItems = items.slice(0, 15);
+  const launchItems = items.slice(16, 30);
+  const landingItems = items.slice(30, 45);
+  renderTimelineItems(preLaunchItems, prelaunchContainer);
+  renderTimelineItems(launchItems, launchContainer);
+  renderTimelineItems(landingItems, landingContainer);
 }
 
 function renderTimelineItems(items, node) {
-  const container = document.getElementById('js-prelaunch-container');
-  removeChildren(prelaunchContainer);
-  items.forEach(element => {
+  items.slice(0, 8).forEach(element => {
     let { date_created, description, title, nasa_id } = element.data[0];
     var imgsrc = element.links[0].href;
-    console.log(imgsrc);
 
     date_created = new Date(date_created);
     date_created =
@@ -69,18 +64,11 @@ function renderTimelineItems(items, node) {
     <h3 class="timeline-date-mobile">${date_created}</h3>
     <img src="${imgsrc}" alt="NASA image ${nasa_id}">
     <p class="event-content">
-      ${description}
-    </p>
-    <a href="#" >View Details &#187;</a>`;
+      ${description.substring(0,100)} &hellip;
+    </p><a href="#" >View Details &#187;</a>`;
 
-    container.appendChild(newEvent);
-    container.appendChild(newContent);
+    node.appendChild(newEvent);
+    node.appendChild(newContent);
     newEvent.appendChild(newDate);
   });
-}
-
-function removeChildren(node) {
-  while (node.lastChild) {
-    node.removeChild(node.lastChild);
-  }
 }

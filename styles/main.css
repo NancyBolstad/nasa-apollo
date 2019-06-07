@@ -521,8 +521,12 @@ section {
 
 .timeline {
   position: relative;
-  width: 90vw;
+  width: 80vw;
   margin: 2rem auto;
+}
+
+.timeline-section{
+  padding-bottom: 5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -644,8 +648,8 @@ section {
 
 @media screen and (min-width: 1024px) {
   .timeline img {
-    width: 45vw;
-    max-height:680px; 
+    width: 35vw;
+    max-height:480px; 
   }
 }
 
