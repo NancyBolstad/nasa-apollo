@@ -505,7 +505,8 @@ section {
 
 .section-title {
   text-align: left;
-  border-bottom: 10px solid #0054b0;
+  border-bottom: 5px solid #0054b0;
+  color: #0054b0;
   width: 80vw;
   padding-top: 5rem;
   height: auto;
@@ -658,6 +659,11 @@ section {
   margin-right: auto;
   text-align: center;
   display: block;
+  margin-top: 15rem;
+}
+
+.index-intro{
+  margin-top: 0;
 }
 
 .intro-wrapper .img-profile {
@@ -669,11 +675,14 @@ section {
 
 .intro-wrapper h1 {
   position: relative;
-  top: -5rem;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   width: 80vw;
+  color: #0054b0;
+  font-weight: 900;
+  font-size: 2.8rem;
+  margin-bottom: 5rem;
 }
 
 .intro-wrapper .about-text {
@@ -683,6 +692,7 @@ section {
   margin-left: auto;
   margin-right: auto;
   text-align: left;
+  width: 80vw;
 }
 
 .features-flex {
@@ -701,7 +711,7 @@ section {
   margin-top: 3rem;
   transition: all 0.2s ease;
   box-sizing: border-box;
-  border-radius: 0px 0px 0px 40px;
+  border-radius: 0px 40px 40px 0px;
   border: 3px solid #0054b0;
   margin: 26px auto;
   width: 90vw;
@@ -723,6 +733,10 @@ section {
   font-size: 2rem;
 }
 
+.features-flex .item:hover h2{
+  text-decoration: underline;
+}
+
 .features-flex p {
   font-size: 1.3rem;
   padding: 0;
@@ -735,7 +749,11 @@ section {
 .fa-rocket {
   font-size: 6rem;
   margin-top: 1rem;
+  color: #0054b0;;
+	
 }
+
+
 
 .read-more-flex {
   display: flex;
@@ -775,38 +793,33 @@ section {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .features-flex {
     width: 80vw;
     flex-direction: row;
     flex-wrap: wrap;
   }
   .features-flex .item {
-    flex: 0 1 calc(50% - 1em);
+    flex: 0 1 calc(33.33333% - 2em);
   }
 }
 
-@media screen and (min-width: 1280px) {
-  .features-flex .item {
-    flex: 0 1 calc(30% - 1em);
-  }
+.intro-video{
+  display: none;
 }
 
-.story-video video {
-  width: 80vw;
-  margin: 3rem auto;
-  text-align: center;
-  display: block;
-  position: relative;
+@media screen and (min-width: 768px) {
+  .intro-video{
+    display: block;
+    width: 80vw;
+    margin: 0 auto;
+  }
 }
 
 /*------------------------------------*\
   #related-articles-section
 \*------------------------------------*/
 
-.articles-section {
-  background-color: #ffffff;
-}
 .articles-flex {
   margin: 5rem auto;
   margin-bottom: 10rem;
