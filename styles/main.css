@@ -493,6 +493,27 @@ span {
   background: #005694;
 }
 
+main {
+  width: 100vw;
+  display: flex !important;
+  flex-direction: column;
+}
+
+section {
+  width: 100vw;
+}
+
+.section-title {
+  text-align: left;
+  border-bottom: 10px solid #0054b0;
+  width: 80vw;
+  padding-top: 5rem;
+  height: auto;
+  margin: 0 auto;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
 /*------------------------------------*\
   #timeline
 \*------------------------------------*/
@@ -665,28 +686,33 @@ span {
 
 .features-flex {
   margin: 5rem auto;
-  margin-bottom: 10rem;
   width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
 }
 
-.features-flex .item a {
-  color: #000;
-  font-weight: 700;
+.features-flex .item {
   padding: 0.5em 1.5em;
-  display: inline-block;
-  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 3rem;
   transition: all 0.2s ease;
   box-sizing: border-box;
-  text-decoration: none;
   border-radius: 0px 0px 0px 40px;
   border: 3px solid #0054b0;
+  margin: 26px auto;
+  width: 90vw;
 }
 
-.features-flex .item a:hover {
+.features-flex .item a{
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.features-flex .item:hover {
   -webkit-box-shadow: 0 6px 12px 0 #999999;
   box-shadow: 0 6px 12px 0 #999999;
   cursor: pointer;
@@ -700,6 +726,8 @@ span {
 .features-flex p {
   font-size: 1.3rem;
   padding: 0;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .fa-user-astronaut,
@@ -729,14 +757,29 @@ span {
 
 @media screen and (min-width: 768px) {
   .features-flex {
+    width: 80vw;
     flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .features-flex .item{
+    flex: 0 1 calc(50% - 1em);
   }
 
-  .features-flex .item a {
-    align-self: stretch;
+  .features-flex button {
+    margin: 12px auto;
   }
+
 }
 
+
+@media screen and (min-width: 1280px) {
+
+  .features-flex .item{
+    flex: 0 1 calc(30% - 1em);
+  }
+
+
+}
 
 .story-video video {
   width: 80vw;
@@ -744,27 +787,6 @@ span {
   text-align: center;
   display: block;
   position: relative;
-}
-
-main {
-  width: 100vw;
-  display: flex !important;
-  flex-direction: column;
-}
-
-section {
-  width: 100vw;
-}
-
-.section-title {
-  text-align: left;
-  border-bottom: 10px solid #0054b0;
-  width: 80vw;
-  padding-top: 5rem;
-  height: auto;
-  margin: 0 auto;
-  text-transform: capitalize;
-  font-weight: 700;
 }
 
 /*------------------------------------*\
@@ -874,6 +896,7 @@ section {
 .article-description p {
   padding: 0;
   margin: 0;
+
 }
 
 .article-read-more {
@@ -889,16 +912,21 @@ section {
 	font-style: italic;
 	text-transform: capitalize;
 }
-
+.article-item:hover .article-title{
+  color: #02d9ff;
+}
 @media (min-width: 900px) {
 	.article-item:hover .article-description {
-		max-height: 70vh;
+    max-height: 70vh;
 		opacity: 1;
 	}
 	.article-item:hover .article-content {
 		background-color: rgba(0, 0, 0, 0.7);
+  }
+  .article-content h2 .fas {
+		display: none;
 	}
-	.article-item:hover .article-title, .article-read-more{
+	.article-item:hover .article-read-more{
 		color: #02d9ff;
 	}
 	.article-item:hover .news-media {
