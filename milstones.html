@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Apollo 11</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="styles/details.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/timeline.js"></script>
+  </head>
+
+  <body>
+    <header class="page-header">
+      <nav class="navbar">
+        <a href="#" class="logo"></a>
+        <span class="navbar-toggle-wrapper mobile-menu-left">
+          <i class="fas fa-bars navbar-fas" id="js-navmenu-toggle"></i>
+        </span>
+        <span class="navbar-toggle-wrapper mobile-search-right">
+          <i class="fas fa-search navbar-fas js-navsearch-toggle"></i>
+        </span>
+        <ul class="main-nav" id="js-menu">
+          <li>
+            <a href="index.html" class="nav-links">Home</a>
+          </li>
+          <li>
+            <a href="milestones.html" class="nav-links">Milestones</a>
+          </li>
+          <li>
+            <a href="astronauts.html" class="nav-links">Astronauts</a>
+          </li>
+          <li>
+              <a href="rockets.html" class="nav-links">Rockets</a>
+            </li>
+          <li>
+            <a href="contact.html" class="nav-links">Contact</a>
+          </li>
+          <li>
+            <a href="#" class="nav-links-search">
+              <i class="fas fa-search navbar-fas js-navsearch-toggle"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="search-overlay" id="js-search-overlay">
+        <span class="btn-close-search" title="Close Overlay">×</span>
+        <div class="search-form-wrapper">
+          <h2>What are your looking for?</h2>
+          <form action="">
+            <input type="text" placeholder="e.g. moon walking" name="search" />
+            <button type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+      <div class="progress-bar" id="js-scroll-bar"></div>
+    </header>
+    <main>
+      <section class="intro-wrapper">
+        <h1 class="sub-page-intro">Apollo 11 Mission Milestones</h1>
+        <p class="sub-page-about">
+          The Apollo 11 mission, the first manned lunar mission, launched from
+          the Kennedy Space Center, Florida via the Saturn V launch vehicle on
+          July 16, 1969 and safely returned to Earth on July 24, 1969.
+        </p>
+        <div class="features-flex">
+                <div class="item">
+                  <a href="#js-prelaunch-container" class="outline-button"
+                    ><i class="far fa-newspaper"></i>
+                    <h2>
+                     Pre-Launch Milestones
+                    </h2>
+                    <p>Explore the history in timeline.</p>
+                    <button class="btn-view-more">View More<i class="fas fa-arrow-right"></i></button>
+                  </a>
+                </div>
+                <div class="item">
+                  <a href="#js-launch-container" class="outline-button"
+                    ><i class="fas fa-user-astronaut"></i>
+                    <h2>
+                      Launching Milestones
+                    </h2>
+                    <p>Get to know the heros.</p>
+                    <button class="btn-view-more">View More<i class="fas fa-arrow-right"></i></button
+                  ></a>
+                </div>
+                <div class="item">
+                  <a href="#js-landing-container"
+                    ><i class="fas fa-rocket"></i>
+                    <h2>
+                      Landing Milestones
+                    </h2>
+                    <p>Learn about the space technology.</p>
+                    <button class="btn-view-more">View More<i class="fas fa-arrow-right"></i></button>
+                  </a>
+                </div>
+              </div>
+
+    </div>
+      </section>
+      <section class="timeline-section prelaunch-timeline">
+            <div class="section-title">
+                    <h1>Prelaunch Milestones</h1>
+                  </div>
+                  <div class="timeline" id="js-prelaunch-container">
+                      </div>
+      </section>
+      <section class="timeline-section launch-timeline">
+            <div class="section-title">
+                    <h1>Launch Milestones</h1>
+                  </div>
+                  <div class="timeline" id="js-launch-container">
+                      </div>
+      </section>
+      <section class="timeline-section landing-timeline">
+            <div class="section-title">
+                    <h1>Landing Milestones</h1>
+                  </div>
+                  <div class="timeline" id="js-landing-container">
+                      </div>
+      </section>
+    </main>
+    <footer class="footer-container">
+      <div class="social-media-bar">
+        <div class="social-media-icons">
+          <ul>
+            <li>
+              <a href="#" class="a-twitter"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#" class="a-facebook"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#" class="a-instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="a-snapchat"
+                ><i class="fab fa-snapchat-ghost"></i
+              ></a>
+            </li>
+          </ul>
+          <h6>
+            &copy; 2019 - Designed and Developed By Nancy Y. Bolstad
+          </h6>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
