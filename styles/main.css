@@ -12,7 +12,7 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  background: #f9f9f9;
+  background: #ffffff;
   color: #000000;
   display: flex;
   -webkit-box-orient: vertical;
@@ -522,7 +522,7 @@ section {
 .timeline {
   position: relative;
   width: 90vw;
-  margin: 0 auto;
+  margin: 2rem auto;
 }
 
 @media screen and (min-width: 1024px) {
@@ -531,9 +531,23 @@ section {
   }
 }
 
-@media screen and (min-width: 1280px) {
-  .timeline {
-    width: 60vw;
+.timeline-date-desktop{
+  font-size: 1.3rem;
+  display: none;
+}
+
+.timeline-date-mobile{
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .timeline-date-desktop{
+    display: block;
+  }
+  
+  .timeline-date-mobile{
+    font-size: 1.3rem;
+    display: none;
   }
 }
 
@@ -548,7 +562,7 @@ section {
   letter-spacing: 0.05rem;
   text-transform: uppercase;
   left: -7.5px;
-  top: 0px;
+  top: -5px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -587,6 +601,7 @@ section {
   position: relative;
   float: left;
   display: block;
+  top:-0.37rem;
   width: 80vw;
   padding-top: 30px;
   padding-left: 16px;
@@ -608,18 +623,30 @@ section {
   }
 }
 
-.timeline h1 {
+.timeline h2 {
   position: relative;
-  top: -2rem;
+  top: -3rem;
   vertical-align: middle;
   font-size: 1.8rem;
   font-weight: 500;
+  margin-bottom: -2.125rem;
 }
 
-.timeline h2 {
-  position: relative;
-  font-size: 1.4rem;
-  font-weight: 400;
+.timeline p{
+  padding: 2rem 0;
+}
+
+.timeline img{
+  width:100vw;
+  height: auto;
+  margin-top: 5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .timeline img {
+    width: 45vw;
+    max-height:680px; 
+  }
 }
 
 .event-content {
@@ -636,10 +663,10 @@ section {
   }
 }
 
-.article-read-more {
+.timeline a{
   color: #0054b0;
   display: block;
-  margin-top: 16px;
+  margin-top: 1rem;
   font-size: 1.2rem;
   text-decoration: underline;
   margin-right: auto;
@@ -666,6 +693,33 @@ section {
   margin-top: 0;
 }
 
+
+.sub-page-intro{
+  margin-top: -3rem;
+  text-align: left;
+  position: relative;
+  margin-left: 10vw;
+  margin-right: auto;
+  text-align: left;
+  width: 80vw;
+  color: #0054b0;
+  font-weight: 900;
+  font-size: 3rem;
+  margin-bottom: 5rem;
+}
+
+.sub-page-about{
+  padding:0px;
+  margin-top: -3rem;
+  font-size: 1.5rem;
+  margin-bottom: 5rem;
+  margin-left: 10vw;
+  margin-right: auto;
+  text-align: left;
+  width: 80vw;
+  line-height: 2.0625rem;
+}
+
 .intro-wrapper .img-profile {
   position: relative;
   top: -7rem;
@@ -673,7 +727,7 @@ section {
   margin: auto;
 }
 
-.intro-wrapper h1 {
+.lead-content {
   position: relative;
   margin-left: auto;
   margin-right: auto;
@@ -1055,4 +1109,12 @@ section {
 
 .a-snapchat:hover {
   background-color: #ffdc7d;
+}
+
+.launch-timeline{
+  background: #EDF4FF;
+}
+
+.landing-timeline{
+  background:#C9DDFF;
 }

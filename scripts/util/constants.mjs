@@ -1,0 +1,1 @@
+export const ENDPOINT="https://images-api.nasa.gov/search?q=";
