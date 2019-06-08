@@ -1,6 +1,5 @@
-.search-page-hero{
-  background-color:#EDF4FF;
-  height: 55vh;
+.search-page-hero {
+  background-color: #edf4ff;
 }
 
 /*------------------------------------*\
@@ -8,7 +7,7 @@
 \*------------------------------------*/
 
 .search-form-container {
-  margin: 3rem auto;
+  margin: 4rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,7 +47,8 @@
   font-size: 1.3rem;
   font-weight: 900;
   color: #0054b0;
-  margin-top: 3rem
+  margin-top: 3rem;
+  width: 90vw;
 }
 
 @media (min-width: 768px) {
@@ -57,7 +57,6 @@
     padding: 40px;
   }
 }
-
 
 .btn-search {
   color: #ffffff;
@@ -129,7 +128,15 @@
     -ms-flex-preferred-size: 75%;
     flex-basis: 50%;
     margin: 0 0 20px 0;
-    width: 30vw;
+    width: 50vw;
+  }
+
+  .search-form input {
+    margin-right: 30px;
+    -ms-flex-preferred-size: 75%;
+    flex-basis: 50%;
+    margin: 0 0 20px 0;
+    width: 40vw;
   }
 
   .btn-search {
@@ -142,11 +149,11 @@
 /*------------------------------------*\
   #search-result
 \*------------------------------------*/
-.search-results-lead{
+.search-results-lead {
   font-size: 1.3rem;
   width: 80vw;
   margin-left: 1rem;
-
+  padding-top: 3rem;
 }
 
 .search-results-wrapper {
@@ -164,6 +171,15 @@
   justify-content: space-between;
   padding: 12px;
   padding-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  .search-results-wrapper {
+    width: 80vw;
+  }
+  .search-results-lead {
+    margin-left: auto;
+  }
 }
 
 .search-result {
@@ -301,7 +317,6 @@
   }
 }
 
-
 .search-overlay {
   height: 100%;
   width: 100%;
@@ -349,7 +364,7 @@
 }
 
 .popular-search-wrapper .fa-search {
-  margin-right:0.4rem;
+  margin-right: 0.4rem;
 }
 
 .popular-search-wrapper {
@@ -368,7 +383,7 @@
     align-self: auto;
     font-size: 1rem;
     text-decoration: underline;
-    margin-top:1rem;
+    margin-top: 1rem;
   }
 
   .search-form-wrapper h3 {
@@ -448,11 +463,12 @@
     width: 80%;
   }
 
-    @media screen and (min-width: 1560px) {
-      .search-options-wrapper {
-        display: block;
-      }
-      .search-form-wrapper {
-        width: 60%;
-      }
+  @media screen and (min-width: 1560px) {
+    .search-options-wrapper {
+      display: block;
+    }
+    .search-form-wrapper {
+      width: 60%;
+    }
+  }
 }
