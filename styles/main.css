@@ -186,6 +186,7 @@ span {
   flex-direction: column;
   background-color: #111111;
   color: #eeeeee;
+  margin-right: 1.5rem;
 }
 
 .nav-links,
@@ -251,7 +252,7 @@ span {
   text-decoration: underline;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -771,7 +772,7 @@ section {
   margin-top: 3rem;
   transition: all 0.2s ease;
   box-sizing: border-box;
-  border-radius: 0px 40px 40px 0px;
+  border-radius: 30px 30px 30px 30px;
   border: 3px solid #0054b0;
   margin: 26px auto;
   width: 90vw;
@@ -783,9 +784,7 @@ section {
   text-decoration: none;
 }
 
-.features-flex .item:hover {
-  -webkit-box-shadow: 0 6px 12px 0 #999999;
-  box-shadow: 0 6px 12px 0 #999999;
+.features-flex .item a:hover {
   cursor: pointer;
 }
 
@@ -793,7 +792,7 @@ section {
   font-size: 2rem;
 }
 
-.features-flex .item:hover h2 {
+.features-flex .item a:hover h2 {
   text-decoration: underline;
 }
 

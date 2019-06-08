@@ -73,6 +73,22 @@
 .btn-submit:hover {
   background-color: #01a183;
 }
-#msg {
-  color: #b00e11;
+
+.service-section {
+  margin-top: -2rem;
+}
+.service-section .item p {
+  margin-bottom: 2rem;
+}
+
+.service-section .item {
+  transition: none;
+}
+
+.fa-map-marker-alt,
+.fa-phone-volume,
+.fa-clock {
+  font-size: 6rem;
+  margin: 2rem auto;
+  color: #0054b0;
 }

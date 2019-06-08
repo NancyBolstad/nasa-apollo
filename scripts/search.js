@@ -18,7 +18,7 @@ searchButton.addEventListener('click', () => {
       render(obj.collection, input);
     })
     .catch(error => {
-      alert(error);
+      console.log(error);
     });
 });
 
@@ -28,12 +28,6 @@ searchInput.addEventListener('keypress', key => {
     document.getElementById('js-search-page-button').click();
   }
 });
-
-function message(msg) {
-  const message = document.createElement('h2');
-  message.innerText = msg;
-  container.appendChild(message);
-}
 
 function render(data, input) {
   remove(container);
@@ -67,16 +61,6 @@ function remove(container) {
   while (container.lastChild) {
     container.removeChild(container.lastChild);
   }
-}
-
-function sortData(data) {
-  let { items } = data;
-
-  items.sort((a, b) => {
-    return a.data[0].date_created > b.data[0].date_created ? 1 : -1;
-  });
-
-  populateTimeline(items);
 }
 
 function showSpinner() {
