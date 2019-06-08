@@ -3,9 +3,19 @@ const searchInput = document.getElementById('js-search-page-input');
 const searchButton = document.getElementById('js-search-page-button');
 
 searchButton.addEventListener('click', () => {
-  const input = document.getElementById('js-search-page-input').value;
+  const input = searchInput.value;
   const url = `https://images-api.nasa.gov/search?media_type=image&keywords=Apollo&q=${input}`;
-  search(url);
+  fetch(url)
+    .then(response => {
+      if (!response.ok) throw Error('Failed to retrieve images');
+      return response.json();
+    })
+    .then(obj => {
+      render(obj.collection, input);
+    })
+    .catch(error => {
+      alert(error);
+    });
 });
 
 searchInput.addEventListener('keypress', key => {
@@ -20,38 +30,21 @@ function message(msg) {
   container.appendChild(message);
 }
 
-function search() {
-  const url =
-    'https://images-api.nasa.gov/search?media_type=image&keywords=Apollo&q=apollo 11';
-  fetch(url)
-    .then(response => {
-      if (!response.ok) throw Error('Failed to retrieve images');
-      return response.json();
-    })
-    .then(obj => {
-      render(obj.collection);
-    })
-    .catch(error => {
-      alert(error);
-    });
-}
-
-function render(data) {
-  console.log(1111111111);
+function render(data, input) {
   remove(container);
   const { items } = data;
-  if (items.length > 0) {
-    console.log(items);
-    items.forEach(element => {
-      console.log(element);
-      const { title, nasa_id } = element.data[0];
-      console.log(333333333);
-      const imgsrc = element.links[0].href;
-      const resultContainer = document.createElement('div');
-      resultContainer.setAttribute('class', 'search-result');
-      container.appendChild(resultContainer);
+  console.log(items.length);
+  const amount = document.getElementById('js-search-result-amount');
+  amount.innerHTML = `${items.length} search results for "${input}"`;
+  items.forEach(element => {
+    console.log(element);
+    const { title, nasa_id } = element.data[0];
+    const imgsrc = element.links[0].href;
+    const resultContainer = document.createElement('div');
+    resultContainer.setAttribute('class', 'search-result');
+    container.appendChild(resultContainer);
 
-      resultContainer.innerHTML = `<a href="${nasa_id}" class="search-result-link"></a>
+    resultContainer.innerHTML = `<a href="${nasa_id}" class="search-result-link"></a>
             <img
               src="${imgsrc}"
               alt="${title}"
@@ -64,8 +57,7 @@ function render(data) {
               <div class="search-result-description">
                 <a href="details.html?id=${nasa_id}" class="search-read-more">Continue reading &#187;</a>
               </div>`;
-    });
-  }
+  });
 }
 
 function remove(container) {

@@ -524,7 +524,7 @@ section {
   margin: 2rem auto;
 }
 
-.timeline-section{
+.timeline-section {
   padding-bottom: 5rem;
 }
 
@@ -534,21 +534,21 @@ section {
   }
 }
 
-.timeline-date-desktop{
+.timeline-date-desktop {
   font-size: 1.3rem;
   display: none;
 }
 
-.timeline-date-mobile{
+.timeline-date-mobile {
   font-size: 1.3rem;
 }
 
 @media screen and (min-width: 1024px) {
-  .timeline-date-desktop{
+  .timeline-date-desktop {
     display: block;
   }
-  
-  .timeline-date-mobile{
+
+  .timeline-date-mobile {
     font-size: 1.3rem;
     display: none;
   }
@@ -604,7 +604,7 @@ section {
   position: relative;
   float: left;
   display: block;
-  top:-0.37rem;
+  top: -0.37rem;
   width: 80vw;
   padding-top: 30px;
   padding-left: 16px;
@@ -635,12 +635,12 @@ section {
   margin-bottom: -2.125rem;
 }
 
-.timeline p{
+.timeline p {
   padding: 2rem 0;
 }
 
-.timeline img{
-  width:100vw;
+.timeline img {
+  width: 100vw;
   height: auto;
   margin-top: 5rem;
 }
@@ -648,7 +648,7 @@ section {
 @media screen and (min-width: 1024px) {
   .timeline img {
     width: 35vw;
-    max-height:480px; 
+    max-height: 480px;
   }
 }
 
@@ -666,7 +666,7 @@ section {
   }
 }
 
-.timeline a{
+.timeline a {
   color: #0054b0;
   display: block;
   margin-top: 1rem;
@@ -692,12 +692,11 @@ section {
   margin-top: 15rem;
 }
 
-.index-intro{
+.index-intro {
   margin-top: 0;
 }
 
-
-.sub-page-intro{
+.sub-page-intro {
   margin-top: -3rem;
   text-align: left;
   position: relative;
@@ -711,8 +710,8 @@ section {
   margin-bottom: 5rem;
 }
 
-.sub-page-about{
-  padding:0px;
+.sub-page-about {
+  padding: 0px;
   margin-top: -3rem;
   font-size: 1.5rem;
   margin-bottom: 5rem;
@@ -790,7 +789,7 @@ section {
   font-size: 2rem;
 }
 
-.features-flex .item:hover h2{
+.features-flex .item:hover h2 {
   text-decoration: underline;
 }
 
@@ -806,11 +805,8 @@ section {
 .fa-rocket {
   font-size: 6rem;
   margin-top: 1rem;
-  color: #0054b0;;
-	
+  color: #0054b0;
 }
-
-
 
 .read-more-flex {
   display: flex;
@@ -861,12 +857,12 @@ section {
   }
 }
 
-.intro-video{
+.intro-video {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .intro-video{
+  .intro-video {
     display: block;
     width: 80vw;
     margin: 0 auto;
@@ -1114,10 +1110,10 @@ section {
   background-color: #ffdc7d;
 }
 
-.launch-timeline{
-  background: #EDF4FF;
+.launch-timeline {
+  background: #edf4ff;
 }
 
-.landing-timeline{
-  background:#C9DDFF;
+.landing-timeline {
+  background: #c9ddff;
 }

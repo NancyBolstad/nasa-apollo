@@ -154,6 +154,7 @@
   width: 80vw;
   margin-left: 1rem;
   padding-top: 3rem;
+  text-transform: none;
 }
 
 .search-results-wrapper {
