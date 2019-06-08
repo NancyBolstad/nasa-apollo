@@ -40,6 +40,10 @@ a {
   border-bottom: none;
 }
 
+a:visited {
+  color: inherit;
+}
+
 img,
 video {
   max-width: 100%;
@@ -1040,6 +1044,7 @@ section {
   justify-content: center;
   align-items: center;
   padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .copyright {

@@ -149,9 +149,6 @@
 /*------------------------------------*\
   #search-result
 \*------------------------------------*/
-.search-results {
-  height: 100vh;
-}
 .search-results-lead {
   font-size: 1.3rem;
   width: 80vw;

@@ -5,11 +5,12 @@ const spinner = document.getElementById('js-loader');
 
 searchButton.addEventListener('click', () => {
   const input = searchInput.value;
-  const url = `https://images-api.nasa.gov/search?media_type=image&keywords=Apollo&q=${input}`;
+  const url = `https://images-api.nasa.gov/search?media_type=image&keywords=Apollo&q=${encodeURIComponent(
+    input
+  )}`;
   showSpinner();
   fetch(url)
     .then(response => {
-      setTimeout(80000);
       if (!response.ok) throw Error('Failed to retrieve images');
       return response.json();
     })
@@ -85,3 +86,31 @@ function showSpinner() {
   }, 2000);
   console.log('Test: Loading...');
 }
+
+function hasQueryString() {
+  const pageParams = new URLSearchParams(window.location.search);
+  const id = pageParams.get('search');
+  if (!pageParams.toString() || !id.toString()) {
+    alert('Empty query string! Redirecting you to the home page ...');
+    window.location = './index.html';
+  } else {
+    const input = pageParams.get('search');
+    const url = `https://images-api.nasa.gov/search?media_type=image&keywords=Apollo&q=${encodeURIComponent(
+      input
+    )}`;
+    showSpinner();
+    fetch(url)
+      .then(response => {
+        if (!response.ok) throw Error('Failed to retrieve images');
+        return response.json();
+      })
+      .then(obj => {
+        render(obj.collection, input);
+      })
+      .catch(error => {
+        alert(error);
+      });
+  }
+}
+
+hasQueryString();
