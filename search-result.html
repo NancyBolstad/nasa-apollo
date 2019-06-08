@@ -20,6 +20,7 @@
       crossorigin="anonymous"
     />
     <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/search.js"></script>
   </head>
   <body>
     <header class="page-header">
@@ -84,17 +85,16 @@
         <form class="search-form">
           <div>
             <input
-              id="search"
+              id="js-search-page-input"
               name="search"
               type="search"
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
               placeholder="e.g. moon walking"
               aria-label="Search"
               required
             />
           </div>
           <div>
-            <button type="submit" class="btn-search">Search</button>
+            <button type="submit" class="btn-search" id="js-search-page-button">Search</button>
           </div>
         </form>
       </div>
@@ -104,9 +104,9 @@
           <h2 class="section-title search-results-lead">100 Search Results for "Moon Landing"</h2>
           <div class="search-filter"></div>
         </div>
-        <div class="search-results-wrapper">
+        <div class="search-results-wrapper" id="js-search-results-container">
           <div class="search-result">
-            <a href="#" class="news-link"></a>
+            <a href="#" class="search-result-link"></a>
             <img
               src="assets/1437409095-neil-armstrong.jpg"
               alt="news picture 1"
@@ -122,7 +122,7 @@
             </div>
           </div>
           <div class="search-result">
-            <a href="#" class="news-link"></a>
+            <a href="#" class="search-result-link"></a>
             <img
               src="assets/small-hero.jpg"
               alt="news picture 2"
@@ -136,7 +136,7 @@
             </div>
           </div>
           <div class="search-result">
-            <a href="#" class="news-link"></a>
+            <a href="#" class="search-result-link"></a>
             <img
               src="assets/pmx0609080c-1531948739.jpg"
               alt="news picture 3"
@@ -150,7 +150,7 @@
             </div>
           </div>
           <div class="search-result">
-            <a href="#" class="news-link"></a>
+            <a href="#" class="search-result-link"></a>
             <img
               src="assets/pmx0609080c-1531948739.jpg"
               alt="news picture 3"
