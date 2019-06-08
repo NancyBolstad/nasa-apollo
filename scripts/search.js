@@ -20,7 +20,8 @@ searchButton.addEventListener('click', () => {
 
 searchInput.addEventListener('keypress', key => {
   if (key.keyCode === 13) {
-    searchButton.click();
+    event.preventDefault();
+    document.getElementById('js-search-page-button').click();
   }
 });
 
