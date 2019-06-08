@@ -426,7 +426,6 @@ span {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-shadow: 0.05em 0.05em 0.05em rgba(0, 0, 0, 6);
 }
 
 .cover-holder h1 {
@@ -492,6 +491,7 @@ span {
 
 .cta-primary {
   background: #2b98f0;
+  color: #ffffff;
 }
 
 .cta-primary:hover {
@@ -775,7 +775,7 @@ section {
   border-radius: 30px 30px 30px 30px;
   border: 3px solid #0054b0;
   margin: 26px auto;
-  width: 90vw;
+  width: 80vw;
 }
 
 .features-flex .item a {
