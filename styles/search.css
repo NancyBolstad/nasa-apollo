@@ -249,7 +249,7 @@
   padding: 16px;
   color: white;
   font-size: 1.2em;
-  width: 100vw;
+  width: 100%;
 }
 
 .search-result-title {
@@ -259,6 +259,7 @@
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 1.2rem;
+  width: 80%;
 }
 
 .search-result-description {
