@@ -2,6 +2,10 @@
   #search-form
 \*------------------------------------*/
 
+.search-results-lead{
+  font-size: 2rem;
+}
+
 .search-form-container {
   background-color: #0054b0;
   display: -webkit-box;
@@ -54,6 +58,8 @@
     padding: 40px;
   }
 }
+
+
 
 #events-banner {
   background-image: -webkit-gradient(

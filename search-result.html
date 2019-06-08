@@ -24,42 +24,52 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="navbar">
-        <a href="#" class="logo"></a>
-        <span class="navbar-toggle-wrapper mobile-menu-left">
-          <i class="fas fa-bars navbar-fas" id="js-navmenu-toggle"></i>
-        </span>
-        <span class="navbar-toggle-wrapper mobile-search-right">
-          <i class="fas fa-search navbar-fas js-navsearch-toggle"></i>
-        </span>
-        <ul class="main-nav" id="js-menu">
-          <li>
-            <a href="#" class="nav-links">Home</a>
-          </li>
-          <li>
-            <a href="#" class="nav-links">Mission Overview</a>
-          </li>
-          <li>
-            <a href="#" class="nav-links">Milestones</a>
-          </li>
-          <li>
-            <a href="#" class="nav-links">Contact</a>
-          </li>
-          <li>
-            <a href="#" class="nav-links-search">
-              <i class="fas fa-search navbar-fas js-navsearch-toggle"></i
-            ></a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="navbar">
+            <a href="#" class="logo"></a>
+            <span class="navbar-toggle-wrapper mobile-menu-left">
+              <i class="fas fa-bars navbar-fas" id="js-navmenu-toggle"></i>
+            </span>
+            <span class="navbar-toggle-wrapper mobile-search-right">
+              <i class="fas fa-search navbar-fas js-navsearch-toggle"></i>
+            </span>
+            <ul class="main-nav" id="js-menu">
+              <li>
+                <a href="index.html" class="nav-links">Home</a>
+              </li>
+              <li>
+                <a href="milestones.html" class="nav-links">Milestones</a>
+              </li>
+              <li>
+                <a href="astronauts.html" class="nav-links">Astronauts</a>
+              </li>
+              <li>
+                  <a href="rockets.html" class="nav-links">Rockets</a>
+                </li>
+              <li>
+                <a href="contact.html" class="nav-links">Contact</a>
+              </li>
+              <li>
+                <a href="#" class="nav-links-search">
+                  <i class="fas fa-search navbar-fas js-navsearch-toggle"></i
+                ></a>
+              </li>
+            </ul>
+          </nav>
       <div class="search-overlay" id="js-search-overlay">
         <span class="btn-close-search" title="Close Overlay">×</span>
         <div class="search-form-wrapper">
-          <h2>What are your looking for?</h2>
+          <h2>What are you looking for?</h2>
           <form action="">
             <input type="text" placeholder="e.g. moon walking" name="search" />
             <button type="submit">Search</button>
           </form>
+            <h3>Popular searches from other users:</h3>
+            <div class="popular-search-wrapper">
+            <a><i class="fas fa-search"></i>Saturn Apollo Program</a>
+            <a><i class="fas fa-search"></i>Space Race</a>
+            <a><i class="fas fa-search"></i>Lunar Space Station</a>
+            <a><i class="fas fa-search"></i>Neil Armstrong</a>
+          </div>
         </div>
       </div>
       <div class="progress-bar" id="js-scroll-bar"></div>
@@ -90,7 +100,8 @@
       </section>
       <section class="search-results">
         <div class="section-intro">
-          <h2 class="section-title">Search Results</h2>
+          <h2 class="section-title search-results-lead">100 Search Results for "Moon Landing"</h2>
+          <div class="search-filter"></div>
         </div>
         <div class="search-results-wrapper">
           <div class="search-result">

@@ -247,7 +247,7 @@ span {
   text-decoration: underline;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -306,9 +306,8 @@ span {
 .search-form-wrapper {
   position: relative;
   width: 80vw;
-  top: 20vh;
+  top: 15vh;
   text-align: center;
-  margin-top: 30px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -322,6 +321,48 @@ span {
   text-align: center;
   padding: 0px 1rem;
   color: inherit;
+}
+
+.search-form-wrapper h3 {
+  font-size: 1.6rem;
+  margin-top: 5rem;
+  margin-bottom: 1.3rem;
+  text-align: center;
+  color: inherit;
+  display: none;
+}
+
+.popular-search-wrapper a {
+  font-size: 1.367rem;
+  margin-top: 1.5rem;
+}
+
+.popular-search-wrapper .fa-search {
+  margin-right:0.4rem;
+}
+
+.popular-search-wrapper {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .search-form-wrapper {
+    top: 20vh;
+    width: 100vw;
+  }
+  .popular-search-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-self: auto;
+    font-size: 1rem;
+    text-decoration: underline;
+    margin-top:1rem;
+  }
+
+  .search-form-wrapper h3 {
+    display: block;
+  }
 }
 
 .btn-close-search {
@@ -370,7 +411,7 @@ span {
 
 @media screen and (min-width: 768px) {
   .search-form-wrapper {
-    width: 50%;
+    width: 55%;
   }
 
   .search-form-wrapper h2 {
@@ -392,6 +433,17 @@ span {
   .search-options-wrapper {
     display: block;
   }
+  .search-form-wrapper {
+    width: 80%;
+  }
+
+    @media screen and (min-width: 1560px) {
+      .search-options-wrapper {
+        display: block;
+      }
+      .search-form-wrapper {
+        width: 60%;
+      }
 }
 
 /*------------------------------------*\
@@ -525,7 +577,7 @@ section {
   margin: 2rem auto;
 }
 
-.timeline-section{
+.timeline-section {
   padding-bottom: 5rem;
 }
 
@@ -535,21 +587,21 @@ section {
   }
 }
 
-.timeline-date-desktop{
+.timeline-date-desktop {
   font-size: 1.3rem;
   display: none;
 }
 
-.timeline-date-mobile{
+.timeline-date-mobile {
   font-size: 1.3rem;
 }
 
 @media screen and (min-width: 1024px) {
-  .timeline-date-desktop{
+  .timeline-date-desktop {
     display: block;
   }
-  
-  .timeline-date-mobile{
+
+  .timeline-date-mobile {
     font-size: 1.3rem;
     display: none;
   }
@@ -605,7 +657,7 @@ section {
   position: relative;
   float: left;
   display: block;
-  top:-0.37rem;
+  top: -0.37rem;
   width: 80vw;
   padding-top: 30px;
   padding-left: 16px;
@@ -636,12 +688,12 @@ section {
   margin-bottom: -2.125rem;
 }
 
-.timeline p{
+.timeline p {
   padding: 2rem 0;
 }
 
-.timeline img{
-  width:100vw;
+.timeline img {
+  width: 100vw;
   height: auto;
   margin-top: 5rem;
 }
@@ -649,7 +701,7 @@ section {
 @media screen and (min-width: 1024px) {
   .timeline img {
     width: 35vw;
-    max-height:480px; 
+    max-height: 480px;
   }
 }
 
@@ -667,7 +719,7 @@ section {
   }
 }
 
-.timeline a{
+.timeline a {
   color: #0054b0;
   display: block;
   margin-top: 1rem;
@@ -693,12 +745,11 @@ section {
   margin-top: 15rem;
 }
 
-.index-intro{
+.index-intro {
   margin-top: 0;
 }
 
-
-.sub-page-intro{
+.sub-page-intro {
   margin-top: -3rem;
   text-align: left;
   position: relative;
@@ -712,8 +763,8 @@ section {
   margin-bottom: 5rem;
 }
 
-.sub-page-about{
-  padding:0px;
+.sub-page-about {
+  padding: 0px;
   margin-top: -3rem;
   font-size: 1.5rem;
   margin-bottom: 5rem;
@@ -791,7 +842,7 @@ section {
   font-size: 2rem;
 }
 
-.features-flex .item:hover h2{
+.features-flex .item:hover h2 {
   text-decoration: underline;
 }
 
@@ -807,11 +858,8 @@ section {
 .fa-rocket {
   font-size: 6rem;
   margin-top: 1rem;
-  color: #0054b0;;
-	
+  color: #0054b0;
 }
-
-
 
 .read-more-flex {
   display: flex;
@@ -862,12 +910,12 @@ section {
   }
 }
 
-.intro-video{
+.intro-video {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .intro-video{
+  .intro-video {
     display: block;
     width: 80vw;
     margin: 0 auto;
@@ -1115,10 +1163,10 @@ section {
   background-color: #ffdc7d;
 }
 
-.launch-timeline{
-  background: #EDF4FF;
+.launch-timeline {
+  background: #edf4ff;
 }
 
-.landing-timeline{
-  background:#C9DDFF;
+.landing-timeline {
+  background: #c9ddff;
 }
