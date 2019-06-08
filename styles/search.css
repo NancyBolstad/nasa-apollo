@@ -51,9 +51,9 @@
   width: 90vw;
 }
 
-@media (min-width: 768px) {
-  .banner-title {
-    font-size: 3rem;
+@media (min-width: 1280px) {
+  .search-form-title h1 {
+    font-size: 1.8rem;
     padding: 40px;
   }
 }
@@ -316,6 +316,10 @@
     flex: 0 1 calc(25% - 1em);
   }
 }
+
+/*------------------------------------*\
+  #search-screen
+\*------------------------------------*/
 
 .search-overlay {
   height: 100%;
