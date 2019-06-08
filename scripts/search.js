@@ -1,12 +1,15 @@
 const container = document.getElementById('js-search-results-container');
 const searchInput = document.getElementById('js-search-page-input');
 const searchButton = document.getElementById('js-search-page-button');
+const spinner = document.getElementById('js-loader');
 
 searchButton.addEventListener('click', () => {
   const input = searchInput.value;
   const url = `https://images-api.nasa.gov/search?media_type=image&keywords=Apollo&q=${input}`;
+  showSpinner();
   fetch(url)
     .then(response => {
+      setTimeout(80000);
       if (!response.ok) throw Error('Failed to retrieve images');
       return response.json();
     })
@@ -34,11 +37,9 @@ function message(msg) {
 function render(data, input) {
   remove(container);
   const { items } = data;
-  console.log(items.length);
   const amount = document.getElementById('js-search-result-amount');
   amount.innerHTML = `${items.length} search results for "${input}"`;
   items.forEach(element => {
-    console.log(element);
     const { title, nasa_id } = element.data[0];
     const imgsrc = element.links[0].href;
     const resultContainer = document.createElement('div');
@@ -75,4 +76,12 @@ function sortData(data) {
   });
 
   populateTimeline(items);
+}
+
+function showSpinner() {
+  spinner.className = 'visible';
+  setTimeout(() => {
+    spinner.className = spinner.className.replace('visible', '');
+  }, 2000);
+  console.log('Test: Loading...');
 }

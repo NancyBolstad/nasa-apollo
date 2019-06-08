@@ -149,6 +149,9 @@
 /*------------------------------------*\
   #search-result
 \*------------------------------------*/
+.search-results {
+  height: 100vh;
+}
 .search-results-lead {
   font-size: 1.3rem;
   width: 80vw;
@@ -477,4 +480,32 @@
       width: 60%;
     }
   }
+}
+
+/*------------------------------------*\
+  #loader
+\*------------------------------------*/
+
+#js-loader {
+  width: 5rem;
+  height: 5rem;
+  border: 5px solid #f3f3f3;
+  border-top: 3px solid #f25a41;
+  border-radius: 100%;
+  margin: 3rem auto;
+  display: block;
+  animation: loader 1s infinite linear;
+}
+
+@keyframes loader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#js-loader .visible {
+  display: block;
 }
