@@ -3,7 +3,9 @@ const searchInput = document.getElementById('js-search-page-input');
 const searchButton = document.getElementById('js-search-page-button');
 
 searchButton.addEventListener('click', () => {
-  search(searchInput.value);
+  const input = document.getElementById('js-search-page-input').value;
+  const url = `https://images-api.nasa.gov/search?media_type=image&keywords=Apollo&q=${input}`;
+  search(url);
 });
 
 searchInput.addEventListener('keypress', key => {
@@ -18,15 +20,20 @@ function message(msg) {
   container.appendChild(message);
 }
 
-async function search() {
-  try {
-    const data = await (await fetch(
-      'https://images-api.nasa.gov/search?media_type=image&q=moon+landing&keywords=Apollo 11'
-    )).json();
-    render(data.collection);
-  } catch (error) {
-    alert(error);
-  }
+function search() {
+  const url =
+    'https://images-api.nasa.gov/search?media_type=image&keywords=Apollo&q=apollo 11';
+  fetch(url)
+    .then(response => {
+      if (!response.ok) throw Error('Failed to retrieve images');
+      return response.json();
+    })
+    .then(obj => {
+      render(obj.collection);
+    })
+    .catch(error => {
+      alert(error);
+    });
 }
 
 function render(data) {
