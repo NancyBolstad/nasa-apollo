@@ -41,7 +41,7 @@ function render(data, input) {
     resultContainer.setAttribute('class', 'search-result');
     container.appendChild(resultContainer);
 
-    resultContainer.innerHTML = `<a href="${nasa_id}" class="search-result-link"></a>
+    resultContainer.innerHTML = `<a href="details.html?id=${nasa_id}" class="search-result-link"></a>
             <img
               src="${imgsrc}"
               alt="${title}"

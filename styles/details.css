@@ -13,7 +13,6 @@
   .section-details {
     flex-direction: row;
     align-items: stretch;
-    align-content: center;
   }
   .details-left {
     flex: 30vh 1 0;
@@ -23,7 +22,7 @@
     flex: 30vh 1 0;
   }
   .details-media img {
-    max-width: 35vw !important;
+    width: 35vw !important;
   }
 }
 
@@ -40,6 +39,8 @@
   line-height: 1.3;
   padding-left: 1.8rem;
   text-align: left;
+  width: 80%;
+  margin-top: 0;
 }
 
 .section-details h6 {
@@ -58,7 +59,7 @@
 
 .details-text p {
   font-size: 1.3rem;
-  line-height: 1.5;
+  line-height: 1.8;
   padding-left: 1.8rem;
   margin-top: 2rem;
   text-align: left;
