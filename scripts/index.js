@@ -15,7 +15,7 @@ const query = `q=${encodeURIComponent(
 
 function render(items, node) {
   const container = document.getElementById('js-articles-container');
-  items.slice(0, 6).forEach(element => {
+  items.slice(9, 15).forEach(element => {
     let { description, title, nasa_id } = element.data[0];
     var imgsrc = element.links[0].href;
 
@@ -31,8 +31,26 @@ function render(items, node) {
     image.setAttribute('alt', `${title}`);
     image.setAttribute('src', `${imgsrc}`);
 
+    const content = document.createElement('div');
+    content.setAttribute('class', 'article-content');
+
+    const articleTitle = document.createElement('h2');
+    articleTitle.setAttribute('class', 'article-title');
+    articleTitle.innerText = title;
+
+    const text = document.createElement('div');
+    text.setAttribute('class', 'article-description');
+
+    text.innerHTML = `<p>${description.substring(
+      0,
+      100
+    )}&hellip;</p><a href="./details.html?id=${nasa_id}" class="article-read-more">Continue reading &#187;</a>`;
+
     container.appendChild(newItem);
     newItem.appendChild(link);
     newItem.appendChild(image);
+    newItem.appendChild(content);
+    content.appendChild(articleTitle);
+    content.appendChild(text);
   });
 }

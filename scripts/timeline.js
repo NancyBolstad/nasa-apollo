@@ -38,7 +38,7 @@ function populateTimeline(items) {
 function renderTimelineItems(items, node) {
   items.slice(0, 8).forEach(element => {
     let { date_created, description, title, nasa_id } = element.data[0];
-    var imgsrc = element.links[0].href;
+    const imgsrc = element.links[0].href;
 
     date_created = new Date(date_created);
     date_created =
@@ -54,22 +54,44 @@ function renderTimelineItems(items, node) {
     const newDate = document.createElement('div');
     newEvent.setAttribute('class', 'event-date');
 
-    newDate.innerHTML = `<span class="timeline-point"></span> <h3 class="timeline-date-desktop">${date_created}</h3>`;
+    const newPoint = document.createElement('span');
+    newPoint.setAttribute('class', 'timeline-point');
+
+    const desktopDate = document.createElement('h3');
+    desktopDate.setAttribute('class', 'timeline-date-desktop');
+    desktopDate.innerText = date_created;
 
     const newContent = document.createElement('div');
     newContent.setAttribute('class', 'event_description');
 
-    newContent.innerHTML = `
-    <h2>${title}</h2>
-    <h3 class="timeline-date-mobile">${date_created}</h3>
-    <img src="${imgsrc}" alt="NASA image ${nasa_id}">
-    <p class="event-content">
-      ${description.substring(0,100)} &hellip;
-    </p><a href="#" >View Details &#187;</a>`;
+    const newTitle = document.createElement('h2');
+    newTitle.innerText = title;
+
+    const mobileDate = document.createElement('h3');
+    mobileDate.setAttribute('class', 'timeline-date-mobile');
+    mobileDate.innerText = date_created;
+
+    const newMedia = document.createElement('img');
+    newMedia.setAttribute('src', `${imgsrc}`);
+    newMedia.setAttribute('alt', `NASA image ${nasa_id}`);
+
+    const newText = document.createElement('p');
+    newText.setAttribute('class', 'event-content');
+    newText.innerText = `${description}`;
+
+    const newLink = document.createElement('a');
+    newLink.setAttribute('href', `details.html?id=${nasa_id}`);
+    newLink.innerHTML = 'View Details &#187;';
 
     node.appendChild(newEvent);
     node.appendChild(newContent);
     newEvent.appendChild(newDate);
+    newDate.appendChild(newPoint);
+    newDate.appendChild(desktopDate);
+    newContent.appendChild(newTitle);
+    newContent.appendChild(mobileDate);
+    newContent.appendChild(newMedia);
+    newContent.appendChild(newText);
+    newContent.appendChild(newLink);
   });
 }
-

@@ -33,16 +33,19 @@
         </span>
         <ul class="main-nav" id="js-menu">
           <li>
-            <a href="#" class="nav-links">Home</a>
+            <a href="index.html" class="nav-links">Home</a>
           </li>
           <li>
-            <a href="#" class="nav-links">Mission Overview</a>
+            <a href="milestones.html" class="nav-links">Milestones</a>
           </li>
           <li>
-            <a href="#" class="nav-links">Milestones</a>
+            <a href="astronauts.html" class="nav-links">Astronauts</a>
           </li>
           <li>
-            <a href="#" class="nav-links">Contact</a>
+            <a href="rockets.html" class="nav-links">Rockets</a>
+          </li>
+          <li>
+            <a href="contact.html" class="nav-links">Contact</a>
           </li>
           <li>
             <a href="#" class="nav-links-search">
@@ -54,11 +57,28 @@
       <div class="search-overlay" id="js-search-overlay">
         <span class="btn-close-search" title="Close Overlay">×</span>
         <div class="search-form-wrapper">
-          <h2>What are your looking for?</h2>
+          <h2>What are you looking for?</h2>
           <form action="">
             <input type="text" placeholder="e.g. moon walking" name="search" />
-            <button type="submit">Search</button>
+            <button formaction="search-result.html" type="submit">
+              Search
+            </button>
           </form>
+          <h3>Popular searches from other users:</h3>
+          <div class="popular-search-wrapper">
+            <a href="./search-result.html?search=Saturn Apollo Program"
+              ><i class="fas fa-search"></i>Saturn Apollo Program</a
+            >
+            <a href="./search-result.html?search=Kennedy"
+              ><i class="fas fa-search"></i>Kennedy</a
+            >
+            <a href="./search-result.html?search=Lunar Space Station"
+              ><i class="fas fa-search"></i>Lunar Space Station</a
+            >
+            <a href="./search-result.html?search=Neil Armstrong"
+              ><i class="fas fa-search"></i>Neil Armstrong</a
+            >
+          </div>
         </div>
       </div>
       <div class="progress-bar" id="js-scroll-bar"></div>
@@ -123,65 +143,65 @@
           </div>
         </div>
         <div class="search-results-wrapper">
-            <div class="search-result">
-              <a href="#" class="search-result-link"></a>
-              <img
-                src="assets/1437409095-neil-armstrong.jpg"
-                alt="news picture 1"
-                class="search-result-media"
-              />
-              <div class="search-result-content">
-                <h2 class="search-result-title">
-                  Visiting Professor of Aeronautics
-                </h2>
-                <div class="search-result-description">
-                  <a href="#" class="search-read-more">Continue reading &#187;</a>
-                </div>
-              </div>
-            </div>
-            <div class="search-result">
-              <a href="#" class="search-result-link"></a>
-              <img
-                src="assets/small-hero.jpg"
-                alt="news picture 2"
-                class="search-result-media"
-              />
-              <div class="search-result-content">
-                <h2 class="search-result-title">Night in the Museum</h2>
-                <div class="search-result-description">
-                  <a href="#" class="search-read-more">Continue reading &#187;</a>
-                </div>
-              </div>
-            </div>
-            <div class="search-result">
-              <a href="#" class="search-result-link"></a>
-              <img
-                src="assets/pmx0609080c-1531948739.jpg"
-                alt="news picture 3"
-                class="search-result-media"
-              />
-              <div class="search-result-content">
-                <h2 class="search-result-title">Energetica Exhibition on Loan</h2>
-                <div class="search-result-description">
-                  <a href="#" class="search-read-more">Continue reading &#187;</a>
-                </div>
-              </div>
-            </div>
-            <div class="search-result">
-              <a href="#" class="search-result-link"></a>
-              <img
-                src="assets/pmx0609080c-1531948739.jpg"
-                alt="news picture 3"
-                class="search-result-media"
-              />
-              <div class="search-result-content">
-                <h2 class="search-result-title">Energetica Exhibition on Loan</h2>
-                <div class="search-result-description">
-                  <a href="#" class="search-read-more">Continue reading &#187;</a>
-                </div>
+          <div class="search-result">
+            <a href="#" class="search-result-link"></a>
+            <img
+              src="assets/1437409095-neil-armstrong.jpg"
+              alt="news picture 1"
+              class="search-result-media"
+            />
+            <div class="search-result-content">
+              <h2 class="search-result-title">
+                Visiting Professor of Aeronautics
+              </h2>
+              <div class="search-result-description">
+                <a href="#" class="search-read-more">Continue reading &#187;</a>
               </div>
             </div>
           </div>
+          <div class="search-result">
+            <a href="#" class="search-result-link"></a>
+            <img
+              src="assets/small-hero.jpg"
+              alt="news picture 2"
+              class="search-result-media"
+            />
+            <div class="search-result-content">
+              <h2 class="search-result-title">Night in the Museum</h2>
+              <div class="search-result-description">
+                <a href="#" class="search-read-more">Continue reading &#187;</a>
+              </div>
+            </div>
+          </div>
+          <div class="search-result">
+            <a href="#" class="search-result-link"></a>
+            <img
+              src="assets/pmx0609080c-1531948739.jpg"
+              alt="news picture 3"
+              class="search-result-media"
+            />
+            <div class="search-result-content">
+              <h2 class="search-result-title">Energetica Exhibition on Loan</h2>
+              <div class="search-result-description">
+                <a href="#" class="search-read-more">Continue reading &#187;</a>
+              </div>
+            </div>
+          </div>
+          <div class="search-result">
+            <a href="#" class="search-result-link"></a>
+            <img
+              src="assets/pmx0609080c-1531948739.jpg"
+              alt="news picture 3"
+              class="search-result-media"
+            />
+            <div class="search-result-content">
+              <h2 class="search-result-title">Energetica Exhibition on Loan</h2>
+              <div class="search-result-description">
+                <a href="#" class="search-read-more">Continue reading &#187;</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="footer-container">
