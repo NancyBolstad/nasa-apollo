@@ -1,11 +1,9 @@
-const endpoint = 'https://images-api.nasa.gov/search?media_type=image&';
-const query = `q=${encodeURIComponent(
-  'apollo 11'
-)}&year_start=1969&year_end=1969`;
-
 (async () => {
   try {
-    console.log(000000);
+    const endpoint = 'https://images-api.nasa.gov/search?media_type=image&';
+    const query = `q=${encodeURIComponent(
+      'apollo 11'
+    )}&year_start=1969&year_end=1969`;
     const data = await (await fetch(endpoint + query)).json();
     render(data.collection.items);
   } catch (error) {
@@ -13,7 +11,7 @@ const query = `q=${encodeURIComponent(
   }
 })();
 
-function render(items, node) {
+function render(items) {
   const container = document.getElementById('js-articles-container');
   items.slice(9, 15).forEach(element => {
     let { description, title, nasa_id } = element.data[0];
@@ -41,10 +39,10 @@ function render(items, node) {
     const text = document.createElement('div');
     text.setAttribute('class', 'article-description');
 
-    text.innerHTML = `<p>${description.substring(
-      0,
-      100
-    )}&hellip;</p><a href="./details.html?id=${nasa_id}" class="article-read-more">Continue reading &#187;</a>`;
+    const readMore = document.createElement('a');
+    readMore.setAttribute('class', 'article-read-more');
+    readMore.setAttribute('href', `./details.html?id=${nasa_id}`);
+    readMore.innerHTML = 'Continue reading &#187;';
 
     container.appendChild(newItem);
     newItem.appendChild(link);
@@ -52,5 +50,6 @@ function render(items, node) {
     newItem.appendChild(content);
     content.appendChild(articleTitle);
     content.appendChild(text);
+    text.appendChild(readMore);
   });
 }

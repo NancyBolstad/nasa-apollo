@@ -120,10 +120,10 @@ function renderRelated(items) {
     const text = document.createElement('div');
     text.setAttribute('class', 'article-description');
 
-    text.innerHTML = `<p>${description.substring(
-      0,
-      100
-    )}&hellip;</p><a href="./details.html?id=${nasa_id}" class="article-read-more">Continue reading &#187;</a>`;
+    const readMore = document.createElement('a');
+    readMore.setAttribute('class', 'article-read-more');
+    readMore.setAttribute('href', `./details.html?id=${nasa_id}`);
+    readMore.innerHTML = 'Continue reading &#187;';
 
     container.appendChild(newItem);
     newItem.appendChild(link);
@@ -131,5 +131,6 @@ function renderRelated(items) {
     newItem.appendChild(content);
     content.appendChild(articleTitle);
     content.appendChild(text);
+    text.appendChild(readMore);
   });
 }
