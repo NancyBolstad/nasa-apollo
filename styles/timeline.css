@@ -1,207 +1,219 @@
 .launch-timeline {
-    background: #edf4ff;
-  }
-  
-  .landing-timeline {
-    background: #c9ddff;
-  }
+  background: #edf4ff;
+}
 
-  /*------------------------------------*\
+.landing-timeline {
+  background: #c9ddff;
+}
+
+/*------------------------------------*\
   #timeline
 \*------------------------------------*/
 
 .timeline {
-    position: relative;
-    width: 80vw;
-    margin: 2rem auto;
+  position: relative;
+  width: 80vw;
+  margin: 2rem auto;
+}
+
+.timeline-section {
+  padding-bottom: 5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .timeline {
+    width: 70vw;
   }
-  
-  .timeline-section {
-    padding-bottom: 5rem;
-  }
-  
-  @media screen and (min-width: 1024px) {
-    .timeline {
-      width: 70vw;
-    }
-  }
-  
+}
+
+.timeline-date-desktop {
+  font-size: 1.3rem;
+  display: none;
+}
+
+.timeline-date-mobile {
+  font-size: 1.3rem;
+}
+
+@media screen and (min-width: 1024px) {
   .timeline-date-desktop {
+    display: block;
+  }
+
+  .timeline-date-mobile {
     font-size: 1.3rem;
     display: none;
   }
-  
-  .timeline-date-mobile {
-    font-size: 1.3rem;
-  }
-  
-  @media screen and (min-width: 1024px) {
-    .timeline-date-desktop {
-      display: block;
-    }
-  
-    .timeline-date-mobile {
-      font-size: 1.3rem;
-      display: none;
-    }
-  }
-  
+}
+
+.event-date {
+  position: relative;
+  float: left;
+  text-align: left;
+  width: 100%;
+  vertical-align: middle;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  left: -7.5px;
+  top: -5px;
+}
+
+@media screen and (min-width: 1024px) {
   .event-date {
-    position: relative;
-    float: left;
-    text-align: left;
-    width: 100%;
-    vertical-align: middle;
-    line-height: 20px;
-    font-weight: 700;
-    letter-spacing: 0.05rem;
-    text-transform: uppercase;
-    left: -7.5px;
-    top: -5px;
+    left: 12.5px;
+    width: 200px;
   }
-  
-  @media screen and (min-width: 1024px) {
-    .event-date {
-      left: 12.5px;
-      width: 200px;
-    }
-  }
-  
+}
+
+.timeline-point {
+  position: relative;
+  float: left;
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  background: white;
+  display: block;
+  border: 5px solid #0054b0;
+  margin-right: 7px;
+}
+
+@media screen and (min-width: 1024px) {
   .timeline-point {
-    position: relative;
-    float: left;
-    height: 10px;
-    width: 10px;
-    border-radius: 100%;
-    background: white;
-    display: block;
-    border: 5px solid #0054b0;
-    margin-right: 7px;
+    float: right;
+    margin-right: 0px;
   }
-  
-  @media screen and (min-width: 1024px) {
-    .timeline-point {
-      float: right;
-      margin-right: 0px;
-    }
-  }
-  
-  .event {
-    padding-top: 50px;
-    width: 100%;
-    display: block;
-  }
-  
+}
+
+.event {
+  padding-top: 50px;
+  width: 100%;
+  display: block;
+}
+
+.event_description {
+  position: relative;
+  float: left;
+  display: block;
+  top: -0.37rem;
+  width: 80vw;
+  padding-top: 30px;
+  padding-left: 16px;
+  padding-bottom: 40px;
+  border-left: 5px solid #0054b0;
+}
+
+.end .event_description {
+  border-left: 5px solid transparent;
+}
+
+@media screen and (min-width: 1024px) {
   .event_description {
-    position: relative;
-    float: left;
-    display: block;
-    top: -0.37rem;
-    width: 80vw;
-    padding-top: 30px;
-    padding-left: 16px;
-    padding-bottom: 40px;
-    border-left: 5px solid #0054b0;
-  }
-  
-  .end .event_description {
-    border-left: 5px solid transparent;
-  }
-  
-  @media screen and (min-width: 1024px) {
-    .event_description {
-      margin-top: 1rem;
-      padding-left: 40px;
-      padding-top: 0px;
-      padding-bottom: 15%;
-      width: calc(100% - 250px);
-    }
-  }
-  
-  .timeline-section h1 {
-    width: 80vw;
-    font-size: 2rem;
-    margin-bottom: 10rem;
-    border-bottom: 5px solid #0054b0;
-  }
-  
-  .timeline h2 {
-    position: relative;
-    top: -3rem;
-    vertical-align: middle;
-    font-size: 1.8rem;
-    font-weight: 500;
-    margin-bottom: -2.125rem;
-    font-weight: 900;
-    text-transform: capitalize;
-  }
-  
-  .timeline-date-desktop,
-  .timeline-date-mobile {
-    font-size: 1.3rem;
-    color: #0054b0;
-    font-weight: 900;
-  }
-  
-  .timeline-date-desktop {
-    display: none;
-  }
-  
-  .timeline-date-mobile {
-    display: block;
-  }
-  
-  @media screen and (min-width: 1024px) {
-    .timeline-date-desktop {
-      font-size: 1.8rem;
-      display: block;
-    }
-    .timeline-date-mobile {
-      display: none;
-    }
-  }
-  
-  .timeline p {
-    padding: 2rem 0;
-    line-height: 2;
-  }
-  
-  .timeline img {
-    width: 100vw;
-    height: auto;
-    margin-top: 5rem;
-  }
-  
-  @media screen and (min-width: 1024px) {
-    .timeline img {
-      width: 40vw;
-    }
-  }
-  
-  .event-content {
-    margin-top: 20px;
-    margin-right: 20px;
-    font-weight: inherit;
-    font-size: 1.2rem;
-    display: none;
-  }
-  
-  @media screen and (min-width: 1024px) {
-    .event-content {
-      display: block;
-    }
-  }
-  
-  .timeline a {
-    color: #0054b0;
-    display: block;
     margin-top: 1rem;
-    font-size: 1.2rem;
-    text-decoration: underline;
-    margin-right: auto;
-    position: relative;
-    cursor: pointer;
-    font-weight: 400;
-    font-style: italic;
-    text-transform: capitalize;
+    padding-left: 40px;
+    padding-top: 0px;
+    padding-bottom: 15%;
+    width: calc(100% - 250px);
   }
+}
+
+.timeline-section h1 {
+  width: 80vw;
+  font-size: 2rem;
+  margin-bottom: 10rem;
+  border-bottom: 5px solid #0054b0;
+}
+
+.timeline h2 {
+  position: relative;
+  top: -3rem;
+  vertical-align: middle;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: -2.125rem;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+
+.timeline-date-desktop,
+.timeline-date-mobile {
+  font-size: 1.3rem;
+  color: #0054b0;
+  font-weight: 900;
+}
+
+.timeline-date-desktop {
+  display: none;
+}
+
+.timeline-date-mobile {
+  display: block;
+}
+
+@media screen and (min-width: 1024px) {
+  .timeline-date-desktop {
+    font-size: 1.8rem;
+    display: block;
+  }
+  .timeline-date-mobile {
+    display: none;
+  }
+}
+
+.timeline p {
+  padding: 2rem 0;
+  line-height: 2;
+}
+
+.timeline img {
+  width: 100vw;
+  height: auto;
+  margin-top: 5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .timeline img {
+    width: 40vw;
+  }
+}
+
+.event-content {
+  margin-top: 20px;
+  margin-right: 20px;
+  font-weight: inherit;
+  font-size: 1.2rem;
+  display: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .event-content {
+    display: block;
+  }
+}
+
+.timeline a {
+  color: #0054b0;
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  margin-right: auto;
+  position: relative;
+  cursor: pointer;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.prelaunch-timeline {
+  background: #dcdcdc;
+}
+
+.launch-timeline {
+  background: #edf4ff;
+}
+
+.landing-timeline {
+  background: #c9ddff;
+}
