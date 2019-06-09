@@ -5,7 +5,6 @@ function hasQueryString() {
     alert('Empty query string! Redirecting you to the home page ...');
     window.location = './index.html';
   } else {
-    const input = pageParams.get('id');
     const url = `https://images-api.nasa.gov/search?media_type=image&q=${encodeURIComponent(
       id
     )}`;
@@ -28,7 +27,6 @@ function render(item) {
   let {
     date_created,
     title,
-    location,
     nasa_id,
     description,
     keywords
@@ -37,8 +35,10 @@ function render(item) {
   const imgsrc = item.links[0].href;
   const container = document.getElementById('js-details-container');
 
+  //Search for related articles, based on the first keyword.
   fetchRelated(keywords);
 
+  //Convert a unix timestamp returned from the API to normal date 
   date_created = new Date(date_created);
   date_created =
     date_created.getFullYear() +
@@ -83,7 +83,8 @@ hasQueryString();
 async function fetchRelated(keywords) {
   try {
     let query = keywords[0];
-    const url = `https://images-api.nasa.gov/search?keywords=${query}&media_type=image`;
+    console.log(query);
+    const url = `https://images-api.nasa.gov/search?q=${query}&media_type=image`;
     const data = await (await fetch(url)).json();
     renderRelated(data.collection.items);
   } catch (error) {
@@ -92,10 +93,18 @@ async function fetchRelated(keywords) {
 }
 
 function renderRelated(items) {
-  console.log(222222);
+  console.log(items.length);
   const container = document.getElementById('js-articles-container');
-  items.slice(9, 13).forEach(element => {
-    let { description, title, nasa_id } = element.data[0];
+
+  //To ensure rendering even if there are less than four related articles.For instance, ID: LRC-1953-B701_P-78457's keyword Vogely only has one related article.
+  const max = 4;
+  let itemsToShow = items;
+  if (items.length > max) {
+    itemsToShow = items.slice(0, 4);
+  }
+
+  itemsToShow.forEach(element => {
+    let { title, nasa_id } = element.data[0];
     var imgsrc = element.links[0].href;
 
     const newItem = document.createElement('div');
