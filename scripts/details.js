@@ -94,7 +94,7 @@ async function fetchRelated(keyword) {
 function renderRelated(items) {
   console.log(222222);
   const container = document.getElementById('js-articles-container');
-  items.slice(9, 15).forEach(element => {
+  items.slice(9, 13).forEach(element => {
     let { description, title, nasa_id } = element.data[0];
     var imgsrc = element.links[0].href;
 

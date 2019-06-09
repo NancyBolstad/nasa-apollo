@@ -8,6 +8,11 @@ searchButton.addEventListener('click', () => {
   const url = `https://images-api.nasa.gov/search?media_type=image&q=${encodeURIComponent(
     input
   )}`;
+
+  if (input == '' || input == null) {
+    alert('Input cannot be empty, try again!');
+    return null;
+  }
   showSpinner();
   fetch(url)
     .then(response => {
@@ -39,7 +44,6 @@ function render(data, input) {
     const imgsrc = element.links[0].href;
     const resultContainer = document.createElement('div');
     resultContainer.setAttribute('class', 'search-result');
-    container.appendChild(resultContainer);
 
     resultContainer.innerHTML = `<a href="details.html?id=${nasa_id}" class="search-result-link"></a>
             <img
@@ -54,6 +58,8 @@ function render(data, input) {
               <div class="search-result-description">
                 <a href="details.html?id=${nasa_id}" class="search-read-more">Continue reading &#187;</a>
               </div>`;
+              
+    container.appendChild(resultContainer);
   });
 }
 
