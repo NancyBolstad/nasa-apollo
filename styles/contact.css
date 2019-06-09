@@ -10,6 +10,14 @@
   width: 80vw;
 }
 
+@media screen and (min-width: 768px) {
+  .contact-form-wrapper .row {
+    flex-direction: row;
+    width: 80vw;
+    justify-content: center;
+  }
+}
+
 .btn-submit,
 .labels,
 .right-tab {
@@ -43,8 +51,32 @@
   width: 80%;
   padding: 16px;
   margin: 10px;
-  border: 1px solid silver;
+  border: 1px solid #ffffff;
   font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .labels {
+    width: 20vw;
+  }
+  .input-field {
+    width: 60vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .labels {
+    width: 8vw;
+  }
+  .input-field {
+    width: 60vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .labels {
+    width: 5vw;
+  }
 }
 
 .input-message {
