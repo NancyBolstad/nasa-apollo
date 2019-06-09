@@ -550,7 +550,7 @@ h6 {
 }
 
 .popular-search-wrapper a:visited {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .popular-search-wrapper .fa-search {
