@@ -668,7 +668,7 @@ h6 {
   overflow: hidden;
   width: 100vw;
   height: 95vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(../assets/footprint.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -742,7 +742,7 @@ h6 {
 
 .cta {
   padding: 15px 32px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-decoration: none;
   cursor: pointer;
   font-weight: 500;
