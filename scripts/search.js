@@ -73,12 +73,11 @@ function showSpinner() {
 
 function hasQueryString() {
   const pageParams = new URLSearchParams(window.location.search);
-  const id = pageParams.get('search');
-  if (!pageParams.toString() || !id.toString()) {
+  const input = pageParams.get('search');
+  if (!pageParams.toString() || !input.toString()) {
     alert('Empty query string! Redirecting you to the home page ...');
     window.location = './index.html';
   } else {
-    const input = pageParams.get('search');
     const url = `https://images-api.nasa.gov/search?media_type=image&keywords=Apollo&q=${encodeURIComponent(
       input
     )}`;

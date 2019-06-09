@@ -20,6 +20,7 @@
       crossorigin="anonymous"
     />
     <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/details.js"></script>
   </head>
   <body>
     <header class="page-header">
@@ -84,55 +85,7 @@
       <div class="progress-bar" id="js-scroll-bar"></div>
     </header>
     <main>
-      <section class="section-details">
-        <div class="details-media details-left">
-          <img
-            src="https://images-assets.nasa.gov/image/as09-19-2982/as09-19-2982~medium.jpg"
-            alt="Gary Rozanc Headshot"
-          />
-
-          <video
-            class="timeline-video"
-            muted=""
-            controls=""
-            loop=""
-            preload="auto"
-          >
-            <source
-              src="assets/apollo-nasa.mp4"
-              type="video/mp4"
-              media="all and (min-width:769px)"
-            />
-          </video>
-        </div>
-        <div class="details-title details-description details-right">
-          <h1 class="">
-            Apollo 9 Mission image - Astronaut Russell L. Schweickart, lunar
-            module pilot, during EVA
-          </h1>
-          <h6 class="details-nasa-id">
-            <strong>NASA ID:</strong> as09-19-2982
-          </h6>
-          <h6 class="details-created-time">
-            <strong>Date Created:</strong> 1969-03-03
-          </h6>
-          <h6 class="details-keywords">
-            <strong>Keywords:</strong> <a>Apollo</a> <a>Apollo 9</a>
-          </h6>
-          <p>
-            Astronaut Russell L. Schweickart, lunar module pilot, operates a
-            70mm Hasselblad camera during his extravehicular activity on the
-            fourth day of the Apollo 9 earth-orbital mission. The
-            Command/Service Module and the Lunar Module 3 \"Spider\" are docked.
-            This view was taken form the Command Module \"Gumdrop\".
-            Schweickart, wearing an Extravehicular Mobility Unit (EMU), is
-            standing in \"golden slippers\" on the Lunar Module porch. On his
-            back, partially visible, are a Portable Life Support System (PLSS)
-            and an Oxygen Purge System (OPS). Film magazine was A,film type was
-            SO-368 Ektachrome with 0.460 - 0.710 micrometers film / filter
-            transmittance response and haze filter,80mm lens.
-          </p>
-        </div>
+      <section class="section-details" id="js-details-container">
       </section>
       <section class="events-container">
         <div class="section-intro">

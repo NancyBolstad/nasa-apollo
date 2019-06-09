@@ -1,30 +1,4 @@
 /*------------------------------------*\
-  #breadcurmb
-\*------------------------------------*/
-
-.breadcrumb {
-  left: 20px;
-  margin-top: 3rem;
-  height: 40px;
-}
-.breadcrumb .left {
-  float: left;
-}
-.breadcrumb .left .crumb {
-  margin-top: 0;
-  padding-top: 10px;
-  padding-left: 10px;
-  color: gray;
-}
-.breadcrumb .left .crumb strong {
-  color: #1b051b;
-}
-
-.breadcrumb h1 {
-  margin: 5rem 3.5rem;
-}
-
-/*------------------------------------*\
   #details
 \*------------------------------------*/
 
@@ -48,53 +22,46 @@
   .details-right {
     flex: 30vh 1 0;
   }
-  .details-media img,
-  .details-media video {
+  .details-media img {
     max-width: 35vw !important;
   }
-
-  .details-media video {
-    display: none;
-  }
 }
 
-.details-title {
+.details-text {
   width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
 }
-
-.details-title h1 {
-  margin: 1.2rem auto;
+.section-details h2 {
   font-weight: 600;
   text-transform: capitalize;
   font-size: 1.5rem;
   line-height: 1.3;
+  padding-left: 1.8rem;
+  text-align: left;
 }
 
 .section-details h6 {
   font-size: 1.2rem;
   color: inherit;
-  margin-top: 0.5em;
+  padding-left: 1.8rem;
+  line-height: 0.1;
+  font-weight: 900;
+  color: #3f3e3e;
 }
 
-.details-media img,
-.details-media video {
+.details-media img {
   max-width: 80vw;
   margin: 0 auto;
 }
 
-.details-description p {
-  font-size: 1.2rem;
-  padding: 0;
-}
-
-.section-details a {
-  color: #262626;
-  transition: all 300ms ease-in-out;
-  cursor: pointer;
-  padding-right: 0.3rem;
-}
-.section-details a:hover {
-  color: #8c8c8c;
+.details-text p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  padding-left: 1.8rem;
+  margin-top: 2rem;
+  text-align: left;
 }
 
 /*------------------------------------*\
