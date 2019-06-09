@@ -258,7 +258,7 @@
   transition: color 1s ease;
   margin-bottom: 10px;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   width: 80%;
 }
 
@@ -275,7 +275,7 @@
   color: #ffffff;
   display: block;
   margin-top: 16px;
-  font-size: 0.8em;
+  font-size: 1.3rem;
   text-decoration: underline;
   margin-right: auto;
   position: relative;
