@@ -100,53 +100,57 @@ async function fetchRelated(query) {
 }
 
 function renderRelated(items) {
-  console.log(items.length);
-  const container = document.getElementById('js-articles-container');
+  if (items.length > 0) {
+    const container = document.getElementById('js-articles-container');
 
-  //To ensure rendering even if there are less than four related articles.For instance, ID: LRC-1953-B701_P-78457's keyword Vogely only has one related article.
-  const max = 4;
-  let itemsToShow = items;
-  if (items.length > max) {
-    itemsToShow = items.slice(0, 4);
+    //To ensure rendering even if there are less than four related articles.For instance, ID: LRC-1953-B701_P-78457's keyword Vogely only has one related article.
+    const max = 4;
+    let itemsToShow = items;
+    if (items.length > max) {
+      itemsToShow = items.slice(0, 4);
+    }
+
+    itemsToShow.forEach(element => {
+      let { title, nasa_id } = element.data[0];
+      var imgsrc = element.links[0].href;
+
+      const newItem = document.createElement('div');
+      newItem.setAttribute('class', 'article-item');
+
+      const link = document.createElement('a');
+      link.setAttribute('class', 'article-link');
+      link.setAttribute('href', `details.html?id=${nasa_id}`);
+
+      const image = document.createElement('img');
+      image.setAttribute('class', 'article-media');
+      image.setAttribute('alt', `${title}`);
+      image.setAttribute('src', `${imgsrc}`);
+
+      const content = document.createElement('div');
+      content.setAttribute('class', 'article-content');
+
+      const articleTitle = document.createElement('h2');
+      articleTitle.setAttribute('class', 'article-title');
+      articleTitle.innerText = title;
+
+      const text = document.createElement('div');
+      text.setAttribute('class', 'article-description');
+
+      const readMore = document.createElement('a');
+      readMore.setAttribute('class', 'article-read-more');
+      readMore.setAttribute('href', `./details.html?id=${nasa_id}`);
+      readMore.innerHTML = 'Continue reading &#187;';
+
+      container.appendChild(newItem);
+      newItem.appendChild(link);
+      newItem.appendChild(image);
+      newItem.appendChild(content);
+      content.appendChild(articleTitle);
+      content.appendChild(text);
+      text.appendChild(readMore);
+    });
+  } else {
+    //Fix bug for no related search, for instance with id=200907160025HQ, no related
+    fetchRelated('apollo');
   }
-
-  itemsToShow.forEach(element => {
-    let { title, nasa_id } = element.data[0];
-    var imgsrc = element.links[0].href;
-
-    const newItem = document.createElement('div');
-    newItem.setAttribute('class', 'article-item');
-
-    const link = document.createElement('a');
-    link.setAttribute('class', 'article-link');
-    link.setAttribute('href', `details.html?id=${nasa_id}`);
-
-    const image = document.createElement('img');
-    image.setAttribute('class', 'article-media');
-    image.setAttribute('alt', `${title}`);
-    image.setAttribute('src', `${imgsrc}`);
-
-    const content = document.createElement('div');
-    content.setAttribute('class', 'article-content');
-
-    const articleTitle = document.createElement('h2');
-    articleTitle.setAttribute('class', 'article-title');
-    articleTitle.innerText = title;
-
-    const text = document.createElement('div');
-    text.setAttribute('class', 'article-description');
-
-    const readMore = document.createElement('a');
-    readMore.setAttribute('class', 'article-read-more');
-    readMore.setAttribute('href', `./details.html?id=${nasa_id}`);
-    readMore.innerHTML = 'Continue reading &#187;';
-
-    container.appendChild(newItem);
-    newItem.appendChild(link);
-    newItem.appendChild(image);
-    newItem.appendChild(content);
-    content.appendChild(articleTitle);
-    content.appendChild(text);
-    text.appendChild(readMore);
-  });
 }
