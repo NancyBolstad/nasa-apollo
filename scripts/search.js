@@ -13,7 +13,13 @@ searchButton.addEventListener('click', () => {
     alert('Input cannot be empty, try again!');
     return null;
   }
+
+  //Optimise Search UX: Update url after user enter an input, use assign so that user can use the "back" button to navigate back to the original document.
+  location.assign(`search-result.html?search=${input}`);
+
+  //Optimise Search UX: Hint for data fetching
   showSpinner();
+
   fetch(url)
     .then(response => {
       if (!response.ok) throw Error('Failed to retrieve images');
@@ -58,7 +64,7 @@ function render(data, input) {
               <div class="search-result-description">
                 <a href="details.html?id=${nasa_id}" class="search-read-more">Continue reading &#187;</a>
               </div>`;
-              
+
     container.appendChild(resultContainer);
   });
 }
