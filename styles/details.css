@@ -24,6 +24,10 @@
   .details-media img {
     width: 35vw !important;
   }
+
+  #js-details-container-aldrin {
+    flex-direction: row-reverse;
+  }
 }
 
 .details-text {

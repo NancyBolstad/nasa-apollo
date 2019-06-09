@@ -290,7 +290,7 @@
   opacity: 1;
 }
 .search-result:hover .search-result-title,
-.search-read-more {
+.search-result:hover .search-read-more {
   color: #02d9ff;
 }
 .search-result:hover .search-result-content {

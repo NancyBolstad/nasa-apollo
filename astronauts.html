@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Apollo 11</title>
     <link rel="stylesheet" type="text/css" href="styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="styles/search.css" />
     <link rel="stylesheet" type="text/css" href="styles/details.css" />
     <link
       rel="stylesheet"
@@ -19,9 +20,8 @@
       crossorigin="anonymous"
     />
     <script defer src="scripts/script.js"></script>
-    <script defer src="scripts/timeline.js"></script>
+    <script defer src="scripts/astronauts.js"></script>
   </head>
-
   <body>
     <header class="page-header">
       <nav class="navbar">
@@ -58,79 +58,31 @@
       <div class="search-overlay" id="js-search-overlay">
         <span class="btn-close-search" title="Close Overlay">×</span>
         <div class="search-form-wrapper">
-          <h2>What are your looking for?</h2>
+          <h2>What are you looking for?</h2>
           <form action="">
             <input type="text" placeholder="e.g. moon walking" name="search" />
-            <button type="submit">Search</button>
+            <button formaction="search-result.html" type="submit">Search</button>
           </form>
+            <h3>Popular searches from other users:</h3>
+            <div class="popular-search-wrapper">
+            <a href="./search-result.html?search=Apollo Legacy"><i class="fas fa-search"></i>Apollo Legacy</a>
+            <a href="./search-result.html?search=Apollo Launch"><i class="fas fa-search"></i>Apollo Launch</a>
+            <a href="./search-result.html?search=Moon Landing"><i class="fas fa-search"></i>Moon Landing</a>
+            <a href="./search-result.html?search=Neil Armstrong"><i class="fas fa-search"></i>Neil Armstrong</a>
+          </div>
         </div>
       </div>
       <div class="progress-bar" id="js-scroll-bar"></div>
     </header>
     <main>
       <section class="intro-wrapper">
-        <h1 class="sub-page-intro">Apollo 11 Mission Milestones</h1>
-        <p class="sub-page-about">
-          The Apollo 11 mission, the first manned lunar mission, launched from
-          the Apollo Launch Space Center, Florida via the Saturn V launch vehicle on
-          July 16, 1969 and safely returned to Earth on July 24, 1969.
-        </p>
-        <div class="features-flex">
-                <div class="item">
-                  <a href="#js-prelaunch-container" class="outline-button"
-                    ><i class="far fa-newspaper"></i>
-                    <h2>
-                     Pre-Launch Milestones
-                    </h2>
-                    <p>Explore the history in timeline.</p>
-                    <button class="btn-view-more">View More<i class="fas fa-arrow-right"></i></button>
-                  </a>
-                </div>
-                <div class="item">
-                  <a href="#js-launch-container" class="outline-button"
-                    ><i class="fas fa-user-astronaut"></i>
-                    <h2>
-                      Launching Milestones
-                    </h2>
-                    <p>Get to know the heros.</p>
-                    <button class="btn-view-more">View More<i class="fas fa-arrow-right"></i></button
-                  ></a>
-                </div>
-                <div class="item">
-                  <a href="#js-landing-container"
-                    ><i class="fas fa-rocket"></i>
-                    <h2>
-                      Landing Milestones
-                    </h2>
-                    <p>Learn about the space technology.</p>
-                    <button class="btn-view-more">View More<i class="fas fa-arrow-right"></i></button>
-                  </a>
-                </div>
-              </div>
-
-    </div>
-      </section>
-      <section class="timeline-section prelaunch-timeline">
-            <div class="section-title">
-                    <h1>Prelaunch Milestones</h1>
-                  </div>
-                  <div class="timeline" id="js-prelaunch-container">
-                      </div>
-      </section>
-      <section class="timeline-section launch-timeline">
-            <div class="section-title">
-                    <h1>Launch Milestones</h1>
-                  </div>
-                  <div class="timeline" id="js-launch-container">
-                      </div>
-      </section>
-      <section class="timeline-section landing-timeline">
-            <div class="section-title">
-                    <h1>Landing Milestones</h1>
-                  </div>
-                  <div class="timeline" id="js-landing-container">
-                      </div>
-      </section>
+        <h1 class="sub-page-intro">Apollo 11 Astronauts</h1>
+        <h2 class="sub-page-about">
+          Get to know about the people who made the history.
+        </h2>
+        <section class="section-details" id="js-details-container-armstrong"></section>
+        <section class="section-details" id="js-details-container-aldrin"></section>
+        <section class="section-details" id="js-details-container-collins"></section>
     </main>
     <footer class="footer-container">
       <div class="social-media-bar">
