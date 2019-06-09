@@ -338,11 +338,7 @@ h6 {
 .fa-bars:hover,
 .fa-times:hover,
 .fa-search:hover {
-  color: paleturquoise;
-}
-
-.nav-links:hover {
-  text-decoration: underline;
+  color: #02d9ff;
 }
 
 @media screen and (min-width: 1024px) {
