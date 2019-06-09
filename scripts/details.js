@@ -1,4 +1,5 @@
 function hasQueryString() {
+  console.log(111111111);
   const pageParams = new URLSearchParams(window.location.search);
   const id = pageParams.get('id');
   if (!pageParams.toString() || !id.toString()) {
@@ -18,27 +19,28 @@ function hasQueryString() {
         render(obj.collection.items[0]);
       })
       .catch(error => {
-        alert(error);
+        console.log(error);
       });
   }
 }
 
 function render(item) {
-  let {
-    date_created,
-    title,
-    nasa_id,
-    description,
-    keywords
-  } = item.data[0];
+  console.log(22222222);
+  let { date_created, title, nasa_id, description, keywords } = item.data[0];
 
   const imgsrc = item.links[0].href;
   const container = document.getElementById('js-details-container');
 
-  //Search for related articles, based on the first keyword.
-  fetchRelated(keywords);
+  //Fix a bug when searching, for instance id:S74-28972
+  if (keywords) {
+    //If keywords exist, search for related articles, based on the first keyword.
+    fetchRelated(keywords[0]);
+  } else {
+    //If not, search with default query
+    fetchRelated('apollo 11');
+  }
 
-  //Convert a unix timestamp returned from the API to normal date 
+  //Convert a unix timestamp returned from the API to normal date
   date_created = new Date(date_created);
   date_created =
     date_created.getFullYear() +
@@ -80,15 +82,13 @@ function render(item) {
 
 hasQueryString();
 
-async function fetchRelated(keywords) {
+async function fetchRelated(query) {
   try {
-    let query = keywords[0];
-    console.log(query);
     const url = `https://images-api.nasa.gov/search?q=${query}&media_type=image`;
     const data = await (await fetch(url)).json();
     renderRelated(data.collection.items);
   } catch (error) {
-    alert(error);
+    console.log(error);
   }
 }
 
