@@ -6,7 +6,7 @@ function hasQueryString() {
     window.location = './index.html';
   } else {
     const input = pageParams.get('id');
-    const url = `https://images-api.nasa.gov/search?media_type=image&keywords=Apollo&q=${encodeURIComponent(
+    const url = `https://images-api.nasa.gov/search?media_type=image&q=${encodeURIComponent(
       id
     )}`;
     fetch(url)
@@ -25,19 +25,19 @@ function hasQueryString() {
 }
 
 function render(item) {
-  let { date_created, title, location, nasa_id, description } = item.data[0];
-  let keyword = 'apollo 11';
-  if (item.data[0].keywords > 1) {
-    keyword = item.data[0].keywords[1];
-  } else {
-    keyword = item.data[0].keywords[0];
-  }
+  let {
+    date_created,
+    title,
+    location,
+    nasa_id,
+    description,
+    keywords
+  } = item.data[0];
 
   const imgsrc = item.links[0].href;
   const container = document.getElementById('js-details-container');
 
-  fetchRelated(keyword);
-  console.log(item.data[0].keywords[0]);
+  fetchRelated(keywords);
 
   date_created = new Date(date_created);
   date_created =
@@ -80,10 +80,14 @@ function render(item) {
 
 hasQueryString();
 
-async function fetchRelated(keyword) {
+async function fetchRelated(keywords) {
   try {
-    console.log(keyword);
-    const url = `https://images-api.nasa.gov/search?keywords=${keyword}&media_type=image`;
+    if (keywords.length > 1) {
+      query = keywords[1];
+    } else {
+      query = 'apollo 11';
+    }
+    const url = `https://images-api.nasa.gov/search?keywords=${query}&media_type=image`;
     const data = await (await fetch(url)).json();
     renderRelated(data.collection.items);
   } catch (error) {
