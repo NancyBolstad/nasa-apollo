@@ -290,13 +290,13 @@ h6 {
 }
 
 .logo {
-  background-image: url('../assets/nasa-logo.svg');
+  background-image: url('../assets/logo.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  height: 2.8rem;
+  height: 3.5rem;
   width: 6rem;
-  margin-top: 0.2rem;
+  margin-top: 7px;
   margin-left: 20px;
   display: inline-block;
 }
@@ -315,12 +315,12 @@ h6 {
 
 .mobile-menu-left {
   left: 1rem;
-  top: 1.2rem;
+  top: 1.5rem;
 }
 
 .mobile-search-right {
   right: 1rem;
-  top: 1.2rem;
+  top: 1.5rem;
 }
 
 .nav-links-search {
@@ -372,7 +372,7 @@ h6 {
   .logo {
     margin-top: 0;
     width: 8rem;
-    height:4.3rem;
+    height: 4.3rem;
   }
 
   .navbar-toggle-wrapper {
