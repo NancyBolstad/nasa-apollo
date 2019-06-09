@@ -5,7 +5,7 @@ const spinner = document.getElementById('js-loader');
 
 searchButton.addEventListener('click', () => {
   const input = searchInput.value;
-  const url = `https://images-api.nasa.gov/search?media_type=image&keywords=Apollo&q=${encodeURIComponent(
+  const url = `https://images-api.nasa.gov/search?media_type=image&q=${encodeURIComponent(
     input
   )}`;
   showSpinner();
