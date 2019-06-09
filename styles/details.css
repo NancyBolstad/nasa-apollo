@@ -70,7 +70,7 @@
 \*------------------------------------*/
 
 .events-container {
-  background: #0054b0;
+  background: #dcdcdc;
 }
 
 .events-container .section-intro {
@@ -78,7 +78,7 @@
   margin: 0 auto;
   text-align: center;
   font-size: 1.5rem;
-  color: aliceblue;
+  color: #0054b0;
 }
 
 .events h3 {
