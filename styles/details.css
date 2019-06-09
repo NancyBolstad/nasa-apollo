@@ -4,7 +4,7 @@
 
 .section-details {
   width: 80vw;
-  margin: 15rem auto 10rem auto;
+  margin: 5rem auto 10rem auto;
   display: flex;
   flex-direction: column-reverse;
 }
@@ -14,6 +14,7 @@
     flex-direction: row;
     align-items: stretch;
   }
+
   .details-left {
     flex: 30vh 1 0;
   }
@@ -25,7 +26,8 @@
     width: 35vw !important;
   }
 
-  #js-details-container-aldrin {
+  #js-details-container-aldrin,
+  #js-details-container-flight {
     flex-direction: row-reverse;
   }
 }
@@ -69,7 +71,7 @@
   text-align: left;
 }
 
-.details-link{
+.details-link {
   text-decoration: none;
   color: #262626;
   transition: all 300ms ease-in-out;
@@ -80,7 +82,7 @@
   padding: 0.5rem 2rem 3rem 2rem;
 }
 
-.details-link:hover{
+.details-link:hover {
   text-decoration: none;
   color: #262626;
   transition: all 300ms ease-in-out;
