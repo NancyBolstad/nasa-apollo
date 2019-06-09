@@ -11,7 +11,7 @@ const containerCollins = document.getElementById(
     const urlArmstrong =
       'https://images-api.nasa.gov/search?media_type=image&nasa_id=9018112';
     const data = await (await fetch(urlArmstrong)).json();
-    const title = 'Neil A. Armstrong';
+    const title = 'Neil Armstrong';
     populateData(data.collection.items[0], containerArmstrong, title);
   } catch (error) {
     alert(error);
@@ -23,7 +23,7 @@ const containerCollins = document.getElementById(
     const urlAldrin =
       'https://images-api.nasa.gov/search?media_type=image&nasa_id=As11-36-5390';
     const data = await (await fetch(urlAldrin)).json();
-    const title = 'Edwin E. Aldrin, Jr.';
+    const title = 'Edwin Aldrin';
     populateData(data.collection.items[0], containerAldrin, title);
   } catch (error) {
     alert(error);
@@ -62,9 +62,15 @@ function populateData(item, container, title) {
   const contentDescription = document.createElement('p');
   contentDescription.innerText = description;
 
+  const link = document.createElement('a');
+  link.setAttribute('class', 'details-link');
+  link.setAttribute('href', `./search-result.html?search=${title}`);
+  link.innerHTML = 'Read More &#187;';
+
   container.appendChild(mediaContainer);
   container.appendChild(contentContainer);
   mediaContainer.appendChild(media);
   contentContainer.appendChild(contentTitle);
   contentContainer.appendChild(contentDescription);
+  contentContainer.appendChild(link);
 }
