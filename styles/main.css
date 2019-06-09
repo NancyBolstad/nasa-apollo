@@ -433,6 +433,10 @@ h6 {
   margin: -2rem;
 }
 
+.btn-close-search:hover {
+  color: #02d9ff;
+}
+
 .search-form-wrapper input[type='text'] {
   background-color: #eeeeee;
   padding: 18px;
