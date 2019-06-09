@@ -15,11 +15,17 @@ function hasQueryString() {
         return response.json();
       })
       .then(obj => {
-        console.log(obj.collection.items[0]);
-        render(obj.collection.items[0]);
+        if (obj.collection.items.length > 0) {
+          console.log(obj.collection.items[0]);
+          render(obj.collection.items[0]);
+        } else {
+          alert('Wrong ID. Redirecting you to the home page ...');
+          window.location = './index.html';
+        }
       })
       .catch(error => {
         console.log(error);
+        alert('Failed to retrieve data.');
       });
   }
 }
@@ -89,6 +95,7 @@ async function fetchRelated(query) {
     renderRelated(data.collection.items);
   } catch (error) {
     console.log(error);
+    alert('Failed to retrieve data.');
   }
 }
 
