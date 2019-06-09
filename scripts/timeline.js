@@ -72,3 +72,4 @@ function renderTimelineItems(items, node) {
     newEvent.appendChild(newDate);
   });
 }
+

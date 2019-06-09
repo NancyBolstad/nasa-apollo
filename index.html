@@ -20,6 +20,7 @@
       crossorigin="anonymous"
     />
     <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/index.js"></script>
   </head>
 
   <body>
@@ -67,11 +68,19 @@
           </form>
           <h3>Popular searches from other users:</h3>
           <div class="popular-search-wrapper">
-              <a href="./search-result.html?search=Saturn Apollo Program"><i class="fas fa-search"></i>Saturn Apollo Program</a>
-              <a href="./search-result.html?search=Kennedy"><i class="fas fa-search"></i>Kennedy</a>
-              <a href="./search-result.html?search=Lunar Space Station"><i class="fas fa-search"></i>Lunar Space Station</a>
-              <a href="./search-result.html?search=Neil Armstrong"><i class="fas fa-search"></i>Neil Armstrong</a>
-            </div>
+            <a href="./search-result.html?search=Saturn Apollo Program"
+              ><i class="fas fa-search"></i>Saturn Apollo Program</a
+            >
+            <a href="./search-result.html?search=Kennedy"
+              ><i class="fas fa-search"></i>Kennedy</a
+            >
+            <a href="./search-result.html?search=Lunar Space Station"
+              ><i class="fas fa-search"></i>Lunar Space Station</a
+            >
+            <a href="./search-result.html?search=Neil Armstrong"
+              ><i class="fas fa-search"></i>Neil Armstrong</a
+            >
+          </div>
         </div>
       </div>
       <div class="progress-bar" id="js-scroll-bar"></div>
@@ -153,7 +162,7 @@
         <div class="section-title">
           <h1>Highlighted Stories</h1>
         </div>
-        <div class="articles-flex">
+        <div class="articles-flex" id="js-articles-container">
           <div class="article-item">
             <a href="#" class="article-link"></a>
             <img
