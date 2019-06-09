@@ -82,11 +82,7 @@ hasQueryString();
 
 async function fetchRelated(keywords) {
   try {
-    if (keywords.length > 1) {
-      query = keywords[1];
-    } else {
-      query = 'apollo 11';
-    }
+    let query = keywords[0];
     const url = `https://images-api.nasa.gov/search?keywords=${query}&media_type=image`;
     const data = await (await fetch(url)).json();
     renderRelated(data.collection.items);
