@@ -543,14 +543,11 @@ h6 {
 .popular-search-wrapper a {
   font-size: 1.367rem;
   margin-top: 1.5rem;
+  color: #ffffff;
 }
 
 .popular-search-wrapper a:hover {
   color: #02d9ff !important;
-}
-
-.popular-search-wrapper a:visited {
-  color: #ffffff !important;
 }
 
 .popular-search-wrapper .fa-search {
