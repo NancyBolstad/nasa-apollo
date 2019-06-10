@@ -21,6 +21,7 @@ searchButton.addEventListener('click', () => {
   //Validate search input is not empty
   if (input == '' || input == null) {
     alert('Input cannot be empty, try again!');
+    //Set return null to stop the function
     return null;
   }
 
@@ -42,7 +43,6 @@ searchInput.addEventListener('keypress', key => {
 async function fetchData(query, doNext) {
   try {
     showSpinner();
-
     //Encode input, since input is part of the url
     const url = `https://images-api.nasa.gov/search?media_type=image&keywords=Apollo&q=${encodeURIComponent(
       query
@@ -51,7 +51,7 @@ async function fetchData(query, doNext) {
     doNext(data.collection, query);
   } catch (error) {
     console.log(error);
-    throw Error('Failed to retrieve data.');
+    alert('Failed to retrieve data.');
   }
 }
 

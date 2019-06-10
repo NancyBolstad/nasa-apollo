@@ -5,8 +5,6 @@ function validateForm() {
   //RFC2822 Email Validation, refer to:https://regexr.com/2rhq7
   var emailRegex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
 
-  console.log(111111111);
-
   if (name == '' || name == null) {
     alert('Name cannot be empty');
     document.getElementById('name').focus();

@@ -1,5 +1,4 @@
-function hasQueryString() {
-  console.log(111111111);
+(function hasQueryString() {
   const pageParams = new URLSearchParams(window.location.search);
   const id = pageParams.get('id');
   if (!pageParams.toString() || !id.toString()) {
@@ -11,15 +10,14 @@ function hasQueryString() {
     )}`;
     fetch(url)
       .then(response => {
-        if (!response.ok) throw Error('Failed to retrieve images');
+        if (!response.ok) throw Error('Failed to retrieve data');
         return response.json();
       })
       .then(obj => {
         if (obj.collection.items.length > 0) {
-          console.log(obj.collection.items[0]);
           render(obj.collection.items[0]);
         } else {
-          alert('Wrong ID. Redirecting you to the home page ...');
+          alert(`No data exists in relation to  NASA ID: ${id}`);
           window.location = './index.html';
         }
       })
@@ -28,16 +26,15 @@ function hasQueryString() {
         alert('Failed to retrieve data.');
       });
   }
-}
+})();
 
 function render(item) {
-  console.log(22222222);
   let { date_created, title, nasa_id, description, keywords } = item.data[0];
 
   const imgsrc = item.links[0].href;
   const container = document.getElementById('js-details-container');
 
-  //Fix a bug when searching, for instance id:S74-28972
+  //To fix a bug when searching, for instance id:S74-28972
   if (keywords) {
     //If keywords exist, search for related articles, based on the first keyword.
     fetchRelated(keywords[0]);
@@ -46,7 +43,7 @@ function render(item) {
     fetchRelated('apollo 11');
   }
 
-  //Convert a unix timestamp returned from the API to normal date
+  //Convert a unix timestamp returned from the API, for instance: from 1974-09-01T00:00:00Z to 1974/09/01
   date_created = new Date(date_created);
   date_created =
     date_created.getFullYear() +
@@ -86,8 +83,6 @@ function render(item) {
   contentContainer.appendChild(contentDescription);
 }
 
-hasQueryString();
-
 async function fetchRelated(query) {
   try {
     const url = `https://images-api.nasa.gov/search?q=${query}&media_type=image`;
@@ -106,7 +101,7 @@ function renderRelated(items) {
     //To ensure rendering even if there are less than four related articles.For instance, ID: LRC-1953-B701_P-78457's keyword Vogely only has one related article.
     let itemsToShow = items;
 
-    //If is more than 4 articles, only show the first four instance
+    //Only if it is more than 4 related articles, slice the items
     const max = 4;
     if (items.length > max) {
       itemsToShow = items.slice(0, 4);
@@ -152,9 +147,7 @@ function renderRelated(items) {
       text.appendChild(readMore);
     });
   } else {
-    //Fix bug for no related search, for instance with id=200907160025HQ, no related
+    //Fix bug for no related search. For instance, id=200907160025HQ and id=S74-28972 have no related articles and keywords by default
     fetchRelated('apollo');
   }
 }
-
-//bug id:id=S74-28972
