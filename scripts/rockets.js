@@ -62,8 +62,9 @@ function populateData(item, container, title) {
 
   const link = document.createElement('a');
   link.setAttribute('class', 'details-link');
+  link.setAttribute('title', `Go to ${title}`);
   link.setAttribute('href', `./search-result.html?search=${title}`);
-  link.innerHTML = 'Read More &#187;';
+  link.innerHTML = `Read more about ${title} &#187;`;
 
   container.appendChild(mediaContainer);
   container.appendChild(contentContainer);

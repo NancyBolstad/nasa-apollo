@@ -14,7 +14,7 @@
 function render(items) {
   const container = document.getElementById('js-articles-container');
   items.slice(9, 15).forEach(element => {
-    let { description, title, nasa_id } = element.data[0];
+    let { title, nasa_id } = element.data[0];
     var imgsrc = element.links[0].href;
 
     const newItem = document.createElement('div');
@@ -22,6 +22,7 @@ function render(items) {
 
     const link = document.createElement('a');
     link.setAttribute('class', 'article-link');
+    link.setAttribute('title', `Got to ${title}`);
     link.setAttribute('href', `details.html?id=${nasa_id}`);
 
     const image = document.createElement('img');
@@ -41,8 +42,10 @@ function render(items) {
 
     const readMore = document.createElement('a');
     readMore.setAttribute('class', 'article-read-more');
+    readMore.setAttribute('title', `Got to ${title}`);
     readMore.setAttribute('href', `./details.html?id=${nasa_id}`);
-    readMore.innerHTML = 'View Details &#187;';
+    readMore.innerHTML = 'View details &#187;';
+    
 
     container.appendChild(newItem);
     newItem.appendChild(link);

@@ -76,7 +76,7 @@
 }
 
 .details-link {
-  text-decoration: none;
+  text-decoration: underline;
   color: #262626;
   transition: all 300ms ease-in-out;
   cursor: pointer;

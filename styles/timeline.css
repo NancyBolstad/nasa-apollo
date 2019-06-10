@@ -170,6 +170,7 @@
   width: 100vw;
   height: auto;
   margin-top: 5rem;
+  margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -192,18 +193,26 @@
   }
 }
 
-.timeline a {
-  color: #0054b0;
-  display: block;
-  margin-top: 1rem;
-  font-size: 1.2rem;
+.details-link {
   text-decoration: underline;
-  margin-right: auto;
-  position: relative;
+  color: #262626;
+  transition: all 300ms ease-in-out;
   cursor: pointer;
-  font-weight: 400;
+  text-align: left;
+  font-size: 1.3rem;
+  font-weight: 500;
   font-style: italic;
-  text-transform: capitalize;
+  margin-top: 1.5rem;
+}
+
+.details-link:hover {
+  text-decoration: none;
+  color: #262626;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+  margin-left: 1.8rem;
+  text-align: left;
+  color: #8c8c8c;
 }
 
 .prelaunch-timeline {

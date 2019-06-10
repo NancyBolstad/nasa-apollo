@@ -79,6 +79,12 @@ function renderTimelineItems(items, node) {
     newText.setAttribute('class', 'event-content');
     newText.innerText = `${description}`;
 
+    const link = document.createElement('a');
+    link.setAttribute('class', 'details-link');
+    link.setAttribute('title', `Got to ${title}`);
+    link.setAttribute('href', `./details.html?id=${nasa_id}`);
+    link.innerHTML = 'View details &#187;';
+
     node.appendChild(newEvent);
     node.appendChild(newContent);
     newEvent.appendChild(newDate);
@@ -88,5 +94,6 @@ function renderTimelineItems(items, node) {
     newContent.appendChild(mobileDate);
     newContent.appendChild(newMedia);
     newContent.appendChild(newText);
+    newContent.appendChild(link);
   });
 }

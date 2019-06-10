@@ -116,6 +116,7 @@ function renderRelated(items) {
 
       const link = document.createElement('a');
       link.setAttribute('class', 'article-link');
+      link.setAttribute('title', `Got to ${title}`);
       link.setAttribute('href', `details.html?id=${nasa_id}`);
 
       const image = document.createElement('img');
@@ -135,8 +136,9 @@ function renderRelated(items) {
 
       const readMore = document.createElement('a');
       readMore.setAttribute('class', 'article-read-more');
+      readMore.setAttribute('title', `Got to ${title}`);
       readMore.setAttribute('href', `./details.html?id=${nasa_id}`);
-      readMore.innerHTML = 'View Details &#187;';
+      readMore.innerHTML = 'View details &#187;';
 
       container.appendChild(newItem);
       newItem.appendChild(link);
