@@ -1,211 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="author" content="NASA" />
-    <meta
-      name="description"
-      content="We provide multimedia-rich searchable information about milestones, astronauts and spacecraft of the Apollo 11 mission in celebration of its50th anniversary"
-    />
-    <title>Apollo 11 Details | Facts About the Moon Landing</title>
-    <link rel="stylesheet" type="text/css" href="styles/main.css" />
-    <link rel="stylesheet" type="text/css" href="styles/details.css" />
-    <link rel="stylesheet" type="text/css" href="styles/search.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
-      crossorigin="anonymous"
-    />
-    <script defer src="scripts/script.js"></script>
-    <script defer src="scripts/details.js"></script>
-  </head>
-  <body>
-    <header class="page-header">
-      <nav class="navbar">
-        <a
-          href="index.html"
-          title="Go to home page"
-          aria-label="Go to home page"
-          class="logo"
-        ></a>
-        <span class="navbar-toggle-wrapper mobile-menu-left">
-          <i class="fas fa-bars navbar-fas" id="js-navmenu-toggle"></i>
-        </span>
-        <span class="navbar-toggle-wrapper mobile-search-right">
-          <i class="fas fa-search navbar-fas js-navsearch-toggle"></i>
-        </span>
-        <ul class="main-nav" id="js-menu">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="author" content="NASA" />
+  <meta name="description"
+    content="We provide multimedia-rich searchable information about milestones, astronauts and spacecraft of the Apollo 11 mission in celebration of its50th anniversary" />
+  <title>Apollo 11 Details | Facts About the Moon Landing</title>
+  <link rel="stylesheet" type="text/css" href="styles/main.css" />
+  <link rel="stylesheet" type="text/css" href="styles/details.css" />
+  <link rel="stylesheet" type="text/css" href="styles/search.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3135901-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-3135901-2');
+  </script>
+  <script defer src="scripts/script.js"></script>
+  <script defer src="scripts/details.js"></script>
+</head>
+
+<body>
+  <header class="page-header">
+    <nav class="navbar">
+      <a href="index.html" title="Go to home page" aria-label="Go to home page" class="logo"></a>
+      <span class="navbar-toggle-wrapper mobile-menu-left">
+        <i class="fas fa-bars navbar-fas" id="js-navmenu-toggle"></i>
+      </span>
+      <span class="navbar-toggle-wrapper mobile-search-right">
+        <i class="fas fa-search navbar-fas js-navsearch-toggle"></i>
+      </span>
+      <ul class="main-nav" id="js-menu">
+        <li>
+          <a href="index.html" title="Go to home page" aria-label="Go to home page" class="nav-links">Home</a>
+        </li>
+        <li>
+          <a href="milestones.html" title="Got to milestones page" aria-label="Go to milestones page"
+            class="nav-links">Milestones</a>
+        </li>
+        <li>
+          <a href="astronauts.html" title="Got to milestones page" aria-label="Go to milestones page"
+            class="nav-links">Astronauts</a>
+        </li>
+        <li>
+          <a href="rockets.html" title="Go to rockets page" aria-label="Go to rocket page" class="nav-links">Rockets</a>
+        </li>
+        <li>
+          <a href="contact.html" title="Got to contact page" aria-label="Go to contact page"
+            class="nav-links">Contact</a>
+        </li>
+        <li>
+          <a href="#" title="Open search screen" aria-label="Open search screen" class="nav-links-search">
+            <i class="fas fa-search navbar-fas js-navsearch-toggle"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="search-overlay" id="js-search-overlay">
+      <span class="btn-close-search" title="Close Overlay">×</span>
+      <div class="search-form-wrapper">
+        <h2>What are you looking for?</h2>
+        <form action="">
+          <input type="text" placeholder="e.g. apollo landing"
+            aria-label="Search for images, articles and stories About the Apollo 11 Mission" name="search" required />
+          <button formaction="search-results.html" type="submit">
+            Search
+          </button>
+        </form>
+        <h3>Popular searches from other users:</h3>
+        <div class="popular-search-wrapper">
+          <a href="./search-results.html?search=Apollo Legacy" title="Go to search results page"
+            aria-label="Go to search results page"><i class="fas fa-search"></i>Apollo Legacy</a>
+          <a href="./search-results.html?search=Apollo Launch" title="Go to search results page"
+            aria-label="Go to search results page"><i class="fas fa-search"></i>Apollo Launch</a>
+          <a href="./search-results.html?search=Moon Landing" title="Go to search results page"
+            aria-label="Go to search results page"><i class="fas fa-search"></i>Moon Landing</a>
+          <a href="./search-results.html?search=Neil Armstrong" title="Go to search results page"
+            aria-label="Go to search results page"><i class="fas fa-search"></i>Neil Armstrong</a>
+        </div>
+      </div>
+    </div>
+    <div class="progress-bar" id="js-scroll-bar"></div>
+  </header>
+  <main>
+    <section class="section-details" id="js-details-container"></section>
+    <section class="events-container" id="js-related-container">
+      <div class="section-intro">
+        <div>
+          <h2 class="related-section-title">
+            You may also be interested in
+          </h2>
+        </div>
+      </div>
+      <div class="articles-flex" id="js-articles-container"></div>
+    </section>
+  </main>
+  <footer class="footer-container">
+    <div class="social-media-bar">
+      <div class="social-media-icons">
+        <ul>
           <li>
-            <a
-              href="index.html"
-              title="Go to home page"
-              aria-label="Go to home page"
-              class="nav-links"
-              >Home</a
-            >
+            <a href="#" title="Go to twitter" aria-label="Go to twitter" class="a-twitter"><i
+                class="fab fa-twitter"></i></a>
           </li>
           <li>
-            <a
-              href="milestones.html"
-              title="Got to milestones page"
-              aria-label="Go to milestones page"
-              class="nav-links"
-              >Milestones</a
-            >
+            <a href="#" title="Go to facebook" aria-label="Go to facebook" class="a-facebook"><i
+                class="fab fa-facebook"></i></a>
           </li>
           <li>
-            <a
-              href="astronauts.html"
-              title="Got to milestones page"
-              aria-label="Go to milestones page"
-              class="nav-links"
-              >Astronauts</a
-            >
+            <a href="#" title="Go to instagram" aria-label="Go to instagram" class="a-instagram"><i
+                class="fab fa-instagram"></i></a>
           </li>
           <li>
-            <a
-              href="rockets.html"
-              title="Go to rockets page"
-              aria-label="Go to rocket page"
-              class="nav-links"
-              >Rockets</a
-            >
-          </li>
-          <li>
-            <a
-              href="contact.html"
-              title="Got to contact page"
-              aria-label="Go to contact page"
-              class="nav-links"
-              >Contact</a
-            >
-          </li>
-          <li>
-            <a
-              href="#"
-              title="Open search screen"
-              aria-label="Open search screen"
-              class="nav-links-search"
-            >
-              <i class="fas fa-search navbar-fas js-navsearch-toggle"></i
-            ></a>
+            <a href="#" title="Go to snap chat" aria-label="Go to snap chat" class="a-snapchat"><i
+                class="fab fa-snapchat-ghost"></i></a>
           </li>
         </ul>
-      </nav>
-      <div class="search-overlay" id="js-search-overlay">
-        <span class="btn-close-search" title="Close Overlay">×</span>
-        <div class="search-form-wrapper">
-          <h2>What are you looking for?</h2>
-          <form action="">
-            <input
-              type="text"
-              placeholder="e.g. apollo landing"
-              aria-label="Search for images, articles and stories About the Apollo 11 Mission"
-              name="search"
-              required
-            />
-            <button formaction="search-results.html" type="submit">
-              Search
-            </button>
-          </form>
-          <h3>Popular searches from other users:</h3>
-          <div class="popular-search-wrapper">
-            <a
-              href="./search-results.html?search=Apollo Legacy"
-              title="Go to search results page"
-              aria-label="Go to search results page"
-              ><i class="fas fa-search"></i>Apollo Legacy</a
-            >
-            <a
-              href="./search-results.html?search=Apollo Launch"
-              title="Go to search results page"
-              aria-label="Go to search results page"
-              ><i class="fas fa-search"></i>Apollo Launch</a
-            >
-            <a
-              href="./search-results.html?search=Moon Landing"
-              title="Go to search results page"
-              aria-label="Go to search results page"
-              ><i class="fas fa-search"></i>Moon Landing</a
-            >
-            <a
-              href="./search-results.html?search=Neil Armstrong"
-              title="Go to search results page"
-              aria-label="Go to search results page"
-              ><i class="fas fa-search"></i>Neil Armstrong</a
-            >
-          </div>
-        </div>
+        <h6>
+          &copy; 2019 - Designed and Developed By Nancy Y. Bolstad
+        </h6>
       </div>
-      <div class="progress-bar" id="js-scroll-bar"></div>
-    </header>
-    <main>
-      <section class="section-details" id="js-details-container"></section>
-      <section class="events-container" id="js-related-container">
-        <div class="section-intro">
-          <div>
-            <h2 class="related-section-title">
-              You may also be interested in
-            </h2>
-          </div>
-        </div>
-        <div class="articles-flex" id="js-articles-container"></div>
-      </section>
-    </main>
-    <footer class="footer-container">
-      <div class="social-media-bar">
-        <div class="social-media-icons">
-          <ul>
-            <li>
-              <a
-                href="#"
-                title="Go to twitter"
-                aria-label="Go to twitter"
-                class="a-twitter"
-                ><i class="fab fa-twitter"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                href="#"
-                title="Go to facebook"
-                aria-label="Go to facebook"
-                class="a-facebook"
-                ><i class="fab fa-facebook"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                href="#"
-                title="Go to instagram"
-                aria-label="Go to instagram"
-                class="a-instagram"
-                ><i class="fab fa-instagram"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                href="#"
-                title="Go to snap chat"
-                aria-label="Go to snap chat"
-                class="a-snapchat"
-                ><i class="fab fa-snapchat-ghost"></i
-              ></a>
-            </li>
-          </ul>
-          <h6>
-            &copy; 2019 - Designed and Developed By Nancy Y. Bolstad
-          </h6>
-        </div>
-      </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
+
 </html>
