@@ -32,7 +32,7 @@ document.addEventListener(
   false
 );
 
-//Page scroll indicator to visualize the scroll position
+//Scroll indicator
 window.onscroll = () => {
   const docHeight =
     document.documentElement.scrollHeight -
