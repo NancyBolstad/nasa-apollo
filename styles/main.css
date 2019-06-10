@@ -1047,7 +1047,7 @@ section {
   color: #ffffff;
   position: relative;
   text-transform: capitalize;
-  width:50vw;
+  width: 50vw;
 }
 
 @media (min-width: 768px) {
@@ -1079,6 +1079,7 @@ section {
   cursor: pointer;
   font-style: italic;
   text-transform: capitalize;
+  transition: all 300ms ease-in-out;
 }
 .article-item:hover .article-title {
   color: #02d9ff;
@@ -1087,6 +1088,7 @@ section {
 .article-item:hover .article-read-more {
   color: #02d9ff;
   font-size: 1.5rem;
+  text-decoration: none;
 }
 
 .article-item:hover .article-content {

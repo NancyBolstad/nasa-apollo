@@ -276,13 +276,14 @@
   display: block;
   margin-top: 16px;
   font-size: 1.3rem;
-  text-decoration: underline;
+  text-decoration: none;
   margin-right: auto;
   position: relative;
   z-index: 5;
   cursor: pointer;
   font-style: italic;
   text-transform: capitalize;
+  transition: all 300ms ease-in-out;
 }
 
 .search-result:hover .search-result-description {
@@ -292,7 +293,9 @@
 .search-result:hover .search-result-title,
 .search-result:hover .search-read-more {
   color: #02d9ff;
+  text-decoration: underline;
 }
+
 .search-result:hover .search-result-content {
   background-color: rgba(0, 0, 0, 0.7);
 }
