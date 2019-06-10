@@ -10,7 +10,6 @@
     )}`;
     fetch(url)
       .then(response => {
-        if (!response.ok) throw Error('Failed to retrieve data');
         return response.json();
       })
       .then(obj => {
@@ -23,7 +22,6 @@
       })
       .catch(error => {
         console.log(error);
-        alert('Failed to retrieve data.');
       });
   }
 })();

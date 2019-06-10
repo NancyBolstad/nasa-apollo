@@ -34,7 +34,6 @@ searchButton.addEventListener('click', () => {
 //Optimise Search UX for keyboard usage
 searchInput.addEventListener('keypress', key => {
   if (key.keyCode === 13) {
-    event.preventDefault();
     document.getElementById('js-search-page-button').click();
   }
 });
@@ -51,7 +50,6 @@ async function fetchData(query, doNext) {
     doNext(data.collection, query);
   } catch (error) {
     console.log(error);
-    alert('Failed to retrieve data.');
   }
 }
 

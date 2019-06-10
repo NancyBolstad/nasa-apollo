@@ -16,7 +16,6 @@
     populateTimeline(items);
   } catch (error) {
     console.log(error);
-    alert('Failed to retrieve data.');
   }
 })();
 
