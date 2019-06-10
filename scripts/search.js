@@ -20,7 +20,7 @@ searchButton.addEventListener('click', () => {
   const input = searchInput.value;
   //Validate search input is not empty
   if (input == '' || input == null) {
-    alert('Input cannot be empty, try again!');
+    alert('The search field cannot be empty. Please try again.');
     //Set return null to stop the function
     return null;
   }
