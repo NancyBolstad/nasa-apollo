@@ -73,6 +73,7 @@ function renderSearchResults(data, input) {
     const link = document.createElement('a');
     link.setAttribute('class', 'search-result-link');
     link.setAttribute('title', `Got to ${title}`);
+    link.setAttribute('aria-label', `Got to ${title}`);
     link.setAttribute('href', `details.html?id=${nasa_id}`);
 
     const media = document.createElement('img');

@@ -81,6 +81,7 @@ function renderTimelineItems(items, node) {
     const link = document.createElement('a');
     link.setAttribute('class', 'details-link');
     link.setAttribute('title', `Got to ${title}`);
+    link.setAttribute('aria-label', `Got to ${title}`);
     link.setAttribute('href', `./details.html?id=${nasa_id}`);
     link.innerHTML = 'View details &#187;';
 

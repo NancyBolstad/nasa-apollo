@@ -44,6 +44,7 @@ function render(items) {
     const readMore = document.createElement('a');
     readMore.setAttribute('class', 'article-read-more');
     readMore.setAttribute('title', `Got to ${title}`);
+    readMore.setAttribute('aria-label', `Got to ${title}`);
     readMore.setAttribute('href', `./details.html?id=${nasa_id}`);
     readMore.innerHTML = 'View details &#187;';
     

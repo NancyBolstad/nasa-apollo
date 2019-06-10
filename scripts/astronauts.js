@@ -65,6 +65,7 @@ function populateData(item, container, title) {
   const link = document.createElement('a');
   link.setAttribute('class', 'details-link');
   link.setAttribute('title', `Got to ${title}`);
+  link.setAttribute('aria-label', `Got to ${title}`);
   link.setAttribute('href', `./search-results.html?search=${title}`);
   link.innerHTML = `Read more about ${title} &#187;`;
 
