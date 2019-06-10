@@ -42,7 +42,7 @@ function render(items) {
     const readMore = document.createElement('a');
     readMore.setAttribute('class', 'article-read-more');
     readMore.setAttribute('href', `./details.html?id=${nasa_id}`);
-    readMore.innerHTML = 'Continue reading &#187;';
+    readMore.innerHTML = 'View Details &#187;';
 
     container.appendChild(newItem);
     newItem.appendChild(link);

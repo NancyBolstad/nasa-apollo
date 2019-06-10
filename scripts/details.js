@@ -104,8 +104,10 @@ function renderRelated(items) {
     const container = document.getElementById('js-articles-container');
 
     //To ensure rendering even if there are less than four related articles.For instance, ID: LRC-1953-B701_P-78457's keyword Vogely only has one related article.
-    const max = 4;
     let itemsToShow = items;
+
+    //If is more than 4 articles, only show the first four instance
+    const max = 4;
     if (items.length > max) {
       itemsToShow = items.slice(0, 4);
     }
@@ -139,7 +141,7 @@ function renderRelated(items) {
       const readMore = document.createElement('a');
       readMore.setAttribute('class', 'article-read-more');
       readMore.setAttribute('href', `./details.html?id=${nasa_id}`);
-      readMore.innerHTML = 'Continue reading &#187;';
+      readMore.innerHTML = 'View Details &#187;';
 
       container.appendChild(newItem);
       newItem.appendChild(link);
@@ -154,3 +156,6 @@ function renderRelated(items) {
     fetchRelated('apollo');
   }
 }
+
+
+//bug id:id=S74-28972
