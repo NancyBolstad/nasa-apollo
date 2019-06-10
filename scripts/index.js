@@ -23,6 +23,7 @@ function render(items) {
     const link = document.createElement('a');
     link.setAttribute('class', 'article-link');
     link.setAttribute('title', `Got to ${title}`);
+    link.setAttribute('aria-label', `Got to ${title}`);
     link.setAttribute('href', `details.html?id=${nasa_id}`);
 
     const image = document.createElement('img');
@@ -33,7 +34,7 @@ function render(items) {
     const content = document.createElement('div');
     content.setAttribute('class', 'article-content');
 
-    const articleTitle = document.createElement('h2');
+    const articleTitle = document.createElement('h3');
     articleTitle.setAttribute('class', 'article-title');
     articleTitle.innerText = title;
 
