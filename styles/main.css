@@ -1262,6 +1262,9 @@ section {
   }
 }
 
+.form-submitted-screen {
+  background-color: #c9ddff;
+}
 /*------------------------------------*\
   #footer
 \*------------------------------------*/
