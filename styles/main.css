@@ -372,7 +372,7 @@ h6 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-right: 1.875rem;
+    margin-right: 3rem !important;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
@@ -394,6 +394,7 @@ h6 {
     margin-top: 0;
     width: 8rem;
     height: 4.3rem;
+    margin-left: 3rem;
   }
 
   .navbar-toggle-wrapper {
