@@ -3,18 +3,47 @@ const searchInput = document.getElementById('js-search-page-input');
 const searchButton = document.getElementById('js-search-page-button');
 const spinner = document.getElementById('js-loader');
 
+//Take the user to the search results
+(function hasQueryString() {
+  const pageParams = new URLSearchParams(window.location.search);
+  const input = pageParams.get('search');
+  if (!pageParams.toString() || !input.toString()) {
+    alert('Empty query string! Redirecting you to the home page ...');
+    window.location = './index.html';
+  } else {
+    const url = `https://images-api.nasa.gov/search?media_type=image&keywords=Apollo&q=${encodeURIComponent(
+      input
+    )}`;
+    showSpinner();
+    fetch(url)
+      .then(response => {
+        if (!response.ok) throw Error('Failed to retrieve images');
+        return response.json();
+      })
+      .then(obj => {
+        renderSearchResults(obj.collection, input);
+      })
+      .catch(error => {
+        alert(error);
+      });
+  }
+})();
+
 searchButton.addEventListener('click', () => {
   const input = searchInput.value;
+
+  //Encode input, since input is part of the url
   const url = `https://images-api.nasa.gov/search?media_type=image&q=${encodeURIComponent(
     input
   )}`;
 
+  //Validate search input is not empty
   if (input == '' || input == null) {
     alert('Input cannot be empty, try again!');
     return null;
   }
 
-  //Optimise Search UX: Update url after user enter an input, use assign so that user can use the "back" button to navigate back to the original document.
+  //Optimise Search UX: Update url after user enter an input. Use assign so that user can use the "back" button to navigate back
   location.assign(`search-result.html?search=${input}`);
 
   //Optimise Search UX: Hint for data fetching
@@ -26,13 +55,14 @@ searchButton.addEventListener('click', () => {
       return response.json();
     })
     .then(obj => {
-      render(obj.collection, input);
+      renderSearchResults(obj.collection, input);
     })
     .catch(error => {
       console.log(error);
     });
 });
 
+//Optimise Search UX for keyboard usage
 searchInput.addEventListener('keypress', key => {
   if (key.keyCode === 13) {
     event.preventDefault();
@@ -40,11 +70,16 @@ searchInput.addEventListener('keypress', key => {
   }
 });
 
-function render(data, input) {
-  remove(container);
+function renderSearchResults(data, input) {
   const { items } = data;
+
+  //Search UX: Hint for search results
   const amount = document.getElementById('js-search-result-amount');
   amount.innerHTML = `${items.length} search results for "${input}"`;
+
+  //Remove child nodes
+  remove(container);
+
   items.forEach(element => {
     const { title, nasa_id } = element.data[0];
     const imgsrc = element.links[0].href;
@@ -64,8 +99,9 @@ function render(data, input) {
     content.setAttribute('class', 'search-result-content');
 
     const resultTitle = document.createElement('h2');
-    resultTitle.setAttribute('class','search-result-title');
-    //Since some titles by default from the API are very long: NASA ID: As14-66-9233
+    resultTitle.setAttribute('class', 'search-result-title');
+
+    //Since some titles by default from the API are very long: for instance, NASA ID: As14-66-9233
     if (title.length < 80) {
       resultTitle.innerText = title;
     } else {
@@ -99,33 +135,5 @@ function showSpinner() {
   spinner.className = 'visible';
   setTimeout(() => {
     spinner.className = spinner.className.replace('visible', '');
-  }, 2000);
-  console.log('Test: Loading...');
+  }, 3000);
 }
-
-function hasQueryString() {
-  const pageParams = new URLSearchParams(window.location.search);
-  const input = pageParams.get('search');
-  if (!pageParams.toString() || !input.toString()) {
-    alert('Empty query string! Redirecting you to the home page ...');
-    window.location = './index.html';
-  } else {
-    const url = `https://images-api.nasa.gov/search?media_type=image&keywords=Apollo&q=${encodeURIComponent(
-      input
-    )}`;
-    showSpinner();
-    fetch(url)
-      .then(response => {
-        if (!response.ok) throw Error('Failed to retrieve images');
-        return response.json();
-      })
-      .then(obj => {
-        render(obj.collection, input);
-      })
-      .catch(error => {
-        alert(error);
-      });
-  }
-}
-
-hasQueryString();

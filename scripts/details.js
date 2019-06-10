@@ -157,5 +157,4 @@ function renderRelated(items) {
   }
 }
 
-
 //bug id:id=S74-28972
