@@ -322,12 +322,12 @@ h6 {
 }
 
 .mobile-menu-left {
-  left: 1rem;
+  left: 1.3rem;
   top: 1.5rem;
 }
 
 .mobile-search-right {
-  right: 1rem;
+  right: 1.3rem;
   top: 1.5rem;
 }
 
@@ -618,8 +618,8 @@ h6 {
 
 .btn-close-search {
   position: absolute;
-  right: 1.3rem;
-  top: 0.3rem;
+  right: 1.5rem;
+  top: 0.5rem;
   font-size: 2.25rem;
   cursor: pointer;
   color: white;
@@ -680,8 +680,8 @@ h6 {
   }
 
   .btn-close-search {
-    right: 2rem;
-    top: 0.6rem;
+    right: 5rem;
+    top: 3rem;
     font-size: 3.3rem;
   }
 }
