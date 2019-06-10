@@ -26,7 +26,7 @@ searchButton.addEventListener('click', () => {
   }
 
   //Optimise Search UX: Update url after user enter an input. Use assign so that user can use the "back" button to navigate back
-  location.assign(`search-result.html?search=${input}`);
+  location.assign(`search-results.html?search=${input}`);
 
   fetchData(input, renderSearchResults);
 });
@@ -59,7 +59,7 @@ function renderSearchResults(data, input) {
   const { items } = data;
 
   //Search UX: Hint for search results
-  const amount = document.getElementById('js-search-result-amount');
+  const amount = document.getElementById('js-search-results-amount');
   amount.innerHTML = `${items.length} search results for "${input}"`;
 
   //Remove child nodes
@@ -72,7 +72,7 @@ function renderSearchResults(data, input) {
     const resultContainer = document.createElement('div');
     resultContainer.setAttribute('class', 'search-result');
     const link = document.createElement('a');
-    link.setAttribute('class', 'search-result-link');
+    link.setAttribute('class', 'search-results-link');
     link.setAttribute('title', `Got to ${title}`);
     link.setAttribute('href', `details.html?id=${nasa_id}`);
 
