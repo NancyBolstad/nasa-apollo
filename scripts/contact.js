@@ -25,7 +25,7 @@ function validateForm() {
   }
 
   if (
-    alert(
+    !confirm(
       'Your contact information has been validated. Do you want to submit the form?'
     )
   ) {
