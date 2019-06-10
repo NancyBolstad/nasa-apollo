@@ -12,7 +12,7 @@ const landingContainer = document.getElementById('js-landing-container');
     const data = await (await fetch(endpoint + query)).json();
     formateData(data.collection);
   } catch (error) {
-    alert(error);
+    console.log(error);
   }
 })();
 

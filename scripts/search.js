@@ -3,40 +3,21 @@ const searchInput = document.getElementById('js-search-page-input');
 const searchButton = document.getElementById('js-search-page-button');
 const spinner = document.getElementById('js-loader');
 
-//Take the user to the search results
+//Take the user to the search results page
 (function hasQueryString() {
   const pageParams = new URLSearchParams(window.location.search);
   const input = pageParams.get('search');
+
   if (!pageParams.toString() || !input.toString()) {
     alert('Empty query string! Redirecting you to the home page ...');
     window.location = './index.html';
   } else {
-    const url = `https://images-api.nasa.gov/search?media_type=image&keywords=Apollo&q=${encodeURIComponent(
-      input
-    )}`;
-    showSpinner();
-    fetch(url)
-      .then(response => {
-        if (!response.ok) throw Error('Failed to retrieve images');
-        return response.json();
-      })
-      .then(obj => {
-        renderSearchResults(obj.collection, input);
-      })
-      .catch(error => {
-        alert(error);
-      });
+    fetchData(input, renderSearchResults);
   }
 })();
 
 searchButton.addEventListener('click', () => {
   const input = searchInput.value;
-
-  //Encode input, since input is part of the url
-  const url = `https://images-api.nasa.gov/search?media_type=image&q=${encodeURIComponent(
-    input
-  )}`;
-
   //Validate search input is not empty
   if (input == '' || input == null) {
     alert('Input cannot be empty, try again!');
@@ -46,20 +27,7 @@ searchButton.addEventListener('click', () => {
   //Optimise Search UX: Update url after user enter an input. Use assign so that user can use the "back" button to navigate back
   location.assign(`search-result.html?search=${input}`);
 
-  //Optimise Search UX: Hint for data fetching
-  showSpinner();
-
-  fetch(url)
-    .then(response => {
-      if (!response.ok) throw Error('Failed to retrieve images');
-      return response.json();
-    })
-    .then(obj => {
-      renderSearchResults(obj.collection, input);
-    })
-    .catch(error => {
-      console.log(error);
-    });
+  fetchData(input, renderSearchResults);
 });
 
 //Optimise Search UX for keyboard usage
@@ -69,6 +37,23 @@ searchInput.addEventListener('keypress', key => {
     document.getElementById('js-search-page-button').click();
   }
 });
+
+//Reusable fetch function takes two variables: query string, and a callback function
+async function fetchData(query, doNext) {
+  try {
+    showSpinner();
+
+    //Encode input, since input is part of the url
+    const url = `https://images-api.nasa.gov/search?media_type=image&keywords=Apollo&q=${encodeURIComponent(
+      query
+    )}`;
+    const data = await (await fetch(url)).json();
+    doNext(data.collection, query);
+  } catch (error) {
+    console.log(error);
+    throw Error('Failed to retrieve data.');
+  }
+}
 
 function renderSearchResults(data, input) {
   const { items } = data;
