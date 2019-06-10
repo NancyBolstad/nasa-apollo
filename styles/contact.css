@@ -5,16 +5,26 @@
 
 .contact-form-wrapper .row {
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 80vw;
 }
 
 @media screen and (min-width: 768px) {
   .contact-form-wrapper .row {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     width: 80vw;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -90,7 +100,8 @@
   margin: 3rem auto;
   color: #fff;
   position: relative;
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   background-color: #08bc9a;
   border-bottom: 3px solid #088d74;
   font-weight: 700;
@@ -111,6 +122,8 @@
 }
 
 .service-section .item {
+  -webkit-transition: none;
+  -o-transition: none;
   transition: none;
 }
 

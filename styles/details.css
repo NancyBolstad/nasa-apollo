@@ -5,8 +5,13 @@
 .section-details {
   width: 80vw;
   margin: 5rem auto 10rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column-reverse;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 #js-details-container {
@@ -15,16 +20,25 @@
 
 @media screen and (min-width: 768px) {
   .section-details {
-    flex-direction: row;
-    align-items: stretch;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
 
   .details-left {
-    flex: 30vh 1 0;
+    -webkit-box-flex: 30vh;
+        -ms-flex: 30vh 1 0px;
+            flex: 30vh 1 0;
   }
 
   .details-right {
-    flex: 30vh 1 0;
+    -webkit-box-flex: 30vh;
+        -ms-flex: 30vh 1 0px;
+            flex: 30vh 1 0;
   }
   .details-media img {
     width: 35vw !important;
@@ -32,15 +46,25 @@
 
   #js-details-container-aldrin,
   #js-details-container-flight {
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
   }
 }
 
 .details-text {
   width: 80vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: stretch;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
 }
 .section-details h2 {
   font-weight: 600;
@@ -78,6 +102,8 @@
 .details-link {
   text-decoration: underline;
   color: #262626;
+  -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   cursor: pointer;
   padding-left: 1.8rem;
@@ -91,6 +117,8 @@
 .details-link:hover {
   text-decoration: none;
   color: #262626;
+  -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
   cursor: pointer;
   margin-left: 1.8rem;
@@ -155,7 +183,8 @@
   margin: 40px 10px;
   overflow: hidden;
   background-color: #ffffff;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 1);
+          box-shadow: 0 1px 6px rgba(0, 0, 0, 1);
 }
 
 @media (min-width: 768px) {
