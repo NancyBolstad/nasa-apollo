@@ -619,7 +619,12 @@ h6 {
   border: none;
   padding: 18px 42px;
   margin-top: 40px;
-  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.search-form-wrapper button:hover {
+  background-color: #005694;
 }
 
 @media screen and (min-width: 768px) {
