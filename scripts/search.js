@@ -48,24 +48,44 @@ function render(data, input) {
   items.forEach(element => {
     const { title, nasa_id } = element.data[0];
     const imgsrc = element.links[0].href;
+
     const resultContainer = document.createElement('div');
     resultContainer.setAttribute('class', 'search-result');
+    const link = document.createElement('a');
+    link.setAttribute('class', 'search-result-link');
+    link.setAttribute('href', `details.html?id=${nasa_id}`);
 
-    resultContainer.innerHTML = `<a href="details.html?id=${nasa_id}" class="search-result-link"></a>
-            <img
-              src="${imgsrc}"
-              alt="${title}"
-              class="search-result-media"
-            />
-            <div class="search-result-content">
-              <h2 class="search-result-title">
-                ${title}
-              </h2>
-              <div class="search-result-description">
-                <a href="details.html?id=${nasa_id}" class="search-read-more">Continue reading &#187;</a>
-              </div>`;
+    const media = document.createElement('img');
+    media.setAttribute('src', imgsrc);
+    media.setAttribute('alt', title);
+    media.setAttribute('class', 'search-result-media');
+
+    const content = document.createElement('div');
+    content.setAttribute('class', 'search-result-content');
+
+    const resultTitle = document.createElement('h2');
+    resultTitle.setAttribute('class','search-result-title');
+    //Since some titles by default from the API are very long: NASA ID: As14-66-9233
+    if (title.length < 80) {
+      resultTitle.innerText = title;
+    } else {
+      resultTitle.innerText = `${title.substr(0, 80)}...`;
+    }
+    const resultDescription = document.createElement('div');
+    resultDescription.setAttribute('class', 'search-result-description');
+
+    const readMore = document.createElement('a');
+    readMore.setAttribute('class', 'search-read-more');
+    readMore.setAttribute('href', `details.html?id=${nasa_id}`);
+    readMore.innerHTML = 'View Details &#187;';
 
     container.appendChild(resultContainer);
+    resultContainer.appendChild(link);
+    resultContainer.appendChild(media);
+    resultContainer.appendChild(content);
+    content.appendChild(resultTitle);
+    content.appendChild(resultDescription);
+    resultDescription.appendChild(readMore);
   });
 }
 
