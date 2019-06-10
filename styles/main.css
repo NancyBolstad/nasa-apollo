@@ -856,7 +856,7 @@ section {
 }
 
 .section-title h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
 }
 
@@ -1262,15 +1262,14 @@ section {
   }
 }
 
+/*------------------------------------*\
+  #form-submitted-screen
+\*------------------------------------*/
+
 .form-submitted-screen-intro {
-  background-color: #c9ddff;
-  padding: 6rem 0 0rem 0;
+  background-color: #0054b0;
+  padding: 13rem 0 0rem 0;
   margin-top: 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('../assets/space-station.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 @media (min-width: 768px) {
@@ -1279,11 +1278,17 @@ section {
   }
 }
 
-
 .form-submitted-screen-intro h1,
-.form-submitted-screen-intro h2{
+.form-submitted-screen-intro h2 {
   color: #ffffff;
-  font-weight:700; 
+}
+
+.form-submitted-screen-intro h1 {
+  font-weight: 700;
+}
+.form-submitted-screen-intro h2 {
+  font-size: 1.5rem;
+  text-transform: initial;
 }
 /*------------------------------------*\
   #footer
