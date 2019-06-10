@@ -71,8 +71,9 @@ function renderSearchResults(data, input) {
 
     const resultContainer = document.createElement('div');
     resultContainer.setAttribute('class', 'search-result');
+
     const link = document.createElement('a');
-    link.setAttribute('class', 'search-results-link');
+    link.setAttribute('class', 'search-result-link');
     link.setAttribute('title', `Got to ${title}`);
     link.setAttribute('href', `details.html?id=${nasa_id}`);
 
