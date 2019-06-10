@@ -120,8 +120,8 @@
     -ms-flex-direction: row;
     flex-direction: row;
     -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
     -webkit-box-pack: stretch;
     -ms-flex-pack: stretch;
   }
@@ -181,6 +181,7 @@
   .search-results-wrapper {
     width: 80vw;
   }
+
   .search-results-lead {
     margin-left: auto;
   }
@@ -210,13 +211,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(0, 0, 0, 0.3)),
-    to(rgba(0, 0, 0, 0.3))
-  );
+  background: -webkit-gradient(linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0.3)),
+      to(rgba(0, 0, 0, 0.3)));
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   background: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3)));
@@ -296,6 +295,7 @@
   max-height: 70vh;
   opacity: 1;
 }
+
 .search-result:hover .search-result-title,
 .search-result:hover .search-read-more {
   color: #02d9ff;
@@ -341,28 +341,30 @@
   margin: 3rem auto;
   display: block;
   -webkit-animation: loader 1s infinite linear;
-          animation: loader 1s infinite linear;
+  animation: loader 1s infinite linear;
 }
 
 @-webkit-keyframes loader {
   from {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
+
   to {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
 @keyframes loader {
   from {
     -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
+
   to {
     -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 

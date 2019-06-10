@@ -10,8 +10,8 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
 }
 
 #js-details-container {
@@ -22,24 +22,25 @@
   .section-details {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
   }
 
   .details-left {
     -webkit-box-flex: 30vh;
-        -ms-flex: 30vh 1 0px;
-            flex: 30vh 1 0;
+    -ms-flex: 30vh 1 0px;
+    flex: 30vh 1 0;
   }
 
   .details-right {
     -webkit-box-flex: 30vh;
-        -ms-flex: 30vh 1 0px;
-            flex: 30vh 1 0;
+    -ms-flex: 30vh 1 0px;
+    flex: 30vh 1 0;
   }
+
   .details-media img {
     width: 35vw !important;
   }
@@ -48,8 +49,8 @@
   #js-details-container-flight {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
   }
 }
 
@@ -60,12 +61,13 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: stretch;
-      -ms-flex-pack: stretch;
-          justify-content: stretch;
+  -ms-flex-pack: stretch;
+  justify-content: stretch;
 }
+
 .section-details h2 {
   font-weight: 600;
   text-transform: capitalize;
@@ -184,7 +186,7 @@
   overflow: hidden;
   background-color: #ffffff;
   -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 1);
-          box-shadow: 0 1px 6px rgba(0, 0, 0, 1);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 1);
 }
 
 @media (min-width: 768px) {
@@ -192,6 +194,7 @@
     width: 80vw;
     text-align: left;
   }
+
   .events {
     width: 80vw;
   }
