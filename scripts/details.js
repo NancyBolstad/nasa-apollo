@@ -65,10 +65,10 @@ function render(item) {
   const contentTitle = document.createElement('h2');
   contentTitle.innerText = title;
 
-  const contentId = document.createElement('h3');
+  const contentId = document.createElement('h4');
   contentId.innerText = `NASA ID: ${nasa_id}`;
 
-  const contentDate = document.createElement('h3');
+  const contentDate = document.createElement('h4');
   contentDate.innerText = `Date Created: ${date_created}`;
 
   const contentDescription = document.createElement('p');
@@ -76,7 +76,7 @@ function render(item) {
   if (description == undefined) {
     //Placeholder text for items do not have description
     contentDescription.innerText =
-      'Sorry, there is no description for this image in out database.';
+      'Sorry, there is no description for this image in our database.';
   } else {
     contentDescription.innerText = description;
   }
