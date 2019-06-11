@@ -1,8 +1,6 @@
 (async () => {
   try {
-    const url = `https://images-api.nasa.gov/search?media_type=image&q=${encodeURIComponent(
-      'apollo 11'
-    )}&year_start=1969&year_end=1969`;
+    const url = `https://images-api.nasa.gov/search?media_type=image&keywords=apollo&year_start=1969&year_end=1969`;
 
     const data = await (await fetch(url)).json();
 
@@ -20,9 +18,9 @@
 })();
 
 function populateTimeline(items) {
-  const preLaunchItems = items.slice(0, 15);
-  const launchItems = items.slice(16, 30);
-  const landingItems = items.slice(30, 45);
+  const preLaunchItems = items.slice(40, 45);
+  const launchItems = items.slice(55, 60);
+  const landingItems = items.slice(65, 70);
 
   const prelaunchContainer = document.getElementById('js-prelaunch-container');
   const launchContainer = document.getElementById('js-launch-container');
