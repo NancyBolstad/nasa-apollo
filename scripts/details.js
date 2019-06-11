@@ -32,6 +32,8 @@ function render(item) {
   const imgsrc = item.links[0].href;
   const container = document.getElementById('js-details-container');
 
+  console.log(item);
+
   //To fix a bug when searching, for instance id:S74-28972
   if (keywords) {
     //If keywords exist, search for related articles, based on the first keyword.
@@ -63,14 +65,21 @@ function render(item) {
   const contentTitle = document.createElement('h2');
   contentTitle.innerText = title;
 
-  const contentId = document.createElement('h6');
+  const contentId = document.createElement('h3');
   contentId.innerText = `NASA ID: ${nasa_id}`;
 
-  const contentDate = document.createElement('h6');
+  const contentDate = document.createElement('h3');
   contentDate.innerText = `Date Created: ${date_created}`;
 
   const contentDescription = document.createElement('p');
-  contentDescription.innerText = description;
+
+  if (description == undefined) {
+    //Placeholder text for items do not have description
+    contentDescription.innerText =
+      'Sorry, there is no description for this image in out database.';
+  } else {
+    contentDescription.innerText = description;
+  }
 
   container.appendChild(mediaContainer);
   container.appendChild(contentContainer);
@@ -83,12 +92,14 @@ function render(item) {
 
 async function fetchRelated(query) {
   try {
-    const url = `https://images-api.nasa.gov/search?q=${query}&media_type=image`;
+    const url = `https://images-api.nasa.gov/search?media_type=image&q=${encodeURIComponent(
+      query
+    )}`;
     const data = await (await fetch(url)).json();
     renderRelated(data.collection.items);
   } catch (error) {
     console.log(error);
-    alert('Failed to retrieve data.');
+    alert(error);
   }
 }
 
