@@ -1307,6 +1307,10 @@ section {
   margin-top: 0;
 }
 
+.form-submitted-screen .section-title{
+  padding-top: 2rem;
+}
+
 @media (min-width: 768px) {
   .form-submitted-screen-intro {
     padding: 15rem 0 3rem 0;
