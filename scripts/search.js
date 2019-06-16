@@ -9,7 +9,7 @@ const whiteSpaceRegex = /^\s*$/;
   const pageParams = new URLSearchParams(window.location.search);
   const input = pageParams.get('search');
 
-  if (!pageParams.toString() || !input.toString()) {
+  if (!pageParams.toString() || !input.toString()|| whiteSpaceRegex.test(input)) {
     alert('Empty query string! Redirecting you to the home page ...');
     window.location = './index.html';
   } else {

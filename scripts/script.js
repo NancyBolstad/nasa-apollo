@@ -40,3 +40,29 @@ window.onscroll = () => {
   let scrolled = (window.pageYOffset / docHeight) * 100;
   document.getElementById('js-scroll-bar').style.width = `${scrolled}%`;
 };
+
+document
+  .getElementById('js-search-button')
+  .addEventListener('click', validateInput);
+
+document.getElementById('js-search-input').addEventListener('keypress', key => {
+  if (key.keyCode === 13) {
+    validateInput();
+  }
+});
+
+function validateInput() {
+  event.preventDefault();
+  const whiteSpaceRegex = /^\s*$/;
+  const input = document.getElementById('js-search-input').value;
+
+  if (whiteSpaceRegex.test(input) || input == null) {
+    alert('Input can not be empty.');
+    return false;
+  } else {
+    document
+      .getElementById('js-search-button')
+      .setAttribute('formaction', 'search-results.html');
+    document.getElementById('js-search-form').submit();
+  }
+}

@@ -118,15 +118,16 @@
         <span class="btn-close-search" title="Close Overlay">×</span>
         <div class="search-form-wrapper">
           <h2>What are you looking for?</h2>
-          <form action="">
+          <form action="search-results.html" id="js-search-form">
             <input
+              id="js-search-input"
               type="text"
               placeholder="e.g. apollo landing"
               name="search"
               aria-label="Search for images, articles and stories About the Apollo 11 Mission"
               required
             />
-            <button formaction="search-results.html" type="submit">
+            <button id="js-search-button" aria-label="Submit search form">
               Search
             </button>
           </form>
