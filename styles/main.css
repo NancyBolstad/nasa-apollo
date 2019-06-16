@@ -370,11 +370,6 @@ h6 {
   .log {
     height: 3.8rem;
   }
-
-  .mobile-menu-left,
-  .mobile-search-right {
-    top: 1.4rem;
-  }
 }
 
 @media screen and (min-width: 1024px) {
