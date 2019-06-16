@@ -32,8 +32,6 @@ function render(item) {
   const imgsrc = item.links[0].href;
   const container = document.getElementById('js-details-container');
 
-  console.log(item);
-
   //To fix a bug when searching, for instance id:S74-28972
   if (keywords) {
     //If keywords exist, search for related articles, based on the first keyword.
@@ -98,7 +96,6 @@ async function fetchRelated(query) {
     const data = await (await fetch(url)).json();
     renderRelated(data.collection.items);
   } catch (error) {
-    console.log(error);
     alert(error);
   }
 }

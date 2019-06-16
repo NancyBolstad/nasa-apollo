@@ -51,7 +51,7 @@ async function fetchData(query, doNext) {
     const data = await (await fetch(url)).json();
     doNext(data.collection, query);
   } catch (error) {
-    console.log(error);
+    alert(error);
   }
 }
 
