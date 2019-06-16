@@ -4,7 +4,7 @@ const searchButton = document.getElementById('js-search-page-button');
 const spinner = document.getElementById('js-loader');
 const whiteSpaceRegex=/^\s*$/;
 
-//Take the user to the search results page
+//Ensure that search results page's url does not have empty query
 (function hasQueryString() {
   const pageParams = new URLSearchParams(window.location.search);
   const input = pageParams.get('search');
@@ -29,13 +29,13 @@ searchInput.addEventListener('keypress', key => {
 
 function validateInput() {
   const input = searchInput.value;
-  //Validate search input is not empty
+  //Validate that the search input is not empty
   if (whiteSpaceRegex.test(input) || input == null) {
     alert('The search field cannot be empty. Please try again.');
     //Set return null to stop the function
     return null;
   } else {
-    //Optimise Search UX: Update url after user enter an input. Use assign so that user can use the "back" button to navigate back
+    //Optimise Search UX: Update url after user enters an input. Use assign so that user can use the "back" button to navigate back
     location.assign(`search-results.html?search=${input}`);
   }
 }
@@ -89,7 +89,7 @@ function renderSearchResults(data, input) {
     const resultTitle = document.createElement('h2');
     resultTitle.setAttribute('class', 'search-result-title');
 
-    //Since some titles by default from the API are very long: for instance, NASA ID: As14-66-9233
+    //Since some titles from the API are very long  by default : for instance, NASA ID: As14-66-9233
     if (title.length < 80) {
       resultTitle.innerText = title;
     } else {

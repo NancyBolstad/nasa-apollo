@@ -12,7 +12,6 @@ function validateForm() {
     return false;
   }
 
-  //Use regex expressions to validate the telephone and email addresses respectively.
   if (emailRegex.test(email) == false) {
     alert('Please type in a correct email address.');
     document.getElementById('email').focus();
