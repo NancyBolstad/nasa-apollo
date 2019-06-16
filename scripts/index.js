@@ -47,7 +47,6 @@ function render(items) {
     readMore.setAttribute('aria-label', `Got to ${title}`);
     readMore.setAttribute('href', `./details.html?id=${nasa_id}`);
     readMore.innerHTML = 'View details &#187;';
-    
 
     container.appendChild(newItem);
     newItem.appendChild(link);

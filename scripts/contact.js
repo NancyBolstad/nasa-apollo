@@ -4,7 +4,7 @@ function validateForm() {
   const message = document.getElementById('message').value;
   //RFC2822 Email Validation, refer to:https://regexr.com/2rhq7
   const emailRegex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
-  const whiteSpaceRegex=/^\s*$/;
+  const whiteSpaceRegex = /^\s*$/;
 
   if (whiteSpaceRegex.test(name) || name == null) {
     alert('Name cannot be empty');
