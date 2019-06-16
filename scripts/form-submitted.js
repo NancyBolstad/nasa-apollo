@@ -16,6 +16,7 @@
     render(data.collection.items);
   } catch (error) {
     console(error);
+    alert(error);
   }
 })();
 
