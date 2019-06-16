@@ -428,6 +428,11 @@ h6 {
   .nav-links-search {
     display: inline;
   }
+
+  .js-navsearch-toggle {
+    padding: 1.3rem;
+    margin: -2rem;
+  }
 }
 
 /*------------------------------------*\
@@ -1307,7 +1312,7 @@ section {
   margin-top: 0;
 }
 
-.form-submitted-screen .section-title{
+.form-submitted-screen .section-title {
   padding-top: 2rem;
 }
 
