@@ -18,6 +18,7 @@
 })();
 
 function populateTimeline(items) {
+  //An arbitrary selection from around April to October 1969, of five items for each part of the timeline 
   const preLaunchItems = items.slice(40, 45);
   const launchItems = items.slice(55, 60);
   const landingItems = items.slice(65, 70);
