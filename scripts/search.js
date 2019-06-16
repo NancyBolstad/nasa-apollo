@@ -2,14 +2,18 @@ const container = document.getElementById('js-search-results-container');
 const searchInput = document.getElementById('js-search-page-input');
 const searchButton = document.getElementById('js-search-page-button');
 const spinner = document.getElementById('js-loader');
-const whiteSpaceRegex=/^\s*$/;
+const whiteSpaceRegex = /^\s*$/;
 
 //Ensure that search results page's url does not have empty query
 (function hasQueryString() {
   const pageParams = new URLSearchParams(window.location.search);
   const input = pageParams.get('search');
 
-  if (!pageParams.toString() || !input.toString() || whiteSpaceRegex.test(input)) {
+  if (
+    !pageParams.toString() ||
+    !input.toString() ||
+    whiteSpaceRegex.test(input)
+  ) {
     alert('Empty query string! Redirecting you to the home page ...');
     window.location = './index.html';
   } else {
@@ -35,7 +39,7 @@ function validateInput() {
     //Set return null to stop the function
     return null;
   } else {
-    //Optimise Search UX: Update url after user enters an input. Use assign so that user can use the "back" button to navigate back
+    //Optimise Search UX: Update url after user enters an input.
     location.assign(`search-results.html?search=${input}`);
   }
 }
