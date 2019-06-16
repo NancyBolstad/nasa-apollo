@@ -2,13 +2,14 @@ const container = document.getElementById('js-search-results-container');
 const searchInput = document.getElementById('js-search-page-input');
 const searchButton = document.getElementById('js-search-page-button');
 const spinner = document.getElementById('js-loader');
+const whiteSpaceRegex=/^\s*$/;
 
 //Take the user to the search results page
 (function hasQueryString() {
   const pageParams = new URLSearchParams(window.location.search);
   const input = pageParams.get('search');
 
-  if (!pageParams.toString() || !input.toString()) {
+  if (!pageParams.toString() || !input.toString() || whiteSpaceRegex.test(input)) {
     alert('Empty query string! Redirecting you to the home page ...');
     window.location = './index.html';
   } else {
@@ -16,27 +17,28 @@ const spinner = document.getElementById('js-loader');
   }
 })();
 
-searchButton.addEventListener('click', () => {
-  const input = searchInput.value;
-  //Validate search input is not empty
-  if (input == '' || input == null) {
-    alert('The search field cannot be empty. Please try again.');
-    //Set return null to stop the function
-    return null;
-  }
-
-  //Optimise Search UX: Update url after user enter an input. Use assign so that user can use the "back" button to navigate back
-  location.assign(`search-results.html?search=${input}`);
-
-  fetchData(input, renderSearchResults);
-});
+searchButton.addEventListener('click', validateInput);
 
 //Optimise Search UX for keyboard usage
 searchInput.addEventListener('keypress', key => {
   if (key.keyCode === 13) {
-    document.getElementById('js-search-page-button').click();
+    event.preventDefault();
+    validateInput();
   }
 });
+
+function validateInput() {
+  const input = searchInput.value;
+  //Validate search input is not empty
+  if (whiteSpaceRegex.test(input) || input == null) {
+    alert('The search field cannot be empty. Please try again.');
+    //Set return null to stop the function
+    return null;
+  } else {
+    //Optimise Search UX: Update url after user enter an input. Use assign so that user can use the "back" button to navigate back
+    location.assign(`search-results.html?search=${input}`);
+  }
+}
 
 //Reusable fetch function takes two variables: query string, and a callback function
 async function fetchData(query, doNext) {
