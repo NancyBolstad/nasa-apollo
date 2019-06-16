@@ -1,6 +1,6 @@
 (function hasQueryString() {
   const pageParams = new URLSearchParams(window.location.search);
-  //Hide submitted form information from url of the form.submitted page
+  //Hide submitted form information from url of the form-submitted page. Since I don't have a database to received post data on form submission, it will always be assumed that the form was successfully submitted (so long as it passes the validation).
   if (pageParams.toString()) {
     window.location = './form-submitted.html';
   }
@@ -15,7 +15,7 @@
     const data = await (await fetch(url)).json();
     render(data.collection.items);
   } catch (error) {
-    alert(error);
+    console(error);
   }
 })();
 
