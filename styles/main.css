@@ -345,13 +345,13 @@ h6 {
 }
 
 .mobile-menu-left {
-  left: 1.3rem;
-  top: 1.5rem;
+  left: 0.5rem;
+  padding: 1.3rem 1rem;
 }
 
 .mobile-search-right {
-  right: 1.3rem;
-  top: 1.5rem;
+  right: 0.5rem;
+  padding: 1.3rem 1rem;
 }
 
 .nav-links-search {
